@@ -1,3 +1,75 @@
 /*
    Temporary Styles
    ========================================================================== */
+
+.bg-cover{
+  background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+
+/*
+   Headings and paragraph styles
+   ========================================================================== */
+
+p {
+  @include text-formatting($form-font, $type-size-8, normal, 6.5rem, normal, none, $text-color, normal);
+}
+h2 {
+  @include text-formatting($highlight-font, $type-size-1, normal, 6.5rem, 1px, uppercase, $text-color, normal);
+}
+h3 {
+  @include text-formatting($primary-font-regular, $type-size-3, normal, 2.5rem, 1px, uppercase, $text-color, normal);
+}
+h4 {
+  @include text-formatting($primary-font-bold, $type-size-5, normal, normal, 1px, uppercase, $text-color, normal);
+}
+h5 {
+  @include text-formatting($primary-font-bold, $type-size-8, normal, normal, 2px, uppercase, $text-color, normal);
+}
+
+/*
+   Button styles
+   ========================================================================== */
+
+.common-btn{
+	@include text-formatting($primary-font-bold, $type-size-9, normal, normal, 2px, uppercase, $text-color, normal);
+	@include box-shadow($line-bg);
+	background-color: $white;
+	padding:10px 0;
+	border:1px solid transparent;
+	width:174px;
+	text-align:center;
+    display: inline-block;
+	&:hover{
+		text-decoration:none;
+	}
+}
+.border-black{
+	@extend .common-btn;
+	border:1px solid $black;   
+}
+.white-shadow-yellow{
+	@extend .border-black;  
+	@include box-shadow($primary-bg);
+}
+.white-shadow-white{
+	@extend .border-black;
+	@include box-shadow($white);  
+	color:$black;
+	background-color: $white; 
+}
+.black-shadow-yellow{
+	@extend .white-shadow-yellow;
+	background-color: $black;
+	color:$white;
+}
+.black-white-shadow{
+	@extend .black-shadow-yellow;
+	@include box-shadow($white);  
+}
+.black{
+	@extend .border-black;  
+	background-color: $black; 
+	color: $white;
+}
