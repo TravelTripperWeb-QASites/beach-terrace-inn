@@ -85,8 +85,11 @@ h5 {
 /*
    CTA Section Styles
    ========================================================================== */
+
 .cta-sec-main{
+	@extend .container;
 	height:742px;
+	margin:63px auto;
 	.cta-sec-inner{
 		@extend .vertical-center;
 		h4{
@@ -121,4 +124,17 @@ h5 {
 			}
 		}
 	}
+}
+
+/*
+   Yellow box style
+   ========================================================================== */
+
+.yellow-box{
+	width:422px;
+	height:295px;
+	background-color:$primary-bg;
+	position:absolute;
+	bottom:0;
+	left:0;
 }
