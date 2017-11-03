@@ -8,12 +8,20 @@
     background-position:center center;
 }
 
+/* Vertical Center (Includes IE9) */
+.vertical-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 /*
    Headings and paragraph styles
    ========================================================================== */
 
 p {
-  @include text-formatting($form-font, $type-size-8, normal, 6.5rem, normal, none, $text-color, normal);
+  @include text-formatting($secondary-font-regular, $type-size-8, normal, 1.875rem, normal, none, $text-color, normal);
 }
 h2 {
   @include text-formatting($highlight-font, $type-size-1, normal, 6.5rem, 1px, uppercase, $text-color, normal);
@@ -72,4 +80,45 @@ h5 {
 	@extend .border-black;  
 	background-color: $black; 
 	color: $white;
+}
+
+/*
+   CTA Section Styles
+   ========================================================================== */
+.cta-sec-main{
+	height:742px;
+	.cta-sec-inner{
+		@extend .vertical-center;
+		h4{
+			color:$white;
+			padding-bottom:100px;
+		}
+		h2{
+			color:$white;
+			padding-bottom:80px;
+		}
+		.input-holder{
+			position:relative;
+			width:385px;
+			input{
+				background-color: $white-70;
+				@extend p;
+				font-size:$type-size-5;
+				width:100%;
+				border:0;
+			    padding: 12px 20px;
+			    margin:0;
+			}
+			a{
+				position:absolute;
+				width:26px;
+				height:15px;
+				right:24px;
+				top:15px;
+				img{
+					width:auto;
+				}
+			}
+		}
+	}
 }
