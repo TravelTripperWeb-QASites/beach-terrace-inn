@@ -1,17 +1,30 @@
+<a href="#" class="booknow">BOOK NOW</a>
+
 {% assign links = site.data.navigation.main %}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">Bedrock</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg ">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	  <span class="navbar-toggler-icon"></span>
 	</button>
+  
+   <div class="brand-centered">
+   <a  class="navbar-brand self-align-center" href="/" title="Beach
+Terrace inn"><img src="/assets/images/logo.svg" alt="{{ site.title }}"></a></div> 
+
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-    {% for link in links %}
+    <ul class="navbar-nav mr-auto npl">
+    {% for link in links[0].left %}
       <li class="nav-item{% if page.url == link.url %} active{% endif%}">
         <a class="nav-link" href="{{ link.url | absolute_url }}">{{ link.title }}{% if page.url == link.url %}<span class="sr-only">(current)</span>{% endif%}</a>
       </li>
     {% endfor %}
     </ul>
+    <ul class="navbar-nav ml-auto npr">
+          {% for item in  links[1].right %}
+          <li class="nav-item {% if page.url == item.url %}active{% endif%}">
+        <a class="nav-link" href="{{item.url | absolute_url}}">{{ item.title }} {% if page.url==item.url %}<span class="sr-only">(current)</span>{% endif%}</a>
+          </li>
+          {% endfor %}
+        </ul>
   </div>
 </nav>

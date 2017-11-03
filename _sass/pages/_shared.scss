@@ -1,3 +1,125 @@
 /*
    Shared Page Elements
    ========================================================================== */
+
+
+.hero-slider{
+	margin:60px 15px 0px 15px;
+	  @include media-breakpoint-up(md) {
+	  	margin:108px 60px 0px 60px ;
+	  }
+	.carousel-inner,
+	.carousel-item{
+       min-height: 660px;
+	}
+
+	.rate-widget{
+		position: absolute;
+	    right: -125px;
+	    z-index: 9;
+	    bottom: 123px;
+	    background:$white;
+	    padding: 1.6rem;
+	    letter-spacing: 4px;
+	    font-size: $type-size-5;
+	    @include transform-rotate(270deg);
+	    a{
+	    	font-family:$secondary-font-bold ;
+	    	text-transform: uppercase;
+	    	color:$secondary-bg;
+	    }
+	}	
+}
+
+.welcome{
+	margin-top:20px;
+	@include media-breakpoint-up(md){
+		margin-top:-70px;
+	}
+	.welcome-container {
+		@extend .container;
+	}
+	.welcome-inner {
+		@include make-row();
+	}
+	.inspired{
+		@include make-col-ready();
+		@include media-breakpoint-up(md){
+			@include make-col(6);
+		}
+		@extend .align-self-center;
+		text-align: right;
+		.inspired_heading{
+			position:relative;
+			left: inherit;
+			@include media-breakpoint-up(lg){
+				left: -32%;
+			}
+			h1{
+				@extend h2;
+				text-align:right;
+			}
+			h4{
+				margin:0;
+			}
+		}
+	}
+
+	.welcome-about{
+			@include make-row();
+			margin: 0!important;
+				.about-pic{
+				padding: 0!important;
+				@include make-col-ready();
+				@include media-breakpoint-up(md){
+						@include make-col(3);
+					}
+					img{
+						padding-right:8rem;	
+					}
+				}
+				.about-content-pic{
+					padding: 0!important;
+					.content-pic-inner{
+						@include make-row();
+					}
+					@include make-row();
+					@include make-col-ready();
+					@include media-breakpoint-up(md){
+						@include make-col(9);
+					}
+					.content{
+						@include make-col-ready();
+						@include media-breakpoint-up(md){
+							@include make-col(6);
+						}
+						@extend .align-self-center;
+					}
+					.pic{
+						padding: 0!important;
+						@include make-col-ready();
+						@include media-breakpoint-up(md){
+							@include make-col(6);
+						}
+						@extend .align-self-end;
+						@extend .text-right;
+					}
+					.trip_advicer{
+						@include make-col-ready();
+						background:$primary-bg;
+						padding:1rem;
+						font-family: $highlight-font;
+						ol{
+							display: flex;
+							li{
+								
+							}
+						}
+					}
+				}
+	}
+}
+
+
+
+

@@ -13,7 +13,7 @@
    ========================================================================== */
 
 p {
-  @include text-formatting($form-font, $type-size-8, normal, 6.5rem, normal, none, $text-color, normal);
+  @include text-formatting($form-font, $type-size-8, normal, 1.875rem, normal, none, $text-color, normal);
 }
 h2 {
   @include text-formatting($highlight-font, $type-size-1, normal, 6.5rem, 1px, uppercase, $text-color, normal);

@@ -36,3 +36,11 @@
 	-webkit-box-shadow: 6px 6px 0px 0px $color;
 	-moz-box-shadow: 6px 6px 0px 0px $color;
 }
+
+@mixin transform-rotate($deg) {	
+	-webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    transform: rotate($deg);
+}

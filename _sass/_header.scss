@@ -1,3 +1,130 @@
-/*
-   Header Elements
-   ========================================================================== */
+.booknow{
+	background-color:$primary-bg;
+	color:$white;
+	position:fixed;
+	right:0px;
+	top:0;
+	text-align:center;
+    height: 50px;
+    padding: 0 15px;
+    line-height: 50px;
+    z-index: 11;
+    font-size: $type-size-9;
+    font-family:$primary-font-bold;
+    letter-spacing: 2px;
+    color:$nav-text;
+    @include media-breakpoint-up(lg) {
+    	
+    	padding:0 70px;
+    	height: 58px;
+    	line-height: 58px;
+    	font-size:$type-size-7;
+    }
+}
+
+.navbar{
+	background-color: $white;
+	color: $nav-text;
+    padding: 0;
+    position: fixed;
+	width: 100%;
+	top: 0px;
+	right: 0;
+	left: 0;
+	z-index: 10;
+	min-height:60px;
+	font-family:$primary-font-medium;
+	font-size:$type-size-7;
+	@include media-breakpoint-up(lg) {
+		position: relative;
+		top: 58px;
+	}
+    &.shrink-nav{
+    	position: fixed;
+    	z-index: 12;
+    	width: 100%;
+    	opacity: 0;
+    	animation: smoothScroll 1s forwards;
+    	@include transition($global-transition);
+    }
+	 ul.navbar-nav{
+		
+		.nav-item{
+			.nav-link{
+				color: $nav-text;;
+				text-transform: uppercase;
+				font-size: $type-size-7 ;
+				text-align: center;
+				padding:1rem 1rem; 
+                @include media-breakpoint-up(lg) {
+                  
+                  padding: 3.8rem 0.8rem 2.8rem 0.8rem; 
+                }
+                @include media-breakpoint-up(xl) {
+                  padding: 3.8rem 0.6rem 2.8rem 1.5rem; 
+                }
+                
+				&:hover{
+				
+				}
+			}
+		 &.active{
+		 	 a{
+		 	 
+		 	 }
+		 }
+		}
+		&.npl{
+			padding-left:0rem;
+			@include media-breakpoint-up(md) {
+				padding-left:3rem;
+			}
+
+		}
+		&.npr{
+			padding-right:0rem;
+			@include media-breakpoint-up(md) {
+				padding-right:3rem;
+			}
+		}
+	}
+	.navbar-toggler{
+		    right:90px;
+            &:hover, &:focus{
+            	outline: 0;
+            	opacity: 1;
+            }
+	}
+
+}
+.brand-centered { 
+  position: absolute;
+  width: 150px;   
+  vertical-align: middle;
+  left:0.9375rem;
+  top: 0;
+  @include media-breakpoint-up(lg) {
+    width: 260px; 
+    left:42%; 
+    left:calc(45.7% - 100px); 
+  }
+  .navbar-brand {
+  	vertical-align: middle;
+  	height: 100%;
+  	position: relative;
+  	display: block;
+  	padding:0;
+	   img{
+	   	  max-width: 100%;
+	   } 
+	}
+}
+
+@keyframes smoothScroll {
+	0% {
+		transform: translateY(-200px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
