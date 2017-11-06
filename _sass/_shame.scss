@@ -49,13 +49,15 @@ h5 {
 	width:174px;
 	text-align:center;
     display: inline-block;
+    font-family: $primary-font-bold;
 	&:hover{
 		text-decoration:none;
 	}
 }
 .border-black{
 	@extend .common-btn;
-	border:1px solid $black;   
+	border:1px solid $black; 
+
 }
 .white-shadow-yellow{
 	@extend .border-black;  
@@ -80,6 +82,13 @@ h5 {
 	@extend .border-black;  
 	background-color: $black; 
 	color: $white;
+}
+.text-btn{
+	@extend .common-btn;
+	box-shadow: none;
+	display:block;
+	margin: 1.25rem 0rem;
+	text-align:left;
 }
 
 /*
@@ -126,6 +135,18 @@ h5 {
 	}
 }
 
+
+/*
+icons font
+=================*/
+.e-icon{
+  	font-family: $icons-font;
+  	font-size: $type-size-3;
+    vertical-align: middle;
+    margin: 0 1rem;
+    vertical-align: middle;
+}
+
 /*
    Yellow box style
    ========================================================================== */
@@ -137,4 +158,48 @@ h5 {
 	position:absolute;
 	bottom:0;
 	left:0;
+}
+
+/*
+More offers
+==================================*/
+.more-offers{
+	margin-bottom:3.75rem;
+ 	h3{
+	 	@extend  h3;
+	 	font-weight: lighter;
+	 	font-size: $type-size-2;
+	 	margin: 3.75rem auto;
+	 	@extend .text-center;
+ 	}
+	.offers-container{
+			@extend .container;
+	}
+	.offers-inner{
+		@include make-row();
+	}
+	.offer{
+		@include make-col-ready();
+		@include media-breakpoint-up(md){
+				@include make-col(4);
+		}
+		.m-offer-pic{
+		 min-height: 406px;
+		 background-size: cover !important;
+		 margin-bottom:3.75rem;
+		 background-repeat:no-repeat;
+		}
+		.m-offer-title{
+			font-family: $primary-font-regular;
+			font-size: $type-size-5;
+			text-transform: uppercase;
+			letter-spacing: 1.7px;
+		}
+		p{
+			font-family: $secondary-font-regular;
+			min-height: 76px;
+			@extend  .pt-3;
+		}
+
+	}
 }

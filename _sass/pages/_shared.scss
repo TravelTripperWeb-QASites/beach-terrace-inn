@@ -64,12 +64,12 @@
 			}
 		}
 	}
-
-	.welcome-about{
+}
+.welcome-about{
 			@include make-row();
-			margin: 0!important;
+			@extend .m-0;
 				.about-pic{
-				padding: 0!important;
+				@extend .p-0;
 				@include make-col-ready();
 				@include media-breakpoint-up(md){
 						@include make-col(3);
@@ -79,9 +79,11 @@
 					}
 				}
 				.about-content-pic{
-					padding: 0!important;
+					@extend .p-0;
+					@extend .m-0;
 					.content-pic-inner{
 						@include make-row();
+						margin: 0!important;
 					}
 					@include make-row();
 					@include make-col-ready();
@@ -103,13 +105,13 @@
 						}
 					}
 					.pic{
-						padding: 0!important;
+						@extend .p-0;
 						@include make-col-ready();
 						@include media-breakpoint-up(md){
 							@include make-col(6);
 						}
 						@extend .align-self-end;
-						@extend .text-right;
+						text-align: right;
 					}
 					.trip_advicer{
 						@include make-col-ready();
@@ -141,8 +143,65 @@
 					}
 				}
 	}
+
+.explore-area{
+	.explore-area-content-pic{
+		@extend .about-content-pic;
+	}
+	@extend .welcome-about;
+	.explore_pic{
+		@extend .text-left ;
+		@extend .pic ;
+		
+	}
+	.cycleing-pic{
+		@extend .about-pic ;
+		@extend .align-self-end;
+		@extend .text-right ;
+		img{
+			@extend .pr-0;
+		}
+		
+	}
 }
 
-
+.visual_tour{
+	@include make-row();
+	@extend .m-0;
+	.beach-view{
+		margin-bottom:200px;
+	 	@extend .p-0;	
+		@include make-col-ready();
+		@include media-breakpoint-up(sm){
+			@include make-col(9);
+		}
+		img{
+			width: 100%;
+			box-shadow: -400px 200px 0px 0px  $primary-bg;
+			-ms-box-shadow: -400px 200px 0px 0px  $primary-bg;
+			-o-box-shadow: -400px 200px 0px 0px  $primary-bg;
+			-webkit-box-shadow: -400px 200px 0px 0px  $primary-bg;
+			-moz-box-shadow: -400px 200px 0px 0px  $primary-bg;
+			@include media-breakpoint-up(md){
+				width: 100%;
+			}
+		}
+		.over-lap-heading{
+			@extend .align-self-end ;
+			@extend .text-right;
+			position:absolute;
+			bottom: -186px;
+    		right: -0px;
+    			@include media-breakpoint-up(md){
+    				bottom: -186px;
+    				right: -200px;
+    			}
+    			a{
+    				margin-right:5rem;
+    				margin-top:2rem;  
+    			}
+		}
+	}
+}
 
 
