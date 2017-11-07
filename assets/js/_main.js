@@ -21,18 +21,33 @@ $(document).ready(function() {
     // }); 
     
 
-  //main nav scroll resize
-  function changeHeader(){
-    if($( window ).width() > 991){
-    if($(window).scrollTop() > 200) {
-      $(".navbar").addClass("shrink-nav"); 
-       $(".navbar").css({'top':'0px','opacity':'1'}); 
-       $('body').css('margin-top','115px');
-    }
-    else {
-      $(".navbar").removeClass("shrink-nav");
-      $('body').css('margin-top','');
-    }
-    }
-  }
+   //main nav scroll resize
+    function changeHeader(){
+      if($( window ).width() > 991){
+      if($(window).scrollTop() > 200) {
+        $(".navbar").addClass("shrink-nav"); 
+         $(".navbar").css({'top':'0px','opacity':'1'});
+         $('body').css('margin-top','115px');
+      }
+      else {
+        $(".navbar").removeClass("shrink-nav");
+        $(".navbar").css({'top':'56px','opacity':'1'}); 
+        $('body').css('margin-top','0');
+      }
+      }
+    }   
+     $(window).on("load resize scroll",function(e){
+      changeHeader();
+     });
+
+    //tonightRate 
+    $('#view_rates').click(function () {
+        $("#tongihtrates").toggle('slow');
+
+    });
+
+    $('#close').click(function (e) {
+        e.preventDefault();
+        $('#tongihtrates').toggle('hide');
+    });
 });
