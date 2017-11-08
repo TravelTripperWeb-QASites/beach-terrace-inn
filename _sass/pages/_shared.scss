@@ -177,11 +177,7 @@
 		}
 		img{
 			width: 100%;
-			box-shadow: -400px 200px 0px 0px  $primary-bg;
-			-ms-box-shadow: -400px 200px 0px 0px  $primary-bg;
-			-o-box-shadow: -400px 200px 0px 0px  $primary-bg;
-			-webkit-box-shadow: -400px 200px 0px 0px  $primary-bg;
-			-moz-box-shadow: -400px 200px 0px 0px  $primary-bg;
+			@include box-shadow(-400px, 200px, 0px, $primary-bg);
 			@include media-breakpoint-up(md){
 				width: 100%;
 			}

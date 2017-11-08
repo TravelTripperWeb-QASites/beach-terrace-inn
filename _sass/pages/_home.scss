@@ -23,6 +23,9 @@
 		.moments-remember-right{
 			@extend .moments-remember-left;
 			padding:136px 0 0 100px;
+			@include media-breakpoint-down(sm) {
+            	padding:100px 0 0 0;
+        	}
 			&:after{
             	display:none;
             }
@@ -65,6 +68,9 @@
 			}
 			.love-sec-content{
 				padding: 30% 0 0 14%;
+				@include media-breakpoint-down(sm) {
+	                padding: 12% 0 0 5%;
+	            }
 				@extend .love-img;
 				p{
 					width:78%;
@@ -87,4 +93,139 @@
 			}
 		}
 	}
+}
+.home-rooms{
+    overflow-x: hidden;
+	position: relative;
+	h3{
+		position: absolute;
+	    top: 0;
+	    left: 50%;
+	    @include transform-translate(-50%, 0);
+	    font-size:3rem;
+	    width: 100%;
+	}
+   .slick-list{
+   	overflow:visible !important;
+   	 overflow-x:visible !important; 
+   }
+    .slick-slide{
+    	padding: 200px 60px 30px;
+    	@include media-breakpoint-down(lg) {
+    		padding: 120px 20px 15px;
+    	}
+    	.room-title{
+			display:none;
+		    @extend h5;
+		    position: absolute;
+    		top: 110px;
+    		left:50%;
+    		@include transform-translate(-50%, 0);
+		}
+    	.caption{
+    		padding:80px 30px 0;
+    		text-align: center;
+    		opacity: 1;
+    		@extend .row;
+    		@include media-breakpoint-down(lg) {
+    			padding:30px 15px 0;
+    		}
+    		.content-part{
+    			@include make-col-ready();
+	            @include media-breakpoint-up(lg) {
+	                @include make-col(6);
+	            }
+	            h5{
+            	    margin-bottom: 20px;
+	            }
+    		}
+    		.btns-part{
+    			@extend .content-part;
+    			a{
+    				&:first-child{
+    					margin-bottom:25px;
+    					@include media-breakpoint-down(lg) {
+    						margin-top:25px;
+    					}
+    				}
+    			}
+    			@include media-breakpoint-down(lg) {
+    				text-align:left;
+    			}
+    		}
+    	}
+    	img{
+    		@include box-shadow(-20px, 20px, 0px, $line-bg);
+    	}
+    	&:focus{
+    		outline: 0;
+    	}
+    	&.slick-active{
+    		padding-top: 240px;
+    		position:relative;
+    		@include media-breakpoint-down(lg) {
+	    		padding-top: 170px;
+	    	}
+    		img{
+    			box-shadow:none;
+    		}
+    		.room-title{ 
+			    display:block;
+    		}
+    	}
+    	&.slick-cloned{
+    		img{
+    			@include box-shadow(20px, 20px, 0px, $line-bg);
+    		}
+    	}
+    	img{
+    		width: 100%; 
+    	}
+    }
+    .slick-prev {
+        left: 13%;
+        width: 60px;
+        left: calc(13% - 20px);
+        position: absolute;
+        z-index: 999;
+        top:45%;
+        @include media-breakpoint-up (md) {
+           left: 24%; 
+           left: calc(25% - 25px);
+        }
+	        &:before{
+	        	content: '#';
+	        	font-family: $icons-font;
+	        	display: block;
+	        	background-color:$line-bg;
+		        width:74px;
+		        height:74px;
+		        color:$arrow-color;
+		        font-size:$type-size-3;
+		        padding-top: 22px;
+	        }
+        }
+    .slick-next {
+        right: 13%;
+        width: 60px;
+        right: calc(13% - 14px);
+        position: absolute;
+        z-index: 999;
+        top:45%;
+        @include media-breakpoint-up (md) {
+          right: 25%; 
+          right: calc(25% - 14px);
+        }
+        &:before{
+        	content: '$';
+        	font-family: $icons-font;
+        	display: block;
+        	background-color:$line-bg;
+	        width:74px;
+	        height:74px;
+	        color:$arrow-color;
+	        font-size:$type-size-3;
+	        padding-top: 22px;
+        }
+    }
 }

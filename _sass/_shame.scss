@@ -25,6 +25,9 @@ p {
 }
 h2 {
   @include text-formatting($highlight-font, $type-size-1, normal, 6.5rem, 1px, uppercase, $text-color, normal);
+  @include media-breakpoint-down(md) {
+    @include text-formatting($highlight-font, $type-size-3, normal, 3.5rem, 1px, uppercase, $text-color, normal);
+	}
 }
 h3 {
   @include text-formatting($primary-font-regular, $type-size-3, normal, 2.5rem, 1px, uppercase, $text-color, normal);
@@ -42,7 +45,7 @@ h5 {
 
 .common-btn{
 	@include text-formatting($primary-font-bold, $type-size-9, normal, normal, 2px, uppercase, $text-color, normal);
-	@include box-shadow($line-bg);
+	@include box-shadow(6px, 6px, 0px, $line-bg);
 	background-color: $white;
 	padding:10px 0;
 	border:1px solid transparent;
@@ -61,11 +64,11 @@ h5 {
 }
 .white-shadow-yellow{
 	@extend .border-black;  
-	@include box-shadow($primary-bg);
+	@include box-shadow(6px, 6px, 0px, $primary-bg);
 }
 .white-shadow-white{
-	@extend .border-black;
-	@include box-shadow($white);  
+	@extend .border-black; 
+	@include box-shadow(6px, 6px, 0px, $white);
 	color:$black;
 	background-color: $white; 
 }
@@ -76,7 +79,7 @@ h5 {
 }
 .black-white-shadow{
 	@extend .black-shadow-yellow;
-	@include box-shadow($white);  
+	@include box-shadow(6px, 6px, 0px, $white); 
 }
 .black{
 	@extend .border-black;  
@@ -121,15 +124,15 @@ h5 {
 			    padding: 12px 20px;
 			    margin:0;
 			}
-			a{
+			button{
 				position:absolute;
 				width:26px;
 				height:15px;
 				right:24px;
-				top:15px;
-				img{
-					width:auto;
-				}
+				top:4px;
+				color:$text-color;
+				border: 0;
+				background-color: transparent;
 			}
 		}
 	}
@@ -145,6 +148,36 @@ icons font
     vertical-align: middle;
     margin: 0 1rem;
     vertical-align: middle;
+}
+//icons style
+.social_facebook, .social_twitter, .social_pinterest, .social_googleplus, .social_instagram, .icon-star
+{
+    font-family: $icons-font;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.social_facebook:before {
+    content: "\e093";
+}
+.social_twitter:before {
+    content: "\e094";
+}
+.social_pinterest:before {
+    content: "\e095";
+}
+.social_googleplus:before {
+    content: "\e096";
+}
+.social_instagram:before {
+    content: "\e09a";
+}
+.icon-star:before {
+    content: "\e033";
 }
 
 /*

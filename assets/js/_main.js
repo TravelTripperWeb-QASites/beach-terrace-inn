@@ -35,4 +35,22 @@ $(document).ready(function() {
     }
     }
   }
+
+  $('.home-rooms-inner').slick({
+    centerMode: true,
+    centerPadding: '25%', 
+    slidesToShow: 1 ,
+    responsive: [{ 
+         breakpoint: 767,
+         settings: { 
+           centerPadding: '25%',
+         },
+         breakpoint: 600,
+         settings: { 
+           centerPadding: '13%',
+         }
+
+       }]
+  });
+  
 });
