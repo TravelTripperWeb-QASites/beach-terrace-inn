@@ -118,7 +118,8 @@ h5 {
         }
         .input-holder {
             position: relative;
-            width: 385px;
+            width: 300px;
+            @include media-breakpoint-up(sm) { width: 385px; }
             input {
                 background-color: $white-70;
                 @extend p;
@@ -137,6 +138,10 @@ h5 {
                 color: $text-color;
                 border: 0;
                 background-color: transparent;
+                cursor:pointer;
+                span{
+                	color:$text-color;
+                }
             }
         }
     }
