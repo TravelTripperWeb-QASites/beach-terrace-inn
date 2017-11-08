@@ -121,12 +121,19 @@
 	    				font-size:$type-size-11;
 	    				font-family:$primary-font-medium;
 	    			}
+                    @include media-breakpoint-down(sm){
+                        text-align: center;
+                    }
 	    		}
 	    		.tt-sign{
 	    			@extend .copyright;
 	    			img{
 	    				width:auto;
 	    			}
+                    text-align: right;
+                    @include media-breakpoint-down(sm){
+                        text-align: center;
+                    }
 	    		}
 	    	}
     	}

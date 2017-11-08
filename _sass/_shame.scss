@@ -26,8 +26,8 @@ p {
 h2 {
     @include text-formatting($highlight-font, $type-size-1, normal, 6.5rem, 1px, uppercase, $text-color, normal);
     @include media-breakpoint-down(lg) {
-        font-size: 55px;
-        line-height: 70px;
+        font-size: 3.438rem;
+        line-height: 4.375rem;
     }
     @include media-breakpoint-down(md) {
         font-size: $type-size-3;
@@ -94,8 +94,11 @@ h5 {
     @extend .common-btn;
     box-shadow: none;
     display: block;
-    margin: 1.25rem 0rem;
+    margin: 0.55rem 0rem;
     text-align: left;
+    @include  media-breakpoint-up(md){
+     margin: 1.25rem 0rem;
+    } 
 }
 
 /*
@@ -244,8 +247,11 @@ More offers
         .m-offer-pic {
             min-height: 406px;
             background-size: cover !important;
-            margin-bottom: 3.75rem;
+            margin-bottom: 1.75rem;
             background-repeat: no-repeat;
+             @include media-breakpoint-up(md){
+                margin-bottom: 3.75rem;
+             }
         }
         .m-offer-title {
             font-family: $primary-font-regular;
@@ -255,8 +261,16 @@ More offers
         }
         p {
             font-family: $secondary-font-regular;
+              min-height: auto;
+            @include media-breakpoint-up(md){
             min-height: 76px;
+            }
             @extend .pt-3;
+        }
+        .white-shadow-yellow{
+           @include media-breakpoint-down(md){ 
+            margin-bottom: 1.75rem;
+            }
         }
     }
 }
