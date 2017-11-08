@@ -2,83 +2,80 @@
    Navigation Elements
    ========================================================================== */
 
-.navbar{
-	background-color: $white;
-	color: $nav-text;
-	padding: 0;
-	position: fixed;
-	width: 100%;
-	top: 0px;
-	right: 0;
-	left: 0;
-	z-index: 10;
-	min-height:60px;
-	font-family:$primary-font-medium;
-	font-size:$type-size-7;
-	@include media-breakpoint-up(lg) {
-		position: relative;
-		top: 58px;
-	}
-    &.shrink-nav{
-    	position: fixed;
-    	z-index: 12;
-    	width: 100%;
-    	opacity: 0;
-    	animation: smoothScroll 1s forwards;
-    	@include transition($global-transition);
+.navbar {
+    background-color: $white;
+    color: $nav-text;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    min-height: 60px;
+    font-family: $primary-font-medium;
+    font-size: $type-size-7;
+    @include media-breakpoint-up(lg) {
+        position: relative;
+        top: 58px;
     }
-	ul.navbar-nav{
-		.nav-item{
-			.nav-link{
-				color: $nav-text;;
-				text-transform: uppercase;
-				font-size: $type-size-7 ;
-				text-align: center;
-				padding:1rem 1rem; 
+    &.shrink-nav {
+        position: fixed;
+        z-index: 12;
+        width: 100%;
+        opacity: 0;
+        animation: smoothScroll 1s forwards;
+        @include transition($global-transition);
+        border-top: 20px solid $white;
+    }
+    ul.navbar-nav {
+        .nav-item {
+            .nav-link {
+                color: $nav-text;
+                ;
+                text-transform: uppercase;
+                font-size: $type-size-7;
+                text-align: center;
+                padding: 1rem 1rem;
                 @include media-breakpoint-up(lg) {
-                  padding: 3.8rem 0.4rem 2.8rem 0.4rem;
+                    padding: 3.8rem 0.4rem 2.8rem 0.4rem;
                 }
                 @include media-breakpoint-up(xl) {
-                  padding: 3.8rem 0.6rem 2.8rem 1.5rem;
+                    padding: 3.8rem 0.6rem 2.8rem 1.5rem;
                 }
-				&:hover{
-				
-				}
-			}
-			&.active{
-			 	a{
-			 	 
-			 	}
-			}
-		}
-		&.npl{
-			padding-left:0rem;
-			@include media-breakpoint-up(lg) {
-				padding-left:3rem;
-			}
-		}
-		&.npt{
-			padding-top:3rem;
-			@include media-breakpoint-up(lg) {
-				padding-top:0rem;
-			}
-		}
-		&.npr{
-			padding-right:0rem;
-			@include media-breakpoint-up(lg) {
-				padding-right:3rem;
-			}
-		}
-	}
-	.navbar-toggler{
-	    right:118px;
-	    position: fixed;
-	    top:5px;
-	    border:none;
-        &:hover, &:focus{
-        	outline: 0;
-        	opacity: 1;
+                &:hover {}
+            }
+            &.active {
+                a {}
+            }
         }
-	}
-	
+        &.npl {
+            padding-left: 0rem;
+            @include media-breakpoint-up(lg) {
+                padding-left: 3rem;
+            }
+        }
+        &.npt {
+            padding-top: 3rem;
+            @include media-breakpoint-up(lg) {
+                padding-top: 0rem;
+            }
+        }
+        &.npr {
+            padding-right: 0rem;
+            @include media-breakpoint-up(lg) {
+                padding-right: 3rem;
+            }
+        }
+    }
+    .navbar-toggler {
+        right: 118px;
+        position: fixed;
+        top: 5px;
+        border: none;
+        &:hover, &:focus {
+            outline: 0;
+            opacity: 1;
+        }
+    }
 }
