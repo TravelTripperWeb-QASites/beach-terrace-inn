@@ -76,6 +76,7 @@
     				}
     			}
     			.footer-address{
+                    @include media-breakpoint-down(sm) { padding-bottom: 30px;}
     				p{
     					font-family:$primary-font-medium;
     					font-size:$type-size-6;
