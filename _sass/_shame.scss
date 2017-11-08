@@ -25,6 +25,9 @@ p {
 }
 h2 {
   @include text-formatting($highlight-font, $type-size-1, normal, 6.5rem, 1px, uppercase, $text-color, normal);
+	@include media-breakpoint-down(md) {
+		@include text-formatting($highlight-font, $type-size-3, normal, 3.5rem, 1px, uppercase, $text-color, normal);
+	}
 }
 h3 {
   @include text-formatting($primary-font-regular, $type-size-3, normal, 2.5rem, 1px, uppercase, $text-color, normal);
@@ -168,9 +171,13 @@ More offers
  	h3{
 	 	@extend  h3;
 	 	font-weight: lighter;
-	 	font-size: $type-size-2;
-	 	margin: 3.75rem auto;
+	 	font-size: $type-size-4;
+	 	margin: 1.75rem auto;
 	 	@extend .text-center;
+	 	@include media-breakpoint-up(md){
+		font-size: $type-size-2;
+		margin: 3.75rem auto;
+		}
  	}
 	.offers-container{
 			@extend .container;
