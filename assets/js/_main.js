@@ -9,7 +9,6 @@ $(document).ready(function() {
   // init smooth scroll
   $("a").smoothScroll({ offset: -20 });
   
-
   //home rooms slider
   $('.home-rooms-inner').slick({
     centerMode: true,
@@ -28,7 +27,7 @@ $(document).ready(function() {
        }]
   });
   
-   //main nav scroll resize
+  //main nav scroll resize
     function changeHeader(){
       if($( window ).width() > 991){
       if($(window).scrollTop() > 200) {
