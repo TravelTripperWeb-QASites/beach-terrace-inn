@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .bg-cover{
-  background-size: cover;
+    background-size: cover;
     background-repeat:no-repeat;
     background-position:center center;
 }
@@ -201,9 +201,13 @@ More offers
  	h3{
 	 	@extend  h3;
 	 	font-weight: lighter;
-	 	font-size: $type-size-2;
-	 	margin: 3.75rem auto;
+	 	font-size: $type-size-4;
+	 	margin: 1.75rem auto;
 	 	@extend .text-center;
+	 	@include media-breakpoint-up(md){
+		font-size: $type-size-2;
+		margin: 3.75rem auto;
+		}
  	}
 	.offers-container{
 			@extend .container;
