@@ -7,14 +7,95 @@ meta_tags:
   robots:
 ---
 
-{% comment %}
+<section class="inner-banner" style="background-image:url(/assets/images/rooms/rooms-banner.jpg);">
+	<div class="inner-banner-title">
+		<h1>Our<br>Rooms</h1>
+		<h5>beach front living</h5>
+	</div>
+</section>
 
-  Name:
+<section class="booking-widget-main p-0">
+	<ul class="m-auto text-center">
+		<li>
+			<span>Arrival</span>
+			<input type="text" placeholder="Arrival Date">
+		</li>
+		<li>
+			<span>Departure</span>
+			<input type="text" name="" placeholder="Departure Date">
+		</li>
+		<li>
+			<span>Rooms</span>
+			<select class="form-control">
+				<option>0</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>5</option>
+			</select>
+		</li>
+		<li>
+			<span>Adults</span>
+			<select class="form-control fa fa-angle-down">
+				<option>0</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>5</option>
+			</select>
+		</li>
+		<li>
+			<span>Children</span>
+			<select class="form-control fa fa-angle-down">
+				<option>0</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>5</option>
+			</select>
+		</li>
+	</ul>
+	<button>Check Availability</button>
+</section>
 
-    Rooms Listing Page
+<section class="rooms-wrap">
+	<h3 class="text-center">browse room types</h3>
+	<ul class="text-center m-0">
+		<li><a href="">Ocean Front Rooms</a></li>
+		<li><a href="">Partial Ocean View Rooms</a></li>
+		<li><a href="">Courtyard Rooms</a></li>
+		<li><a href="">Poolside Rooms</a></li>
+	</ul>
+	<div class="room-block m-0">
+		<div class="room-img bg-cover" style="background-image:url(/assets/images/rooms/room1.jpg);">
+		</div>
+		<div class="room-content">
+			<div class="room-content-inner">
+				<h4>room 01</h4>
+				<h5>tonight’s rate $ 420</h5>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+				<div class="btn-holder">
+					<a href="#" class="black">book room</a>
+					<a href="#" class="border-black">view room</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="room-block m-0">
+		<div class="room-img bg-cover" style="background-image:url(/assets/images/rooms/room1.jpg);">
+		</div>
+		<div class="room-content">
+			<div class="room-content-inner">
+				<h4>room 01</h4>
+				<h5>tonight’s rate $ 420</h5>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+				<div class="btn-holder">
+					<a href="#" class="black">book room</a>
+					<a href="#" class="border-black">view room</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
-  Description:
-
-    Display room list from RezTrip.
-
-{% endcomment %}
+{% include special_offers.html %}
