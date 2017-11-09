@@ -41,3 +41,14 @@
     -ms-transform: translate($left, $top);
     transform: translate($left, $top);
 }
+
+@mixin linearGradient($top, $value, $bottom, $value-1 ){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(left,  $top, $value, $bottom, $value-1); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top, $value, $bottom $value-1); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  $top, $value, $bottom $value-1); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  $top, $value, $bottom $value-1); /* IE10+ */
+    background: linear-gradient(to right,  $top, $value, $bottom $value-1); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}

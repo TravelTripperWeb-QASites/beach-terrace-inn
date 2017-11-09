@@ -1,3 +1,81 @@
 /*
    About Page Elements
    ========================================================================== */
+.about-banner{
+	@extend .hero-slider;
+	@extend .bg-cover;
+	position:relative;
+	min-height:666px;
+	.about-title{
+		// @extend .inner-banner-title;
+		h1{
+			@extend h2;
+			text-align:left;
+		}
+	}
+}
+.about-content{
+	  @include linearGradient($white, 20%, $line-bg, 20%);
+	  min-height: 100px;
+	  margin-top: -100px;
+	  padding-top:100px;
+}
+.hotel-features{
+	margin-top:10.6rem;
+   h3{
+	position: relative;
+		&:before{
+			content:'';
+			@extend  .vercal-line;
+		}
+	}
+	p{
+		max-width: 57%;
+	    margin: 8.5rem auto;
+	    text-align: center;
+	    font-family: $secondary-font-regular;
+	}
+	.features{
+	@extend .container;
+	}
+	.features-list{
+		padding-left:5rem;
+		ul{
+			padding:0;
+			margin:0;
+			li{
+			display: inline-block;
+			width:19%;
+		    .features-icon{
+			width: 112px;
+			height: 112px;
+			text-align:center;
+			background-color: $white;
+			border: 1px solid $line-bg;
+			padding: 30px;
+			margin:auto auto 50px auto;
+			@include border-radius(50%);
+			@include transition($global-transition);
+			
+			&:hover,&.active{
+				background-color: $primary-bg ;
+				border: 1px solid $primary-bg;
+				  @include transition($global-transition);
+				img{
+					webkit-filter: invert(100%);
+					filter: invert(100%);
+					}
+			} 	
+			}
+			span{
+			 	display: block;
+			 	text-align: center;
+			 	padding:50px 0;
+			 	font-family: $primary-font-regular;
+			 }
+			}
+		}
+		
+	}
+   
+ }

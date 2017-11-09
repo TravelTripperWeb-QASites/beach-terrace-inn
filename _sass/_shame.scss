@@ -274,3 +274,14 @@ More offers
         }
     }
 }
+
+.vercal-line{
+     position:absolute;
+     background-color:$line-bg;
+     width:2px;
+     height:60px;
+     left:0;
+     right:0;
+     margin:4rem auto;
+}
+

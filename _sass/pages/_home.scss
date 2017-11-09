@@ -126,9 +126,6 @@
                 @extend h2;
                 text-align: right;
             }
-            h4 {
-                margin: 0;
-            }
         }
     }
 }
@@ -257,6 +254,11 @@
         @extend .text-right;
         img {
             @extend .pr-0;
+            width:100%;
+            height: auto;
+             @include media-breakpoint-up(md) {
+            width: auto;
+            }
         }
     }
 }
