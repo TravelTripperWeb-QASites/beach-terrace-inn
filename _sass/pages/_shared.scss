@@ -321,7 +321,21 @@ More offers
         h5{
             color:$white;
         }
+        @include media-breakpoint-down(xs) {
+            text-align:left;
+            left: 5%;
+            @include transform-translate(0%, -50%);
+        }
     } 
+    &.extra-height{
+        min-height:670px;
+        @include media-breakpoint-down(md) {
+            min-height: 450px;
+        }
+        .inner-banner-title{
+            top: 75%;
+        }
+    }
 }
 
 /*
