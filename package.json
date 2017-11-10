@@ -25,7 +25,7 @@
     "uglify-js": "^2.6.1"
   },
   "scripts": {
-    "js:uglify": "uglifyjs assets/js/vendor/jquery-3.2.1.min.js assets/js/vendor/popper.min.js assets/js/vendor/bootstrap.min.js assets/js/plugins/jquery.fitvids.js assets/js/plugins/jquery.smooth-scroll.min.js assets/js/plugins/slick.js assets/js/_main.js -c -o assets/js/main.min.js",
+    "js:uglify": "uglifyjs assets/js/vendor/jquery-3.2.1.min.js assets/js/vendor/popper.min.js assets/js/vendor/bootstrap.min.js assets/js/plugins/jquery.fitvids.js assets/js/plugins/jquery.smooth-scroll.min.js assets/js/plugins/slick.js assets/js/vendor/jquery-ui.min.js assets/js/_main.js -c -o assets/js/main.min.js",
     "js:watch": "onchange \"assets/js/**/*.js\" -e \"assets/js/main.min.js\" -- npm run js:uglify",
     "browsersync": "browser-sync start --server --files 'assets/css/main.css' 'assets/js/main.min.js' '**/*.html'",
     "css": "node-sass --output-style expanded _sass/main.scss assets/css/main.css",

@@ -324,3 +324,78 @@ More offers
         }
     } 
 }
+
+/*
+   Datepicker CSS
+   ========================================================================== */
+
+.ui-datepicker{
+    font-family:$form-font !important;
+    border-radius: 0 !important;
+    .ui-datepicker-header{
+        background-color:transparent;
+        color:$secondary-bg;
+        border-radius: 0;
+        border:0;
+        .ui-datepicker-next{
+            background:none;
+            &:hover{
+                background-color:transparent;
+                border:0;
+            }
+            .ui-icon{
+                background:none;
+                position:relative;
+            }
+            &:after{
+                content:"\f105";
+                position:absolute;
+                top:0;
+                right:5px;
+                font-size:20px;
+                color:$secondary-bg;
+                font-family: FontAwesome;
+            }
+        }
+        .ui-datepicker-prev{
+            @extend .ui-datepicker-next;
+            &:after{
+                content:"\f104";
+                left:5px;
+            }
+        }
+        .ui-datepicker-title{
+            font-family: $form-font;
+            font-size: $type-size-12;
+            font-weight: 700;
+            padding-bottom: 5px;
+            padding-top:6px;
+            @extend h5;
+        }
+    }
+    .ui-datepicker-calendar{
+        thead{
+            th{
+                font-weight:400;
+                font-size:$type-size-11;
+            }
+        }
+        tbody{
+            td{
+                a{
+                    font-size:$type-size-11;
+                    &.ui-state-highlight{
+                        border: 1px solid $secondary-bg !important;
+                        background: $secondary-bg !important;
+                        color: $white !important;
+                    }
+                    &.ui-state-default{
+                        border: 0;
+                        background: transparent;
+                        text-align:center;
+                    }
+                }
+            }
+        }
+    }
+}
