@@ -114,11 +114,11 @@ h5 {
    CTA Section Styles
    ========================================================================== */
 
-.cta-sec-main {
+.cta-signup {
     @extend .container;
     margin: 63px auto;
     padding:162px 0;
-    .cta-sec-inner {
+    .cta-signup-inner {
         position: relative;
         h4 {
             color: $white;
@@ -321,7 +321,21 @@ More offers
         h5{
             color:$white;
         }
+        @include media-breakpoint-down(xs) {
+            text-align:left;
+            left: 5%;
+            @include transform-translate(0%, -50%);
+        }
     } 
+    &.extra-height{
+        min-height:670px;
+        @include media-breakpoint-down(md) {
+            min-height: 450px;
+        }
+        .inner-banner-title{
+            top: 75%;
+        }
+    }
 }
 
 /*
