@@ -4,7 +4,14 @@
 .about-banner{
 	@extend .inner-banner;
 	position:relative;
-	min-height:666px;
+	min-height:300px;
+    @include  media-breakpoint-up(md){
+     min-height:666px; 
+    }
+    
+    .carousel-inner{
+        top:70%
+    }
 	.about-title{
 		@extend .inner-banner-title;
 		left: 0%;
@@ -15,8 +22,10 @@
 	}
 }
 .about-middle{
-	  @include linearGradient($white, 20%, $line-bg, 20%);
-	 
+	  @include linearGradient($white, 20%, $white, 20%);
+	   @include media-breakpoint-up(md) {
+          @include linearGradient($white, 20%, $line-bg, 20%);
+       }
 	  margin-top: -100px;
 	  padding-top:270px;
 	  padding-bottom:270px;
@@ -26,18 +35,25 @@
 	  .about-inner{
 	  	@include make-row();
 	  }
-	  .about-pic{
+	  .about-img{
 	  	 @include make-col-ready();
          @include media-breakpoint-up(md) {
             @include make-col(4);
          }
          @extend .align-self-end;
+         img{
+            width: 100%;
+            @include media-breakpoint-up(lg) {
+                width: auto;
+            }
+         }
 	  }	
-	  .content{
+	  .about-text{
 	  	 @include make-col-ready();
          @include media-breakpoint-up(md) {
             @include make-col(6);
          }
+         @extend .align-self-center;
 		.middle-align{
 			max-width: 359px;
 			margin:auto;
@@ -81,8 +97,21 @@
 	    @include media-breakpoint-up(md) {
 	           @include make-col(5);
          }
-		@include linearGradient(transparent, 75%, $primary-bg, 25%);
-		
+         @include linearGradient(transparent, 75%, $white, 25%);
+             @include media-breakpoint-up(md) {
+        		@include linearGradient(transparent, 75%, $primary-bg, 25%);
+            }
+		.heading-text{
+            @extend .vertical-center;
+            position: absolute;
+            left: 0%;
+            transform: translateX(-20%);
+            text-align:right;   
+            a{
+                margin:4rem;
+            }
+        }
+        
 	}
 }
 .hotel-features{

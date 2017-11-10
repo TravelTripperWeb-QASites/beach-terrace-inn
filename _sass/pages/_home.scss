@@ -109,7 +109,7 @@
     .common-content-element-inner {
         @include make-row();
     }
-    .inspired-image,
+    .inspired-img,
     .inspired-text {
         @include make-col-ready();
         @include media-breakpoint-up(sm) {
@@ -269,15 +269,14 @@
     @extend .m-0;
     padding-top:40px;
     .beach-view {
-        margin-bottom: 200px;
-        @extend .p-0;
+        @include linearGradient($primary-bg, 65%, transparent, 35%);
+        padding:0  0 200px 0 !important;
         @include make-col-ready();
         @include media-breakpoint-up(md) {
             @include make-col(9);
         }
         img {
             width: 100%;
-            @include box-shadow(-400px, 200px, 0px, $primary-bg);
             @include media-breakpoint-up(md) {
                 width: 100%;
             }
@@ -286,15 +285,15 @@
             @extend .align-self-end;
             @extend .text-right;
             position: absolute;
-            bottom: -152px;
-            right: 26px;
-            @include media-breakpoint-up(lg) {
-                bottom: -186px;
-                right: -200px;
-            }
-            @include media-breakpoint-up(md) {
-                bottom: -144px;
-                right: -36px;
+            bottom: 46px;
+            right: 0px;
+            // @include media-breakpoint-up(lg) {
+            //     bottom: -186px;
+            //     right: -200px;
+            // }
+             @include media-breakpoint-up(md) {
+                 bottom: 46px;
+                 right: -79px;
             }
             a {
                 margin-right: 5rem;

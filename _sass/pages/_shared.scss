@@ -412,3 +412,16 @@ More offers
     left:0;
     bottom:0;
 }
+
+
+/* carousel-inner  next prev buttons*/
+
+.carousel-inner{
+    .carousel-control-prev, 
+    .carousel-control-next{
+       width: 60px;
+        height: 60px;
+        opacity: 1;  
+        top:40%;
+    }
+}
