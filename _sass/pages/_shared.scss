@@ -116,17 +116,16 @@ h5 {
 
 .cta-sec-main {
     @extend .container;
-    height: 742px;
     margin: 63px auto;
+    padding:162px 0;
     .cta-sec-inner {
-        @extend .vertical-center;
+        position: relative;
         h4 {
             color: $white;
-            padding-bottom: 100px;
         }
         h2 {
             color: $white;
-            padding-bottom: 80px;
+            padding: 80px 0;
         }
         .input-holder {
             position: relative;
@@ -398,4 +397,18 @@ More offers
             }
         }
     }
+}
+
+
+/*
+   Overlap CSS
+   ========================================================================== */
+
+.overlap{
+    position:absolute;
+    background-color:rgba(0,0,0,.2);
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
 }
