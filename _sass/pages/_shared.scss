@@ -114,11 +114,11 @@ h5 {
    CTA Section Styles
    ========================================================================== */
 
-.cta-sec-main {
+.cta-signup-main {
     @extend .container;
     height: 742px;
     margin: 63px auto;
-    .cta-sec-inner {
+    .cta-signup-inner {
         @extend .vertical-center;
         h4 {
             color: $white;

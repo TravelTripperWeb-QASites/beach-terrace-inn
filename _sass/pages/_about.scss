@@ -2,23 +2,88 @@
    About Page Elements
    ========================================================================== */
 .about-banner{
-	@extend .hero-slider;
-	@extend .bg-cover;
+	@extend .inner-banner;
 	position:relative;
 	min-height:666px;
 	.about-title{
-		// @extend .inner-banner-title;
-		h1{
-			@extend h2;
-			text-align:left;
+		@extend .inner-banner-title;
+		left: 0%;
+		h1,h5{
+			color:$text-color;
+			text-align:left!important;
 		}
 	}
 }
-.about-content{
+.about-middle{
 	  @include linearGradient($white, 20%, $line-bg, 20%);
-	  min-height: 100px;
+	 
 	  margin-top: -100px;
-	  padding-top:100px;
+	  padding-top:270px;
+	  padding-bottom:270px;
+	  .about-container{
+		@extend .container;
+	  }	
+	  .about-inner{
+	  	@include make-row();
+	  }
+	  .about-pic{
+	  	 @include make-col-ready();
+         @include media-breakpoint-up(md) {
+            @include make-col(4);
+         }
+         @extend .align-self-end;
+	  }	
+	  .content{
+	  	 @include make-col-ready();
+         @include media-breakpoint-up(md) {
+            @include make-col(6);
+         }
+		.middle-align{
+			max-width: 359px;
+			margin:auto;
+			p{	
+				font-family: $secondary-font-regular;	
+				&:nth-child(1){
+					border-top: 2px solid $line-bg-2;
+					padding: 2rem 0 3rem 0;
+				}
+		    }
+		    a{
+		    	margin:3rem 0;
+		    }
+	    }
+	  }
+	  .address{
+	  		@include make-col-ready();
+	         @include media-breakpoint-up(md) {
+	            @include make-col(2);
+         }
+         p{	
+         	font-family:$primary-font-medium; 
+         	padding-bottom:2rem;
+         }
+	  }
+}
+
+.world-of-bliss{
+	  margin-top: -330px;
+	.about-slide{
+     margin-top: 170px;
+     @extend .p-0;
+     @include make-col-ready();
+        @include media-breakpoint-up(md) {
+               @include make-col(7);
+         }
+    }
+	.yellow-heading{
+        @extend .p-0;
+		@include make-col-ready();
+	    @include media-breakpoint-up(md) {
+	           @include make-col(5);
+         }
+		@include linearGradient(transparent, 75%, $primary-bg, 25%);
+		
+	}
 }
 .hotel-features{
 	margin-top:10.6rem;
@@ -39,7 +104,6 @@
 	@extend .container;
 	}
 	.features-list{
-		padding-left:5rem;
 		ul{
 			padding:0;
 			margin:0;
