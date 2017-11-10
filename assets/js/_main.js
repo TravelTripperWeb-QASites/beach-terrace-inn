@@ -5,6 +5,8 @@
 $(document).ready(function() {
   // FitVids init
   $("#main").fitVids();
+  $("#input_13").datepicker();
+  $("#input_14").datepicker();
 
   // init smooth scroll
   $("a").smoothScroll({ offset: -20 });

@@ -1,5 +1,5 @@
 ---
-layout: single-room
+layout: default
 title: Room Details
 meta_description:
 permalink: /room-details/
@@ -7,14 +7,25 @@ meta_tags:
   robots:
 ---
 
-{% comment %}
+<section class="inner-banner" style="background-image:url(/assets/images/rooms/rooms-banner.jpg);">
+	<div class="inner-banner-title">
+		<h1>ocean<br>view</h1>
+		<h5>room <span>01</span> | Tonight’s rate <span>$380</span></h5>
+	</div>
+</section>
 
-  Name:
+{% include booking-widget-custom.html %}
 
-    Room Details Page
+{% include special_offers.html %}
 
-  Description:
-
-    Display a single room from RezTrip.
-
-{% endcomment %}
+<section class="cta-sec-main bg-cover text-center" style="background-image: url(/assets/images/home-cta-bg.jpg);">
+	<div class="overlap"></div>
+    <div class="cta-sec-inner">
+        <h4>exclusive newsletter sign-up</h4>
+        <h2>seaside playground</h2>
+        <div class="input-holder m-auto">
+            <input type="email" name="" placeholder="Your Email Address goes here">
+            <button><span class="e-icon m-0">$</span></button>
+        </div>
+    </div>
+</section>
