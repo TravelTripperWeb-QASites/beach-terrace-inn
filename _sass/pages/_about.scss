@@ -6,6 +6,8 @@
     @extend .inner-banner;
     position: relative;
     min-height: 300px;
+    background-size: inherit;
+    background-position: right center;
     @include media-breakpoint-up(md) {
         min-height: 666px;
     }
@@ -103,6 +105,19 @@
         @include media-breakpoint-up(md) {
             @include make-col(7);
         }
+        .carousel-control-prev,
+        .carousel-control-next{
+           top:80%; 
+           @include media-breakpoint-down(md) {
+              top:50%;
+           }
+           @include media-breakpoint-down(md) {
+              top:50%;
+           }
+           @include media-breakpoint-down(sm) {
+              top:30%;
+           }
+        }
     }
     .yellow-heading {
         @include make-col-ready();
@@ -117,7 +132,7 @@
             @include vertical-center();
             position: absolute;
             right: 1%;
-            left:inherit;
+            left: inherit;
             text-align: right;
             @include media-breakpoint-up(md) {
                left: -9%;

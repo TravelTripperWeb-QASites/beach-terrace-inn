@@ -1,0 +1,46 @@
+
+.carslsbad-middle {
+    @include linearGradient($white, 20%, $white, 20%);
+    @include media-breakpoint-up(md) {
+        @include linearGradient($white, 20%, $line-bg, 20%);
+    }
+     margin-top: -230px;
+     padding-top:260px;
+    @include media-breakpoint-up(md) {
+        margin-top: -100px;
+    }
+    
+    .carslsbad-inner {
+        @include make-row();
+    }
+    .carslsbad-pic {
+        @include make-col-ready();
+        @include media-breakpoint-up(md) {
+            @include make-col(4);
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .carslsbad-text {
+        @include make-col-ready();
+        @include media-breakpoint-up(md) {
+            @include make-col(8);
+        }
+        .middle-align {
+            max-width: 100%;
+            margin: auto;
+             @include media-breakpoint-up(md) {
+                 max-width: 359px;
+             }
+            p {
+                font-family: $secondary-font-regular;
+                border-top: 2px solid $line-bg-2;
+                padding: 2rem 0 3rem 0; 
+            }
+            a {
+                margin: 3rem 0;
+            }
+        }
+    }
+}

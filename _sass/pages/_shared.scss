@@ -458,11 +458,22 @@ More offers
 .carousel-inner {
     .carousel-control-prev,
     .carousel-control-next {
-        width: 47px;
-        height: 47px;
+        width: 25px;
+        height: 25px;
         opacity: 1;
-        top:45%;
-        margin:50px;
+        top:35%;
+        margin:10px;
+        @include media-breakpoint-up(md){
+            width: 47px;
+            height: 47px;
+            opacity: 1;
+            top:45%;
+            margin:50px;
+        }
+        img{
+            width: 100%;
+        }
+
     }
     .carousel-control-prev{
         img{
