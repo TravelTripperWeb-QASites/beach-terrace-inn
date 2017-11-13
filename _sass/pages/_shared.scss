@@ -458,9 +458,15 @@ More offers
 .carousel-inner {
     .carousel-control-prev,
     .carousel-control-next {
-        width: 60px;
-        height: 60px;
+        width: 47px;
+        height: 47px;
         opacity: 1;
-        top: 40%;
+        top:45%;
+        margin:50px;
+    }
+    .carousel-control-prev{
+        img{
+            @include transform-rotate(180deg)
+        }
     }
 }
