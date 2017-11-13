@@ -113,10 +113,11 @@
     }
 }
 
-.hotel-features {
+.features-section {
     margin-top: 10.6rem;
     h3 {
         position: relative;
+        margin-bottom: 8.5rem;
         &:before {
             content: '';
             @extend .vercal-line;
@@ -124,7 +125,7 @@
     }
     p {
         max-width: 57%;
-        margin: 8.5rem auto;
+        margin: 0 auto 8.5rem;
         text-align: center;
         font-family: $secondary-font-regular;
     }
@@ -136,6 +137,7 @@
             li {
                 display: inline-block;
                 width: 19%;
+                text-align:center;
                 .features-icon {
                     width: 112px;
                     height: 112px;
@@ -143,11 +145,23 @@
                     background-color: $white;
                     border: 1px solid $line-bg;
                     padding: 30px;
-                    margin: auto auto 50px auto;
+                    margin: auto;
                     @include border-radius(50%);
                     @include transition($global-transition);
-                    &:hover,
-                    &.active {
+                }
+                span {
+                    margin: 50px 0 90px;
+                    font-family: $primary-font-regular;
+                    display: inline-block;
+                    text-align: center;
+                    width: auto;
+                }
+                &:hover, &.active{
+                    span{
+                        background-color:$primary-bg;
+                        @include transition($global-transition);
+                    }
+                    .features-icon {
                         background-color: $primary-bg;
                         border: 1px solid $primary-bg;
                         @include transition($global-transition);
@@ -156,12 +170,6 @@
                             filter: invert(100%);
                         }
                     }
-                }
-                span {
-                    display: block;
-                    text-align: center;
-                    padding: 50px 0;
-                    font-family: $primary-font-regular;
                 }
             }
         }
