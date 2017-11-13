@@ -72,7 +72,6 @@
             }
         }
         h4 {
-            @extend h4;
             font-size: $type-size-11!important;
             color: $tonightrate !important;
             padding: 1.3rem 0;
@@ -96,28 +95,27 @@
     }
 }
 
-.common-content-element {
+.common-content {
     margin-top: 20px;
-    margin-bottom:40px;
+    margin-bottom: 40px;
     @include media-breakpoint-up(sm) {
         margin-top: -70px;
-        margin-bottom:80px;
+        margin-bottom: 80px;
     }
-    .common-content-element-container {
-        @extend .container;
+    .top-part {
+        @include container-fix();
     }
-    .common-content-element-inner {
+    .top-part-inner {
         @include make-row();
     }
-    .inspired-img,
-    .inspired-text {
+    .image-section,
+    .text-section {
         @include make-col-ready();
         @include media-breakpoint-up(md) {
             @include make-col(6);
         }
-        @extend .align-self-center;
         text-align:right;
-        .inspired_heading {
+        .heading-part {
             position: relative;
             left: inherit;
             @include media-breakpoint-up(md) {
@@ -131,11 +129,9 @@
     }
 }
 
-.common-content-element-bottom {
+.bottom-part {
     @include make-row();
-    @extend .m-0;
-    .common-content-element-bottom-image {
-        @extend .p-0;
+    .images-part {
         @include make-col-ready();
         @include media-breakpoint-up(md) {
             @include make-col(3);
@@ -149,12 +145,9 @@
             }
         }
     }
-    .common-content-element-bottom-text-image{
-        @extend .p-0;
-        @extend .m-0;
-        .common-content-element-bottom-text-image-inner {
+    .text-container {
+        .text-container-inner {
             @include make-row();
-            margin: 0!important;
         }
         @include make-row();
         @include make-col-ready();
@@ -176,17 +169,15 @@
                     margin-right: 10rem;
                 }
             }
-            a{
-                margin-bottom:50px;
+            a {
+                margin-bottom: 50px;
             }
         }
         .img {
-            @extend .p-0;
             @include make-col-ready();
             @include media-breakpoint-up(md) {
                 @include make-col(6);
             }
-            @extend .align-self-end;
             text-align: right;
             img {
                 @include media-breakpoint-down(md) {
@@ -241,24 +232,21 @@
 }
 
 .explore-area {
-    .explore-area-content-pic {
-        @extend .common-content-element-bottom-text-image ;
-    }
-    @extend .common-content-element-bottom ;
-    .explore_img {
-        @extend .text-left;
-        @extend .img;
+    @extend .bottom-part;
+    .explore-area-inner {
+        @extend .text-container;
+        .explore_img {
+            @extend .img;
+            text-align: left;
+        }
     }
     .cycleing-img {
-        @extend .common-content-element-bottom-image;
-        @extend .align-self-end;
-        @extend .text-right;
+        @extend .images-part;
         img {
-            @extend .pr-0;
-            width:100%;
+            width: 100%;
             height: auto;
-             @include media-breakpoint-up(md) {
-            width: auto;
+            @include media-breakpoint-up(md) {
+                width: auto;
             }
         }
     }
@@ -266,11 +254,10 @@
 
 .visual_tour {
     @include make-row();
-    @extend .m-0;
-    padding-top:40px;
+    padding-top: 40px;
     .beach-view {
         @include linearGradient($primary-bg, 65%, transparent, 35%);
-        padding:0  0 200px 0 !important;
+        padding: 0 0 200px 0 !important;
         @include make-col-ready();
         @include media-breakpoint-up(md) {
             @include make-col(9);
@@ -282,18 +269,12 @@
             }
         }
         .over-lap-heading {
-            @extend .align-self-end;
-            @extend .text-right;
             position: absolute;
             bottom: 46px;
             right: 0px;
-            // @include media-breakpoint-up(lg) {
-            //     bottom: -186px;
-            //     right: -200px;
-            // }
-             @include media-breakpoint-up(md) {
-                 bottom: 46px;
-                 right: -79px;
+            @include media-breakpoint-up(md) {
+                bottom: 46px;
+                right: -79px;
             }
             a {
                 margin-right: 5rem;
@@ -315,7 +296,7 @@
             text-align:left;
             padding: 0 0 0 20px;
             @include media-breakpoint-up(md) {
-                text-align:right;
+                text-align: right;
                 padding: 0;
             }
             h4 {
@@ -337,7 +318,7 @@
                 display: none;
             }
             .moments-remember-right-inner {
-                @extend .row;
+                @include make-row();
                 .image-1 {
                     height: 543px;
                     background-image: url(/assets/images/home/nets.jpg);
@@ -360,9 +341,9 @@
         width: 100%;
     }
     .love-section-wrap {
-        @extend .container;
+        @include container-fix();
         .love-section-inner {
-            @extend .row;
+            @include make-row();
             margin: -165px 0 0 0;
             .love-img {
                 @include make-col-ready();
@@ -421,10 +402,9 @@
         @include transform-translate(-50%, 0);
         font-size: $type-size-4;
         width: 100%;
-        @include media-breakpoint-up(md){
-             font-size: 3rem;
+        @include media-breakpoint-up(md) {
+            font-size: 3rem;
         }
-        
     }
     .slick-list {
         overflow: visible !important;
@@ -437,7 +417,6 @@
         }
         .room-title {
             display: none;
-            @extend h5;
             position: absolute;
             top: 110px;
             left: 50%;
@@ -447,7 +426,7 @@
             padding: 80px 30px 0;
             text-align: center;
             opacity: 1;
-            @extend .row;
+            @include make-row();
             @include media-breakpoint-down(lg) {
                 padding: 30px 15px 0;
             }
@@ -504,16 +483,12 @@
         }
     }
     .slick-prev {
-        //left: 13%;
         width: 60px;
-        //left: calc(13% - 20px);
         position: absolute;
         z-index: 999;
         top: 45%;
-        //@include media-breakpoint-up (md) {
-            left: 24%;
-            left: calc(25% - 25px);
-        //}
+        left: 24%;
+        left: calc(25% - 25px);
         &:before {
             content: '#';
             font-family: $icons-font;
@@ -532,16 +507,12 @@
         }
     }
     .slick-next {
-        //right: 13%;
         width: 60px;
-        //right: calc(13% - 14px);
         position: absolute;
         z-index: 999;
         top: 45%;
-        //@include media-breakpoint-up (md) {
-            right: 25%;
-            right: calc(25% - 14px);
-        //}
+        right: 25%;
+        right: calc(25% - 14px);
         @include media-breakpoint-down (lg) {
             right: calc(25% - 49px);
         }

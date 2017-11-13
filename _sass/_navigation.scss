@@ -73,7 +73,8 @@
         position: fixed;
         top: 10px;
         border: none;
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             outline: 0;
             opacity: 1;
         }

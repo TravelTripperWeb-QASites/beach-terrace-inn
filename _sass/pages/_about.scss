@@ -1,174 +1,169 @@
 /*
    About Page Elements
    ========================================================================== */
-.about-banner{
-	@extend .inner-banner;
-	position:relative;
-	min-height:300px;
-    @include  media-breakpoint-up(md){
-     min-height:666px; 
+
+.about-banner {
+    @extend .inner-banner;
+    position: relative;
+    min-height: 300px;
+    @include media-breakpoint-up(md) {
+        min-height: 666px;
     }
-    
-    .carousel-inner{
-        top:70%
+    .carousel-inner {
+        top: 70%
     }
-	.about-title{
-		@extend .inner-banner-title;
-		left: 0%;
-		h1,h5{
-			color:$text-color;
-			text-align:left!important;
-		}
-	}
+    .about-title {
+        @extend .inner-banner-title;
+        left: 0%;
+        h1,
+        h5 {
+            color: $text-color;
+            text-align: left!important;
+        }
+    }
 }
-.about-middle{
-	  @include linearGradient($white, 20%, $white, 20%);
-	   @include media-breakpoint-up(md) {
-          @include linearGradient($white, 20%, $line-bg, 20%);
-       }
-	  margin-top: -100px;
-	  padding-top:270px;
-	  padding-bottom:270px;
-	  .about-container{
-		@extend .container;
-	  }	
-	  .about-inner{
-	  	@include make-row();
-	  }
-	  .about-img{
-	  	 @include make-col-ready();
-         @include media-breakpoint-up(md) {
+
+.about-middle {
+    @include linearGradient($white, 20%, $white, 20%);
+    @include media-breakpoint-up(md) {
+        @include linearGradient($white, 20%, $line-bg, 20%);
+    }
+    margin-top: -100px;
+    padding-top:270px;
+    padding-bottom:270px;
+    .about-container {
+        @include container-fix();
+    }
+    .about-inner {
+        @include make-row();
+    }
+    .about-pic {
+        @include make-col-ready();
+        @include media-breakpoint-up(md) {
             @include make-col(4);
-         }
-         @extend .align-self-end;
-         img{
+        }
+        img {
             width: 100%;
             @include media-breakpoint-up(lg) {
                 width: auto;
             }
-         }
-	  }	
-	  .about-text{
-	  	 @include make-col-ready();
-         @include media-breakpoint-up(md) {
+        }
+    }
+    .about-text {
+        @include make-col-ready();
+        @include media-breakpoint-up(md) {
             @include make-col(6);
-         }
-         @extend .align-self-center;
-		.middle-align{
-			max-width: 359px;
-			margin:auto;
-			p{	
-				font-family: $secondary-font-regular;	
-				&:nth-child(1){
-					border-top: 2px solid $line-bg-2;
-					padding: 2rem 0 3rem 0;
-				}
-		    }
-		    a{
-		    	margin:3rem 0;
-		    }
-	    }
-	  }
-	  .address{
-	  		@include make-col-ready();
-	         @include media-breakpoint-up(md) {
-	            @include make-col(2);
-         }
-         p{	
-         	font-family:$primary-font-medium; 
-         	padding-bottom:2rem;
-         }
-	  }
+        }
+        @extend .align-self-center;
+        .middle-align {
+            max-width: 359px;
+            margin: auto;
+            p {
+                font-family: $secondary-font-regular;
+                &:nth-child(1) {
+                    border-top: 2px solid $line-bg-2;
+                    padding: 2rem 0 3rem 0;
+                }
+            }
+            a {
+                margin: 3rem 0;
+            }
+        }
+    }
+    .address {
+        @include make-col-ready();
+        @include media-breakpoint-up(md) {
+            @include make-col(2);
+        }
+        p {
+            font-family: $primary-font-medium;
+            padding-bottom: 2rem;
+        }
+    }
 }
 
-.world-of-bliss{
-	  margin-top: -330px;
-	.about-slide{
-     margin-top: 170px;
-     @extend .p-0;
-     @include make-col-ready();
+.world-of-bliss {
+    margin-top: -330px;
+    .about-slide {
+        margin-top: 170px;
+        @include make-col-ready();
         @include media-breakpoint-up(md) {
-               @include make-col(7);
-         }
+            @include make-col(7);
+        }
     }
-	.yellow-heading{
-        @extend .p-0;
-		@include make-col-ready();
-	    @include media-breakpoint-up(md) {
-	           @include make-col(5);
-         }
-         @include linearGradient(transparent, 75%, $white, 25%);
-             @include media-breakpoint-up(md) {
-        		@include linearGradient(transparent, 75%, $primary-bg, 25%);
-            }
-		.heading-text{
-            @extend .vertical-center;
+    .yellow-heading {
+        @include make-col-ready();
+        @include media-breakpoint-up(md) {
+            @include make-col(5);
+        }
+        @include linearGradient(transparent, 75%, $white, 25%);
+        @include media-breakpoint-up(md) {
+            @include linearGradient(transparent, 75%, $primary-bg, 25%);
+        }
+        .heading-text {
+            @include vertical-center();
             position: absolute;
             left: 0%;
             transform: translateX(-20%);
-            text-align:right;   
-            a{
-                margin:4rem;
+            text-align: right;
+            a {
+                margin: 4rem;
             }
         }
-        
-	}
+    }
 }
-.hotel-features{
-	margin-top:10.6rem;
-   h3{
-	position: relative;
-		&:before{
-			content:'';
-			@extend  .vercal-line;
-		}
-	}
-	p{
-		max-width: 57%;
-	    margin: 8.5rem auto;
-	    text-align: center;
-	    font-family: $secondary-font-regular;
-	}
-	.features{
-	@extend .container;
-	}
-	.features-list{
-		ul{
-			padding:0;
-			margin:0;
-			li{
-			display: inline-block;
-			width:19%;
-		    .features-icon{
-			width: 112px;
-			height: 112px;
-			text-align:center;
-			background-color: $white;
-			border: 1px solid $line-bg;
-			padding: 30px;
-			margin:auto auto 50px auto;
-			@include border-radius(50%);
-			@include transition($global-transition);
-			
-			&:hover,&.active{
-				background-color: $primary-bg ;
-				border: 1px solid $primary-bg;
-				  @include transition($global-transition);
-				img{
-					webkit-filter: invert(100%);
-					filter: invert(100%);
-					}
-			} 	
-			}
-			span{
-			 	display: block;
-			 	text-align: center;
-			 	padding:50px 0;
-			 	font-family: $primary-font-regular;
-			 }
-			}
-		}
-		
-	}
-   
- }
+
+.hotel-features {
+    margin-top: 10.6rem;
+    h3 {
+        position: relative;
+        &:before {
+            content: '';
+            @extend .vercal-line;
+        }
+    }
+    p {
+        max-width: 57%;
+        margin: 8.5rem auto;
+        text-align: center;
+        font-family: $secondary-font-regular;
+    }
+    .features {
+        @include container-fix();
+    }
+    .features-list {
+        ul {
+            li {
+                display: inline-block;
+                width: 19%;
+                .features-icon {
+                    width: 112px;
+                    height: 112px;
+                    text-align: center;
+                    background-color: $white;
+                    border: 1px solid $line-bg;
+                    padding: 30px;
+                    margin: auto auto 50px auto;
+                    @include border-radius(50%);
+                    @include transition($global-transition);
+                    &:hover,
+                    &.active {
+                        background-color: $primary-bg;
+                        border: 1px solid $primary-bg;
+                        @include transition($global-transition);
+                        img {
+                            webkit-filter : invert(100%);
+                            filter: invert(100%);
+                        }
+                    }
+                }
+                span {
+                    display: block;
+                    text-align: center;
+                    padding: 50px 0;
+                    font-family: $primary-font-regular;
+                }
+            }
+        }
+    }
+}

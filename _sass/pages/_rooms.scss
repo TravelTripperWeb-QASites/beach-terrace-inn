@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .booking-widget-main {
-    @extend .container;
+    @include container-fix();
     background-color: $inner-bg;
     ul {
         padding: 30px 0 60px;
@@ -11,10 +11,10 @@
             display: inline-block;
             width: 100%;
             padding-bottom: 30px;
-            &:last-child{
+            &:last-child {
                 padding-bottom: 0px;
             }
-            @include media-breakpoint-up(sm) { 
+            @include media-breakpoint-up(sm) {
                 width: 17%;
                 padding-bottom: 0px;
             }
@@ -27,22 +27,25 @@
                 font-weight: 700;
                 display: block;
                 padding-bottom: 20px;
-                position:relative;
-                @extend h5;
+                position: relative;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: $text-color;
+                line-height: normal;
                 &:after {
                     position: absolute;
                     content: "\f107";
                     top: 80px;
-                    left:0;
-                    right:0;
+                    left: 0;
+                    right: 0;
                     font-family: FontAwesome;
-                    font-size:$type-size-5;
+                    font-size: $type-size-5;
                     @include media-breakpoint-down(xs) {
                         top: 48px;
                     }
                 }
                 @include media-breakpoint-down(xs) {
-                    padding-bottom:0;
+                    padding-bottom: 0;
                 }
             }
             input {
@@ -53,18 +56,8 @@
                 position: relative;
                 display: block;
                 text-align: center;
-                width:100%;
+                width: 100%;
                 height: 37px;
-                /* &:after {
-                    position: absolute;
-                    content: "";
-                    top: 0;
-                    left: 0;
-                    width: 10px;
-                    height: 10px;
-                    font-family: FontAwesome;
-                    background-color:red;
-                } */
                 &:active {
                     border: 0;
                     background-color: transparent;
@@ -116,7 +109,7 @@
 
 .rooms-wrap {
     padding-top: 70px;
-    @extend .container;
+    @include container-fix();
     ul {
         padding: 60px 0 70px;
         li {
@@ -124,7 +117,6 @@
             padding: 0 15px;
             display: inline;
             a {
-                @extend .h5;
                 text-transform: none;
                 font-size: $type-size-7;
                 font-family: $primary-font-medium;
@@ -138,7 +130,7 @@
         }
     }
     .room-block {
-        @extend .row;
+        @include make-row();
         padding-bottom: 120px;
         @include media-breakpoint-down(md) {
             padding-bottom: 80px;
@@ -165,7 +157,7 @@
             .room-content-inner {
                 width: 72%;
                 margin: 0 auto;
-                @extend .vertical-center;
+                @include vertical-center();
                 @include media-breakpoint-down(sm) {
                     width: 100%;
                 }
@@ -195,15 +187,15 @@
                 order: 2;
                 @include box-shadow(-15px, 15px, 0px, $line-bg);
                 @include media-breakpoint-down(sm) {
-                	order: 1;
-                	@include box-shadow(15px, 15px, 0px, $line-bg);
+                    order: 1;
+                    @include box-shadow(15px, 15px, 0px, $line-bg);
                 }
             }
             .room-content {
                 order: 1;
-                box-shadow:none;
+                box-shadow: none;
                 @include media-breakpoint-down(sm) {
-                	order: 2;
+                    order: 2;
                 }
             }
         }
@@ -211,17 +203,15 @@
             .room-content {
                 order: 2;
                 @include media-breakpoint-down(sm) {
-                	order: 1;
+                    order: 1;
                 }
             }
             .room-img {
                 order: 1;
                 @include media-breakpoint-down(sm) {
-                	order: 2;
+                    order: 2;
                 }
             }
         }
     }
 }
-
-

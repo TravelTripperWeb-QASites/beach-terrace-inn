@@ -1,19 +1,23 @@
 /*
    Shared Page Elements
    ========================================================================== */
+
 .bg-cover {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
+
 /* Vertical Center (Includes IE9) */
-.vertical-center {
+
+@mixin vertical-center() {
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
 
 /*
    Headings and paragraph styles
@@ -22,6 +26,7 @@
 p {
     @include text-formatting($form-font, $type-size-8, normal, 1.875rem, normal, none, $text-color, normal);
 }
+
 h2 {
     @include text-formatting($highlight-font, $type-size-1, normal, 6.5rem, 1px, uppercase, $text-color, normal);
     @include media-breakpoint-down(lg) {
@@ -33,15 +38,19 @@ h2 {
         line-height: 3.5rem;
     }
 }
+
 h3 {
     @include text-formatting($primary-font-regular, $type-size-3, normal, 2.5rem, 1px, uppercase, $text-color, normal);
 }
+
 h4 {
     @include text-formatting($primary-font-bold, $type-size-5, normal, normal, 1px, uppercase, $text-color, normal);
 }
+
 h5 {
     @include text-formatting($primary-font-bold, $type-size-8, normal, normal, 2px, uppercase, $text-color, normal);
 }
+
 
 /*
    Button styles
@@ -60,64 +69,73 @@ h5 {
     &:hover {
         text-decoration: none;
         background-color: $black;
-        color:$white;
+        color: $white;
     }
 }
+
 .border-black {
     @extend .common-btn;
     border: 1px solid $black;
 }
+
 .white-shadow-yellow {
     @extend .border-black;
     @include box-shadow(6px, 6px, 0px, $primary-bg);
 }
+
 .white-shadow-white {
     @extend .border-black;
     @include box-shadow(6px, 6px, 0px, $white);
     color: $black;
     background-color: $white;
 }
+
 .black-shadow-yellow {
     @extend .white-shadow-yellow;
     background-color: $black;
     color: $white;
 }
+
 .black-white-shadow {
     @extend .black-shadow-yellow;
     @include box-shadow(6px, 6px, 0px, $white);
 }
+
 .black {
     @extend .border-black;
     background-color: $black;
     color: $white;
-    &:hover{
-        background-color:$white;
-        color:$black;
+    &:hover {
+        background-color: $white;
+        color: $black;
     }
 }
+
 .text-btn {
     @extend .common-btn;
     box-shadow: none;
     display: block;
     margin: 0.55rem 0rem;
     text-align: left;
-    @include  media-breakpoint-up(md) {
+    @include media-breakpoint-up(md) {
         margin: 1.25rem 0rem;
-    } 
-    &:hover{
-        background-color:transparent;
-        color:$black;
+    }
+    &:hover {
+        background-color: transparent;
+        color: $black;
     }
 }
+
 
 /*
    CTA Section Styles
    ========================================================================== */
 
 .cta-signup {
-    @extend .container;
-    margin: 63px auto;
-    padding:162px 0;
+    @include container-fix();
+    margin-top: 63px;
+    margin-bottom: 63px;
+    padding: 162px 0;
     .cta-signup-inner {
         position: relative;
         h4 {
@@ -130,15 +148,18 @@ h5 {
         .input-holder {
             position: relative;
             width: 300px;
-            @include media-breakpoint-up(sm) { width: 385px; }
+            @include media-breakpoint-up(sm) {
+                width: 385px;
+            }
             input {
                 background-color: $white-70;
-                @extend p;
                 font-size: $type-size-5;
                 width: 100%;
                 border: 0;
                 padding: 12px 20px;
                 margin: 0;
+                line-height: 1.875rem;
+                font-family: $form-font;
             }
             button {
                 position: absolute;
@@ -149,14 +170,15 @@ h5 {
                 color: $text-color;
                 border: 0;
                 background-color: transparent;
-                cursor:pointer;
-                span{
-                	color:$text-color;
+                cursor: pointer;
+                span {
+                    color: $text-color;
                 }
             }
         }
     }
 }
+
 
 /*
 icons font
@@ -211,6 +233,7 @@ icons font
     content: "\e033";
 }
 
+
 /*
    Yellow box style
    ========================================================================== */
@@ -224,6 +247,7 @@ icons font
     left: 0;
 }
 
+
 /*
 More offers
 ==================================*/
@@ -231,7 +255,6 @@ More offers
 .more-offers {
     margin-bottom: 3.75rem;
     h3 {
-        @extend h3;
         font-weight: lighter;
         font-size: $type-size-4;
         margin: 1.75rem auto;
@@ -242,7 +265,7 @@ More offers
         }
     }
     .offers-container {
-        @extend .container;
+        @include container-fix();
     }
     .offers-inner {
         @include make-row();
@@ -257,9 +280,9 @@ More offers
             background-size: cover !important;
             margin-bottom: 1.75rem;
             background-repeat: no-repeat;
-             @include media-breakpoint-up(md){
+            @include media-breakpoint-up(md) {
                 margin-bottom: 3.75rem;
-             }
+            }
         }
         .m-offer-title {
             font-family: $primary-font-regular;
@@ -269,70 +292,71 @@ More offers
         }
         p {
             font-family: $secondary-font-regular;
-              min-height: auto;
-            @include media-breakpoint-up(md){
+            min-height: auto;
+            @include media-breakpoint-up(md) {
                 min-height: 76px;
             }
             @extend .pt-3;
         }
-        .white-shadow-yellow{
-           @include media-breakpoint-down(md){ 
-            margin-bottom: 1.75rem;
+        .white-shadow-yellow {
+            @include media-breakpoint-down(md) {
+                margin-bottom: 1.75rem;
             }
         }
     }
 }
 
-.vercal-line{
-     position:absolute;
-     background-color:$line-bg;
-     width:2px;
-     height:60px;
-     left:0;
-     right:0;
-     margin:4rem auto;
+.vercal-line {
+    position: absolute;
+    background-color: $line-bg;
+    width: 2px;
+    height: 60px;
+    left: 0;
+    right: 0;
+    margin: 4rem auto;
 }
+
 
 /*
    Offers rooms page banner CSS
    ========================================================================== */
 
-.inner-banner{
-    @extend .container;
+.inner-banner {
+    @include container-fix();
     @extend .bg-cover;
     margin-top: 56px;
-    min-height:451px;
+    min-height: 451px;
     @include media-breakpoint-down(md) {
         min-height: 300px;
     }
-    .inner-banner-title{
-        position:absolute;
-        top:50%;
-        left:10%;
+    .inner-banner-title {
+        position: absolute;
+        top: 50%;
+        left: 10%;
         @include transform-translate(37%, -50%);
-        text-align:right;
-        h1{
+        text-align: right;
+        h1 {
             @extend h2;
-            color:$white;
+            color: $white;
             @include media-breakpoint-down(md) {
-                line-height:3rem;
+                line-height: 3rem;
             }
-        } 
-        h5{
-            color:$white;
+        }
+        h5 {
+            color: $white;
         }
         @include media-breakpoint-down(xs) {
-            text-align:left;
+            text-align: left;
             left: 5%;
             @include transform-translate(0%, -50%);
         }
-    } 
-    &.extra-height{
-        min-height:670px;
+    }
+    &.extra-height {
+        min-height: 670px;
         @include media-breakpoint-down(md) {
             min-height: 450px;
         }
-        .inner-banner-title{
+        .inner-banner-title {
             top: 75%;
         }
     }
@@ -342,70 +366,73 @@ More offers
    Datepicker CSS
    ========================================================================== */
 
-.ui-datepicker{
-    font-family:$form-font !important;
+.ui-datepicker {
+    font-family: $form-font !important;
     border-radius: 0 !important;
-    .ui-datepicker-header{
-        background-color:transparent;
-        color:$secondary-bg;
+    .ui-datepicker-header {
+        background-color: transparent;
+        color: $secondary-bg;
         border-radius: 0;
-        border:0;
-        .ui-datepicker-next{
-            background:none;
-            &:hover{
-                background-color:transparent;
-                border:0;
+        border: 0;
+        .ui-datepicker-next {
+            background: none;
+            &:hover {
+                background-color: transparent;
+                border: 0;
             }
-            .ui-icon{
-                background:none;
-                position:relative;
+            .ui-icon {
+                background: none;
+                position: relative;
             }
-            &:after{
-                content:"\f105";
-                position:absolute;
-                top:0;
-                right:5px;
-                font-size:20px;
-                color:$secondary-bg;
+            &:after {
+                content: "\f105";
+                position: absolute;
+                top: 0;
+                right: 5px;
+                font-size: 20px;
+                color: $secondary-bg;
                 font-family: FontAwesome;
             }
         }
-        .ui-datepicker-prev{
+        .ui-datepicker-prev {
             @extend .ui-datepicker-next;
-            &:after{
-                content:"\f104";
-                left:5px;
+            &:after {
+                content: "\f104";
+                left: 5px;
             }
         }
-        .ui-datepicker-title{
+        .ui-datepicker-title {
             font-family: $form-font;
             font-size: $type-size-12;
             font-weight: 700;
             padding-bottom: 5px;
-            padding-top:6px;
-            @extend h5;
+            padding-top: 6px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: $text-color;
+            line-height: normal
         }
     }
-    .ui-datepicker-calendar{
-        thead{
-            th{
-                font-weight:400;
-                font-size:$type-size-11;
+    .ui-datepicker-calendar {
+        thead {
+            th {
+                font-weight: 400;
+                font-size: $type-size-11;
             }
         }
-        tbody{
-            td{
-                a{
-                    font-size:$type-size-11;
-                    &.ui-state-highlight{
+        tbody {
+            td {
+                a {
+                    font-size: $type-size-11;
+                    &.ui-state-highlight {
                         border: 1px solid $secondary-bg !important;
                         background: $secondary-bg !important;
                         color: $white !important;
                     }
-                    &.ui-state-default{
+                    &.ui-state-default {
                         border: 0;
                         background: transparent;
-                        text-align:center;
+                        text-align: center;
                     }
                 }
             }
@@ -413,29 +440,27 @@ More offers
     }
 }
 
-
 /*
    Overlap CSS
    ========================================================================== */
 
-.overlap{
-    position:absolute;
-    background-color:rgba(0,0,0,.2);
-    top:0;
-    right:0;
-    left:0;
-    bottom:0;
+.overlap {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .2);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
 }
-
 
 /* carousel-inner  next prev buttons*/
 
-.carousel-inner{
-    .carousel-control-prev, 
-    .carousel-control-next{
-       width: 60px;
+.carousel-inner {
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 60px;
         height: 60px;
-        opacity: 1;  
-        top:40%;
+        opacity: 1;
+        top: 40%;
     }
 }
