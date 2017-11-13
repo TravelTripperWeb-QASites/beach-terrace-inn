@@ -14,7 +14,10 @@
     }
     .about-title {
         @extend .inner-banner-title;
+        left: 4%;
+        @include media-breakpoint-up(md) {
         left: 0%;
+        }
         h1,
         h5 {
             color: $text-color;
@@ -28,9 +31,13 @@
     @include media-breakpoint-up(md) {
         @include linearGradient($white, 20%, $line-bg, 20%);
     }
-    margin-top: -100px;
-    padding-top:270px;
-    padding-bottom:270px;
+     margin-top: -230px;
+     padding-bottom:160px;
+     padding-top:270px;
+    @include media-breakpoint-up(md) {
+        margin-top: -100px;
+        padding-bottom:270px;
+    }
     .about-container {
         @include container-fix();
     }
@@ -56,8 +63,11 @@
         }
         @extend .align-self-center;
         .middle-align {
-            max-width: 359px;
+            max-width: 100%;
             margin: auto;
+             @include media-breakpoint-up(md) {
+                 max-width: 359px;
+             }
             p {
                 font-family: $secondary-font-regular;
                 &:nth-child(1) {
@@ -84,6 +94,9 @@
 
 .world-of-bliss {
     margin-top: -330px;
+    .world-of-bliss-inner{
+        @include make-row(); 
+    }
     .about-slide {
         margin-top: 170px;
         @include make-col-ready();
@@ -103,9 +116,13 @@
         .heading-text {
             @include vertical-center();
             position: absolute;
-            left: 0%;
-            transform: translateX(-20%);
+            right: 1%;
+            left:inherit;
             text-align: right;
+            @include media-breakpoint-up(md) {
+               left: -9%;
+                right: inherit;
+            }
             a {
                 margin: 4rem;
             }
@@ -117,25 +134,35 @@
     margin-top: 10.6rem;
     h3 {
         position: relative;
+         margin-bottom: 5.5rem ;
         &:before {
             content: '';
             @extend .vercal-line;
         }
     }
     p {
-        max-width: 57%;
-        margin: 8.5rem auto;
+        max-width: 98%;
+        margin: 8.5rem auto 1rem auto;
         text-align: center;
         font-family: $secondary-font-regular;
+          @include media-breakpoint-up(md) {
+             max-width: 57%;
+             margin: 8.5rem auto 2rem auto;
+          }
     }
     .features {
         @include container-fix();
+         margin-top: 1.5rem ;
+        @include media-breakpoint-up(md) {
+           margin-top: 8.5rem ;  
+        }
     }
     .features-list {
         ul {
             li {
                 display: inline-block;
-                width: 19%;
+                width: 49%;
+                text-align:center;
                 .features-icon {
                     width: 112px;
                     height: 112px;
@@ -143,11 +170,24 @@
                     background-color: $white;
                     border: 1px solid $line-bg;
                     padding: 30px;
-                    margin: auto auto 50px auto;
+                    margin: auto;
                     @include border-radius(50%);
                     @include transition($global-transition);
-                    &:hover,
-                    &.active {
+
+                }
+                span {
+                    margin: 50px 0 90px;
+                    font-family: $primary-font-regular;
+                    display: inline-block;
+                    text-align: center;
+                    width: auto;
+                }
+                &:hover, &.active{
+                    span{
+                        background-color:$primary-bg;
+                        @include transition($global-transition);
+                    }
+                    .features-icon {
                         background-color: $primary-bg;
                         border: 1px solid $primary-bg;
                         @include transition($global-transition);
@@ -157,11 +197,11 @@
                         }
                     }
                 }
-                span {
-                    display: block;
-                    text-align: center;
-                    padding: 50px 0;
-                    font-family: $primary-font-regular;
+                @include media-breakpoint-up(sm) {
+                    width:29%;
+                }
+                @include media-breakpoint-up(md) {
+                    width:19%;
                 }
             }
         }
