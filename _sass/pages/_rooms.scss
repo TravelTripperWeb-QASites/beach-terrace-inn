@@ -215,3 +215,70 @@
         }
     }
 }
+
+.room-details-content{
+    @include container-fix();
+    .room-details-inner{
+        @include make-row();
+        ._left{
+            @include make-col-ready();
+            @include media-breakpoint-up(md) {
+                @include make-col(6);
+            }
+            .text-sec{
+                @include vertical-center();
+                padding-left: 90px;
+                z-index:9;
+                a{
+                    margin-top: 50px;
+                }
+            }
+        }
+        ._right{
+            @include make-col-ready();
+            @include media-breakpoint-up(md) {
+                @include make-col(6);
+            }
+            .img-sec{
+                padding-right: 30%;
+                position: relative;
+                left: -120px;
+                img{
+                    width:100%;
+                }
+            }
+        }
+    }
+}
+.content-bottom-part{
+    .content-bottom-inr{
+        @include make-row();
+        ._left{
+            @include make-col-ready();
+            @include media-breakpoint-up(md) {
+                @include make-col(4);
+            }
+            img{
+                width:100%;
+            }
+        }
+        ._right{
+            @include make-col-ready();
+            @include media-breakpoint-up(md) {
+                @include make-col(4);
+            }
+        }
+        ._middle{
+            @include make-col-ready();
+            @include media-breakpoint-up(md) {
+                @include make-col(4);
+            }
+            p{
+                width: 88%;
+                margin: 160px 0 0 12%;
+                border-top: 2px solid #e5e5e5;
+                padding: 2rem 0 3rem 0;
+            }
+        }
+    }
+}
