@@ -1,5 +1,5 @@
 ---
-layout: single-offer
+layout: default
 title: Offer Details
 meta_description:
 permalink: /offer-details/
@@ -7,14 +7,45 @@ meta_tags:
   robots:
 ---
 
-{% comment %}
+<!-- offers banner section start -->
+<section class="inner-banner extra-height" style="background-image:url(/assets/images/offers/offer-banner.jpg);">
+    <div class="overlap"></div>
+    <div class="inner-banner-title">
+        <h1>fall on<br>the sand</h1>
+        <h5>save <span>15%</span></h5>
+    </div>
+</section>
+<!-- offers banner section end -->
 
-  Name:
+<!-- gift section start -->
+<section class="gift-beach bg-cover" style="background-image:url(/assets/images/offers/gift-sec-bg.jpg);">
+	<div class="gift-beach-wrap m-0">
+		<div class="img-part p-0">
+			<img src="/assets/images/offers/hand-with-star.png" alt="Hand with Star">
+		</div>
+		<div class="text-part p-0">
+			<div class="text-part-inner">
+				<h2>gift the<br>beach</h2>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
+				<a href="" title="Buy Gift card" class="white-shadow-white">Buy Gift card</a>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- gift section end -->
 
-    Offer Details Page
+{% include special_offers.html %}
 
-  Description:
-
-    Display a single offer from RezTrip.
-
-{% endcomment %}
+<!-- newsletter signup start -->
+<section class="cta-signup bg-cover text-center" style="background-image: url(/assets/images/offers/offer-cta.jpg);">
+    <div class="overlap"></div>
+    <div class="cta-signup-inner">
+        <h4>exclusive newsletter sign-up</h4>
+        <h2>everyone's invited</h2>
+        <div class="input-holder m-auto">
+            <input type="email" name="" placeholder="Your Email Address goes here">
+            <button><span class="e-icon m-0">$</span></button>
+        </div>
+    </div>
+</section>
+<!-- newsletter signup end -->
