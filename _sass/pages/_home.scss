@@ -3,10 +3,11 @@
    ========================================================================== */
 
 .hero-slider {
-    margin: 60px 15px 0px 15px;
+    margin: 60px auto 0px auto;
     @include media-breakpoint-up(xl) {
-        margin: 108px 60px 0px 60px;
+        margin: 108px auto 0px auto;
     }
+    @include container-fix();
     .carousel-inner,
     .carousel-item {
         min-height: 460px;
