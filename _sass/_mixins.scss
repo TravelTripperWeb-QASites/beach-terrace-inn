@@ -64,6 +64,15 @@
     /* IE6-9 */
 }
 
+/* Vertical Center (Includes IE9) */
+
+@mixin vertical-center() {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
 // Custome container width
 @mixin container-fix() {
     @include make-container();
@@ -147,29 +156,6 @@
     }
 }
 
-// common button 
-@mixin common-btn(){
-    @include text-formatting($primary-font-bold, $type-size-9, normal, normal, 2px, uppercase, $text-color, normal);
-    @include box-shadow(6px, 6px, 0px, $line-bg);
-    background-color: $white;
-    padding: 10px 0;
-    border: 1px solid transparent;
-    width: 174px;
-    text-align: center;
-    display: inline-block;
-    font-family: $primary-font-bold;
-    &:hover {
-        text-decoration: none;
-        background-color: $black;
-        color: $white;
-    }
-}
-// border button 
-@mixin border-black(){
-    @include common-btn();
-    border: 1px solid $black;
-}
-
 // more sliders 
 @mixin more-sliders(){
     .assets-slide{
@@ -218,3 +204,32 @@
         }
     }
 }    
+
+// assets content common
+@mixin assets-content() {
+    width: 72%;
+    margin: 0 auto;
+    @include vertical-center();
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+    h4 {
+        font-family: $primary-font-regular;
+        padding-bottom: 15px;
+        margin-bottom: 18px;
+        border-bottom: 3px solid $line-bg;
+    }
+    h5 {
+        padding-bottom: 40px;
+    }
+    p {
+        padding-bottom: 50px;
+    }
+    .btn-holder {
+        a {
+            &:first-child {
+                margin-right: 50px;
+            }
+        }
+    }
+}

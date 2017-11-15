@@ -2,7 +2,7 @@
    Offers & Offer Details Page Elements
    ========================================================================== */
 
-.offers-content{
+.offers-intro{
 	@include container-fix();
 	padding:50px 30px;
 	@include media-breakpoint-up(lg) {
@@ -23,12 +23,8 @@
 }
 
 .offers-wrap{
-	@extend .rooms-wrap;
-	padding-top:0 !important;
-	.offer-block{
-		@extend .room-block;
-		.offer-img{
-			@extend .room-img;
+	.assets-block{
+		.assets-img{
 			height:575px;
 			box-shadow:none !important;
 			.img-inner{
@@ -41,14 +37,8 @@
 				}
 			}
 		}
-		.offer-content{
-			@extend .room-content;
-			.offer-content-inner{
-				@extend .room-content-inner;
-			}
-		}
 		&:nth-child(even) {
-	        .offer-img {
+	        .assets-img {
 	        	.img-inner{
 	                @include box-shadow(-15px, 15px, 0px, $line-bg);
 	                @include media-breakpoint-down(sm) {
@@ -60,7 +50,7 @@
 	}
 }
 
-.offers-intro{
+.offer-details-intro{
 	@include intro();
 }
 
