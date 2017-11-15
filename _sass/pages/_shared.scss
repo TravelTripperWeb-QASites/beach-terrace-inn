@@ -385,6 +385,22 @@ More offers
                     width: 560px;
                 }
             }
+            &.wedding-detail{
+                left:0;
+                top:65%;
+                a{
+                    width: auto;
+                    padding-left:10px;
+                    padding-right:10px;
+                }
+                &:after{
+                    width: 535px;
+                    height: 458px;
+                    left: -172px;
+                    top: -100px;
+                   
+                }
+            }
         }
     }
 }
