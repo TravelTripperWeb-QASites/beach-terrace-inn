@@ -1,0 +1,33 @@
+.local-flow-wrap{
+	width:100%;
+    .assets-block{
+    	.assets-img {
+            @include make-col-ready();
+            @include media-breakpoint-up(md) {
+                @include make-col(7);
+            }
+            min-height: 535px;
+            @include box-shadow(10px, 10px, 0px, $primary-bg);
+            @include media-breakpoint-down(sm) {
+            	min-height: 420px;
+            }
+        }
+        .assets-content {
+        	@include make-col-ready();
+            @include media-breakpoint-up(md) {
+                @include make-col(5);
+            }
+            h5{
+            	
+            }
+        }
+        &:nth-child(even) {
+            .assets-img {
+                @include box-shadow(-10px, 10px, 0px, $primary-bg);
+                @include media-breakpoint-down(sm) {
+                    @include box-shadow(10px, 10px, 0px, $primary-bg);
+                }
+            }
+        }
+    }
+}

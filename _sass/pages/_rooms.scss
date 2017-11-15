@@ -107,7 +107,7 @@
     }
 }
 
-.rooms-wrap {
+.assets-wrap {
     padding-top: 70px;
     @include container-fix();
     ul {
@@ -129,13 +129,13 @@
             }
         }
     }
-    .room-block {
+    .assets-block {
         @include make-row();
         padding-bottom: 120px;
         @include media-breakpoint-down(md) {
             padding-bottom: 80px;
         }
-        .room-img {
+        .assets-img {
             @include make-col-ready();
             @include media-breakpoint-up(md) {
                 @include make-col(6);
@@ -147,43 +147,19 @@
                 margin-bottom: 50px;
             }
         }
-        .room-content {
-            @extend .room-img;
+        .assets-content {
+            @extend .assets-img;
             @include media-breakpoint-down(sm) {
                 min-height: auto;
                 margin-bottom: 0px;
             }
             box-shadow:none;
-            .room-content-inner {
-                width: 72%;
-                margin: 0 auto;
-                @include vertical-center();
-                @include media-breakpoint-down(sm) {
-                    width: 100%;
-                }
-                h4 {
-                    font-family: $primary-font-regular;
-                    padding-bottom: 15px;
-                    margin-bottom: 18px;
-                    border-bottom: 3px solid $line-bg;
-                }
-                h5 {
-                    padding-bottom: 40px;
-                }
-                p {
-                    padding-bottom: 50px;
-                }
-                .btn-holder {
-                    a {
-                        &:first-child {
-                            margin-right: 50px;
-                        }
-                    }
-                }
+            .assets-content-inner {
+                @include assets-content();
             }
         }
         &:nth-child(even) {
-            .room-img {
+            .assets-img {
                 order: 2;
                 @include box-shadow(-15px, 15px, 0px, $line-bg);
                 @include media-breakpoint-down(sm) {
@@ -191,7 +167,7 @@
                     @include box-shadow(15px, 15px, 0px, $line-bg);
                 }
             }
-            .room-content {
+            .assets-content {
                 order: 1;
                 box-shadow: none;
                 @include media-breakpoint-down(sm) {
@@ -200,13 +176,13 @@
             }
         }
         &:nth-child(odd) {
-            .room-content {
+            .assets-content {
                 order: 2;
                 @include media-breakpoint-down(sm) {
                     order: 1;
                 }
             }
-            .room-img {
+            .assets-img {
                 order: 1;
                 @include media-breakpoint-down(sm) {
                     order: 2;

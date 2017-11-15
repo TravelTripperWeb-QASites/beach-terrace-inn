@@ -146,3 +146,32 @@
         }
     }
 }
+
+// assets content common
+@mixin assets-content() {
+    width: 72%;
+    margin: 0 auto;
+    @include vertical-center();
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+    h4 {
+        font-family: $primary-font-regular;
+        padding-bottom: 15px;
+        margin-bottom: 18px;
+        border-bottom: 3px solid $line-bg;
+    }
+    h5 {
+        padding-bottom: 40px;
+    }
+    p {
+        padding-bottom: 50px;
+    }
+    .btn-holder {
+        a {
+            &:first-child {
+                margin-right: 50px;
+            }
+        }
+    }
+}
