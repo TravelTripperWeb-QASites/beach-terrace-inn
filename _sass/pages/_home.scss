@@ -31,6 +31,10 @@
             text-transform: uppercase;
             color: $secondary-bg;
             cursor: pointer;
+            span{
+                font-size: $type-size-4;
+                padding-left:7px;
+            }
         }
     }
     .tonights-rate {
@@ -369,11 +373,18 @@
                 @extend .love-img;
                 p {
                     width: 78%;
-                    margin-bottom: 30px;
-                    padding-bottom: 30px;
-                    border-bottom:3px solid $line-bg;
+                    margin-bottom: 60px;
+                    position: relative;
                     @include media-breakpoint-down(md) {
                         width: 95%;
+                    }
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        background-color: $line-bg;
+                        top: -30px;
                     }
                 }
                 a {

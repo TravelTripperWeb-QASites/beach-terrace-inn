@@ -95,7 +95,7 @@
         }
     }
     button {
-        @extend .common-btn;
+       @include common-btn();
         background-color: $secondary-bg;
         padding: 15px 0;
         border: 0;

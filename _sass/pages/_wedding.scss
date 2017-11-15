@@ -1,6 +1,24 @@
-.setting-section{
-	.headings{
-	 		@include container-fix();
-	 		padding-left:96px;
+.wedding-intro{
+	@include intro();
+	h4{
+		padding-bottom: 36px;
 	}
 }
+.forever-moments{
+ 	a{
+	 	width: auto;
+	 	padding-left:10px;
+	 	padding-right:10px;
+ 	}
+}
+.setting-section{
+	.headings{
+	 	@include container-fix();
+	 	padding-left:96px;
+	 	margin-bottom:-160px; 
+	}
+	a{
+		margin: 70px 0;
+	}
+}
+
