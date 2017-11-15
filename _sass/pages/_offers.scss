@@ -60,79 +60,8 @@
 	}
 }
 
-.offer-detail-content{
-	@include container-fix();
-	.offer-detail-wrap{
-		@include make-row();
-		._left{
-			@include make-col-ready();
-	        @include media-breakpoint-up(lg) {
-	            @include make-col(6);
-	        }
-			.text-section{
-				@include vertical-center();
-				padding: 0;
-				width: 100;
-				@include media-breakpoint-up(lg) {
-					padding: 0 0 0 60px;
-					width: 75%;
-				}
-				@include media-breakpoint-up(xl) {
-					width: 70%;
-				}
-				p{
-				    border-top: 3px solid $line-bg;
-				    padding-top:36px;
-				    &:last-child{
-				    	margin-top:40px;
-				    	width:100%;
-				    	font-family:$secondary-font-bold;
-				    	margin-bottom:50px;
-				    	@include media-breakpoint-up(lg) {
-				    		margin-bottom:0;
-				    		margin-top:70px;
-				    		width:90%;
-				    	}
-				    	@include media-breakpoint-up(xl) {
-				    		width:55%;
-				    		margin-top:140px;
-				    	}
-				    }
-				}
-				a{
-					display:block;
-					margin-top:30px;
-					@include media-breakpoint-up(xl) {
-						margin-top:60px;
-					}
-				}
-
-			}
-		}
-		._right{
-			@include make-col-ready();
-	        @include media-breakpoint-up(lg) {
-	            @include make-col(6);
-	        }
-			.image-section{
-				margin-left: 0px;
-   				padding-right: 0px;
-   				@include media-breakpoint-up(lg) {
-   					margin-left: -112px;
-   					padding-right: 100px;
-   				}
-				img{
-					width:100%;
-				}
-				.image-sec-header{
-				    margin: 0;
-				    @include media-breakpoint-up(lg) {
-				    	margin: -42px 0 0 90px;
-				    }
-				}
-			}
-		}
-	}
+.offers-intro{
+	@include intro();
 }
 
 .offer-includes{

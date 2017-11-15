@@ -73,8 +73,9 @@
             p {
                 font-family: $secondary-font-regular;
                 &:nth-child(1) {
-                    border-top: 2px solid $line-bg-2;
                     padding: 2rem 0 3rem 0;
+                    position:relative;
+                    border-top:3px solid $line-bg-2;
                 }
             }
             a {
