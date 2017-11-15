@@ -31,6 +31,10 @@
             text-transform: uppercase;
             color: $secondary-bg;
             cursor: pointer;
+            span{
+                font-size: $type-size-4;
+                padding-left:7px;
+            }
         }
     }
     .tonights-rate {
