@@ -24,7 +24,7 @@
    ========================================================================== */
 
 p {
-    @include text-formatting($form-font, $type-size-8, normal, 1.875rem, normal, none, $text-color, normal);
+    @include text-formatting($secondary-font-regular, $type-size-8, normal, 1.875rem, normal, none, $text-color, normal);
 }
 
 h2 {
@@ -369,6 +369,11 @@ More offers
                 z-index: -9;
                 @include media-breakpoint-down(sm) {
                     display:none;
+                }
+            }
+            &.offer-detail{
+                &:after{
+                    width: 560px;
                 }
             }
         }
