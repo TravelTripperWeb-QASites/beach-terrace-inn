@@ -18,7 +18,9 @@
                 @include make-col(5);
             }
             h5{
-            	
+            	padding-bottom: 30px;
+    			margin-bottom: 30px;
+    			border-bottom:3px solid $line-bg;
             }
         }
         &:nth-child(even) {
