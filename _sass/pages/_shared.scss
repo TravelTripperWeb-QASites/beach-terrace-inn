@@ -117,6 +117,15 @@ h5 {
     display: block;
     margin: 0.55rem 0rem;
     text-align: left;
+    position: relative;
+    &:after{
+        content:'$';
+        position: absolute;
+        font-family: $icons-font;
+        font-size: $type-size-3;
+        right: 10px;
+        top: 4px;
+    }
     @include media-breakpoint-up(md) {
         margin: 1.25rem 0rem;
     }
@@ -284,7 +293,7 @@ More offers
                 margin-bottom: 3.75rem;
             }
         }
-        .m-offer-title {
+        h4{
             font-family: $primary-font-regular;
             font-size: $type-size-5;
             text-transform: uppercase;
