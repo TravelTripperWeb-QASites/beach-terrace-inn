@@ -59,7 +59,7 @@ $(document).ready(function() {
         $('#tongihtrates').toggle('hide');
     }); 
 
-    $('.attractions-list').slick({
+    $('.attractions-list,.assets-slide-inner').slick({
       dots: false,
       infinite: true,
       speed: 300,

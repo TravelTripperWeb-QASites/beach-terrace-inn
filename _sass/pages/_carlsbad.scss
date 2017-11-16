@@ -114,7 +114,15 @@
             top: 10px;
             left: 22px;
             right: 0;
-            @include media-breakpoint-up(md) {
+             @include media-breakpoint-up(md) {
+                right: -80px;
+                left: inherit;
+            }
+            @include media-breakpoint-up(lg) {
+                right: -100px;
+                left: inherit;
+            }
+             @include media-breakpoint-up(xl) {
                 right: -150px;
                 left: inherit;
             }
@@ -128,7 +136,7 @@
                 color: $arrow-color;
                 font-size: $type-size-3;
                 padding-top: 22px;
-                @include media-breakpoint-down(lg) {
+                @include media-breakpoint-down(md) {
                     width: 37px;
                     height: 37px;
                     padding-top: 6px;
@@ -142,6 +150,12 @@
             top: 10px;
             right: 0px;
             @include media-breakpoint-up(md) {
+                right: -130px;
+            }
+            @include media-breakpoint-up(lg) {
+                right: -150px;
+            }
+            @include media-breakpoint-up(xl) {
                 right: -250px;
             }
             &:before {
@@ -154,7 +168,7 @@
                 color: $arrow-color;
                 font-size: $type-size-3;
                 padding-top: 22px;
-                @include media-breakpoint-down(lg) {
+                @include media-breakpoint-down(md) {
                     width: 37px;
                     height: 37px;
                     padding-top: 6px;
@@ -167,13 +181,19 @@
     @extend .container-fluid;
     .info-wrapper {
         @include make-row();
-        margin-top: -145px;
+         margin-top: 20px;
+         @include media-breakpoint-up(lg) {
+             margin-top: -145px;
+         }
     }
     .info {
         @include make-col-ready();
         @include media-breakpoint-up(md) {
-            @include make-col(3);
+            @include make-col(12);
         }
+         @include media-breakpoint-up(lg) {
+             @include make-col(3);
+         }
         padding:60px;
         background-color:$primary-bg;
         font-family: $secondary-font-regular;

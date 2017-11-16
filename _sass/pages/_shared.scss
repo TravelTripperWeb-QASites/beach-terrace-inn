@@ -246,13 +246,7 @@ More offers
     }
     @include more-sliders();
 }
-.more-accommodation {
-    h3 {
-        margin: 1.75rem auto;
-        @include media-breakpoint-up(md) {
-            margin: 3.75rem auto;
-        }
-    }
+.accommodation{
     @include more-sliders();
 }
 .vercal-line {
@@ -328,6 +322,21 @@ More offers
                 }
             }
         }
+    }
+    &.half-banner{
+        background-size:inherit;
+        background-position:right;
+
+      @extend .extra-height ;
+       .inner-banner-title {
+            top: 50%;
+            left: 8%;
+        }
+      h1,
+      h5{
+        text-align:left;
+        color:$black;
+      }  
     }
 }
 /*
@@ -418,59 +427,4 @@ More offers
     right: 0;
     left: 0;
     bottom: 0;
-}
-/* carousel-inner  next prev buttons*/
-
-.carousel-inner {
-    .carousel-control-prev, .carousel-control-next {
-        width: 25px;
-        height: 25px;
-        opacity: 1;
-        top: 35%;
-        margin: 10px;
-        @include media-breakpoint-up(md) {
-            width: 47px;
-            height: 47px;
-            opacity: 1;
-            top: 45%;
-            margin: 50px;
-        }
-        img {
-            width: 100%;
-        }
-    }
-    .carousel-control-prev {
-        img {
-            @include transform-rotate(180deg)
-        }
-    }
-}
-#setting-carousel {
-    .carousel-control-prev {
-        left: 0;
-        width: 450px;
-        height: 300px;
-        background: #fbde3c;
-        top: inherit;
-        margin: 0;
-        opacity: .9;
-        img {
-            @include transform-rotate(180deg)
-        }
-        &:hover {
-            opacity: .5;
-        }
-    }
-    .carousel-control-next {
-        right: 20px;
-        top: inherit;
-        bottom: 23%;
-        width: 47px;
-        height: 47px;
-        opacity: .9;
-        margin: 0;
-        &:hover {
-            opacity: .5;
-        }
-    }
 }
