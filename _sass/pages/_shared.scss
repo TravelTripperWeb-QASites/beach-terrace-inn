@@ -271,11 +271,9 @@ More offers
         min-height: 300px;
     }
     .inner-banner-title {
-        position: absolute;
-        top: 50%;
-        left: 7%;
-        @include transform-translate(37%, -50%);
         text-align: right;
+        position: relative;
+        width: 44%;
         h1 {
             @extend h2;
             color: $white;
@@ -286,20 +284,23 @@ More offers
         h5 {
             color: $white;
         }
-        @include media-breakpoint-down(xs) {
+        @include media-breakpoint-down(sm) {
             text-align: left;
-            left: 5%;
-            @include transform-translate(0%, -50%);
+            width: 90%;
         }
     }
     &.extra-height {
         position:relative;
         min-height: 670px;
+        padding-bottom: 50px;
         @include media-breakpoint-down(md) {
             min-height: 450px;
         }
         .inner-banner-title {
-            top: 75%;
+            width: 51%;
+            @include media-breakpoint-down(sm) {
+                width: 90%;
+            }
         }
         .title-bg{
             content: "";
@@ -329,7 +330,7 @@ More offers
       @extend .extra-height ;
        .inner-banner-title {
             top: 50%;
-            left: 0;
+            left: 8%;
         }
       h1,
       h5{
