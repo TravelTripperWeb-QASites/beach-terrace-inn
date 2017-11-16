@@ -2,7 +2,7 @@
    About Page Elements
    ========================================================================== */
 
-.about-banner {
+/*.about-banner {
     @extend .inner-banner;
     position: relative;
     min-height: 300px;
@@ -26,7 +26,7 @@
             text-align: left!important;
         }
     }
-}
+}*/
 
 .about-middle {
     @include linearGradient($white, 20%, $white, 20%);

@@ -83,7 +83,7 @@
 // Intro container width
 @mixin intro() {
     @include container-fix();
-    .intro-wrap {
+    .intro-wrap,.images-tow {
         @include make-row();
         ._left{
             @include make-col-ready();
@@ -152,6 +152,16 @@
                     }
                 }
             }
+
+            .images{
+                @include make-col-ready();
+                @include media-breakpoint-up(lg) {
+                    @include make-col(6);
+                }
+                img{
+                        width:100%;
+                    }  
+            }
         }
     }
 }
@@ -207,13 +217,23 @@
     .slick-prev {
         width: 60px;
         position: absolute;
-        z-index: 12;
-        top: 25%;
+        z-index: 11;
         align-items: center;
         justify-content: center;
-        left:-17px;
+        left:34px;
+         @include media-breakpoint-up(md) {
+            left:34px;
+        }
+        @include media-breakpoint-up(lg) {
+            left:1px;
+        }
+        @include media-breakpoint-up(xl) {
+            left:-10px;
+        }
+       
         &:before {
             content: '#';
+             width: 60px;
             font-family: $icons-font;
             display: block;
             background-color: $line-bg;
@@ -221,21 +241,29 @@
             font-size: $type-size-3;
             padding:10px;
             @include media-breakpoint-down(lg) {
-                width: 37px;
-                height: 37px;
+                padding:10px;
             }
         }
     }
     .slick-next {
         width: 60px;
         position: absolute;
-        z-index: 12;
-        top: 25%;
-        right:-17px;
+        z-index: 11;
+        right:20px;
         align-items: center;
         justify-content: center;
+        @include media-breakpoint-down(md) {
+            right:30px;
+        }
+        @include media-breakpoint-up(lg) {
+            right:1px;
+        }
+         @include media-breakpoint-up(xl) {
+            right:-10px;
+        }
         &:before {
             content: '$';
+            width: 60px;
             font-family: $icons-font;
             display: block;
             background-color: $line-bg;
@@ -243,8 +271,7 @@
             font-size: $type-size-3;
             padding:10px;
             @include media-breakpoint-down(lg) {
-                width: 37px;
-                height: 37px;
+               
             }
         }
     }

@@ -1,3 +1,96 @@
 /*
    Temporary Styles
    ========================================================================== */
+
+/* carousel-inner  next prev buttons*/
+
+.carousel-inner {
+    .carousel-control-prev, .carousel-control-next {
+        width: 25px;
+        height: 25px;
+        opacity: 1;
+        top: 35%;
+        margin: 10px;
+        @include media-breakpoint-up(md) {
+            width: 47px;
+            height: 47px;
+            opacity: 1;
+            top: 45%;
+            margin: 50px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .carousel-control-prev {
+        img {
+            @include transform-rotate(180deg)
+        }
+    }
+}
+#setting-carousel {
+    .carousel-control-prev {
+        left: 15px;
+        background: transparent;
+        top: inherit;
+        bottom: 50%;
+        width: 25px;
+        height: 25px;
+        margin: 0;
+        opacity: .9;
+        @include media-breakpoint-up(md){
+            width: 105px;
+            height: 100px;
+            left:0;
+            top: inherit;
+             bottom: 0;
+            background: $primary-bg;
+        }
+        @include media-breakpoint-up(lg){
+            width: 225px;
+            height: 150px;
+            left:0;
+            top: inherit;
+             bottom: 0;
+            background: $primary-bg;
+        }
+        @include media-breakpoint-up(xl){
+             width: 450px;
+             height: 300px;
+             left:0;
+            bottom: 0;
+             top: inherit;
+             background: $primary-bg;
+        }
+        img {
+            width: 100%;
+            @include transform-rotate(180deg)
+        }
+        &:hover {
+            opacity: .5;
+        }
+    }
+    .carousel-control-next {
+        right: 20px;
+        top: inherit;
+        bottom: 50%;
+        width: 25px;
+        height: 25px;
+        opacity: .9;
+        margin: 0;
+         @include media-breakpoint-up(md){
+             bottom: 15%;
+          }
+          @include media-breakpoint-up(lg){
+             bottom: 23%;
+            width: 47px;
+            height: 47px;
+          }
+        &:hover {
+            opacity: .5;
+        }
+        img{
+            width:100%
+        }
+    }
+}
