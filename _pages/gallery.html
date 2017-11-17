@@ -54,9 +54,9 @@ meta_tags:
 <div class="gallery-inner">
         {% assign images = site.data._models.gallery %}
         {% for image in images %}
-            <div data-src="{% if photo.url_large %}{{ photo.url_large }}{% else %}{{ photo.url }}{% endif %}">
-              <img src="{% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %}" alt="">
-            </div>
-          {% endif %}
+            <div class="card item fancybox" data-filter="{{ image.category }}" data-src="{{ image.image.url }}" {% if image.image.caption %}data-sub-html="{{ image.image.caption }}"{% endif %}>
+            <img src="{{ image.image.url }}" alt="{{ image.image.alt }}" class="img-responsive">
+          </div>
+        {% endfor %}
 </div>
 </div>
