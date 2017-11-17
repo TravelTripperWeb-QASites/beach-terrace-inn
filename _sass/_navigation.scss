@@ -29,6 +29,7 @@
     }
     ul.navbar-nav {
         .nav-item {
+            position:relative;
             .nav-link {
                 color: $nav-text;
                 @include transition($global-transition);
@@ -60,6 +61,11 @@
                 }
 
             }
+           .dropdown-menu{
+            left: 0;
+            padding: 1rem 1rem;
+            @extend .nav-link;
+           }
         }
         &.npl {
             padding-left: 0rem;

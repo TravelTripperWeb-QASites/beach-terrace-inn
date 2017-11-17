@@ -128,7 +128,7 @@ $(document).ready(function() {
   $('#lightgallery').lightGallery({
     selector: ".item",
     counter: false,
-    thumbnail: true,
+    thumbnail: false,
     share: false
   });
   
