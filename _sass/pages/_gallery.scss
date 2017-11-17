@@ -1,3 +1,49 @@
 /*
    Gallery Page Elements
    ========================================================================== */
+.gallery-inner-banner {
+	min-height:200px;
+	margin-top:50px;
+
+}
+.gallery{
+	@include container-fix();
+	ul{
+		margin:80px auto;
+		padding: 0;
+		display: flex;
+		max-width: 360px;
+		li{
+			padding:14px;
+			a{
+				font-family: $primary-font-regular;
+				color:$nav-text;
+				position:relative;
+				font-size: $type-size-8;
+				letter-spacing: 1px;
+				&:before{
+					content:'';
+					@include transition($global-transition);
+				}
+				&:hover, &.active{
+					&:before{
+					content:'';
+					width: 100%;
+					height: 8px;
+					top:7px;
+					background-color:$primary-bg;
+					left:0;
+					z-index: -1;
+					position:absolute;
+					@include transition($global-transition);
+					}
+				}
+			}
+		}
+	}
+
+.gallery-inner{
+	@include make-row();
+	padding:0;
+}	
+}   
