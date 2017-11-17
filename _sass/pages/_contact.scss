@@ -39,7 +39,7 @@
 	        @include media-breakpoint-up(md) {
 	            @include make-col(9);
 	        }
-	        background-image: url(/assets/images/contact/map.jpg);
+	        //background-image: url(/assets/images/contact/map.jpg);
 	        @include media-breakpoint-down(sm) {
 	        	height:400px;
 	        }
@@ -161,9 +161,6 @@
         				resize:none;
         			}
         		}
-            	.control-col-fw{
-
-            	}
             }
         }
     }
