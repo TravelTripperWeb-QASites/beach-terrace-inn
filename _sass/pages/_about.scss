@@ -2,32 +2,6 @@
    About Page Elements
    ========================================================================== */
 
-/*.about-banner {
-    @extend .inner-banner;
-    position: relative;
-    min-height: 300px;
-    background-size: inherit;
-    background-position: right center;
-    @include media-breakpoint-up(md) {
-        min-height: 666px;
-    }
-    .carousel-inner {
-        top: 70%
-    }
-    .about-title {
-        @extend .inner-banner-title;
-        left: 4%;
-        @include media-breakpoint-up(md) {
-        left: 0%;
-        }
-        h1,
-        h5 {
-            color: $text-color;
-            text-align: left!important;
-        }
-    }
-}*/
-
 .about-middle {
     @include linearGradient($white, 20%, $white, 20%);
     @include media-breakpoint-up(md) {

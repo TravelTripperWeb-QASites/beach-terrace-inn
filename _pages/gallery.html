@@ -41,8 +41,7 @@ meta_tags:
     
       
 <div class="gallery">
-
-<ul class="sub-nav">
+<ul class="text-center">
     <li><a href="javascript:;" class="filter active" data-filter="all" data-rel="all">All</a></li>
     <li><a href="javascript:;" class="filter" data-rel="rooms">Rooms</a></li>
     <li><a href="javascript:;" class="filter" data-rel="exterior">Exterior</a></li>
@@ -50,13 +49,13 @@ meta_tags:
     <li><a href="javascript:;" class="filter" data-rel="video">Video</a></li>
 </ul>
 
-
-<div class="gallery-inner">
-        {% assign images = site.data._models.gallery %}
-        {% for image in images %}
-            <div class="card item fancybox" data-filter="{{ image.category }}" data-src="{{ image.image.url }}" {% if image.image.caption %}data-sub-html="{{ image.image.caption }}"{% endif %}>
-            <img src="{{ image.image.url }}" alt="{{ image.image.alt }}" class="img-responsive">
-          </div>
-        {% endfor %}
-</div>
+<div class="gallery-items-wrap" id="lightgallery">
+            <ul>
+                {% for photo in site.photos %} {% assign tag_list = photo.tags | split: "," | strip %} {% if tag_list contains "gallery" %}
+                <li class="col-md-4 col-sm-4 fancybox" data-filter="{{photo.tags | replace: 'gallery' | replace: ',','' | replace:' ',''}}">
+                    <div class="item" data-src="{% if photo.url_large %}{{ photo.url_large }}{% else %}{{ photo.url }}{% endif %}" data-exthumbimage="{% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %}" style="background-image:url({% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %})"></div>
+                </li>
+                {% endif %} {% endfor %}
+            </ul>
+        </div>
 </div>
