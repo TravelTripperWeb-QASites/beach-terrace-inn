@@ -1,0 +1,11 @@
+{
+  "image": {
+    "type": "image",
+    "required": true
+  },
+  "category": {
+    "type": "select",
+    "options":["rooms","exterior","carlsbad","video"],
+    "required": true
+  }
+}
