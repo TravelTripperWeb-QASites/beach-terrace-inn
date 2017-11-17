@@ -38,24 +38,21 @@ meta_tags:
     <h4>take a visual tour</h4>
 </section>
 <!-- banner section end -->
-    
-      
-<div class="gallery">
-<ul class="text-center">
-    <li><a href="javascript:;" class="filter active" data-filter="all" data-rel="all">All</a></li>
-    <li><a href="javascript:;" class="filter" data-rel="rooms">Rooms</a></li>
-    <li><a href="javascript:;" class="filter" data-rel="exterior">Exterior</a></li>
-    <li><a href="javascript:;" class="filter" data-rel="carlsbad">Carlsbad</a></li>
-    <li><a href="javascript:;" class="filter" data-rel="video">Video</a></li>
-</ul>
-
-<div class="gallery-items-wrap" id="lightgallery">
-            <ul>
+  <section class="assets-wrap">
+    <ul class="text-center m-0">
+        <li><a href="javascript:;" class="filter active" data-filter="all" title="All" data-rel="all">All</a></li>
+        <li><a href="javascript:;" class="filter" data-rel="rooms" title="Rooms">Rooms</a></li>
+        <li><a href="javascript:;" class="filter" data-rel="exterior" title="Exterior">Exterior</a></li>
+        <li><a href="javascript:;" class="filter" data-rel="carlsbad" title="Carlsbad">Carlsbad</a></li>  
+       <li><a href="javascript:;" class="filter" data-rel="video" title="Video">Video</a>
+    </ul>  
+</section>
+<div class="gallery-wrapper">
+<div class=" gallery-items-wrap" id="lightgallery">
                 {% for photo in site.photos %} {% assign tag_list = photo.tags | split: "," | strip %} {% if tag_list contains "gallery" %}
-                <li class="col-md-4 col-sm-4 fancybox" data-filter="{{photo.tags | replace: 'gallery' | replace: ',','' | replace:' ',''}}">
+                <div class="fancybox" data-filter="{{photo.tags | replace: 'gallery' | replace: ',','' | replace:' ',''}}">
                     <div class="item" data-src="{% if photo.url_large %}{{ photo.url_large }}{% else %}{{ photo.url }}{% endif %}" data-exthumbimage="{% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %}" style="background-image:url({% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %})"></div>
-                </li>
+                </div>
                 {% endif %} {% endfor %}
-            </ul>
         </div>
 </div>
