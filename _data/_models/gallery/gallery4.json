@@ -1,21 +1,21 @@
 {
+  "category": "carlsbad",
   "image": {
-    "url": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-025442/Image-03.jpg",
-    "path": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-025442/Image-03.jpg",
+    "url": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-050117/Beach-front.jpg",
+    "path": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-050117/Beach-front.jpg",
     "file_type": "image/jpeg",
-    "name": "Image-03",
+    "name": "Beach-front",
     "tags": "",
-    "url_large": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-025442/large_Image-03.jpg",
-    "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-025442/thumb_Image-03.jpg",
-    "url_medium": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-025442/medium_Image-03.jpg",
-    "url_small": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-025442/small_Image-03.jpg",
-    "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-025442/xsmall_Image-03.jpg",
-    "width": 1204,
-    "height": 792,
-    "file_size": 166650,
-    "alt": "Beach View",
-    "caption": "Beach View",
+    "url_large": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-050117/large_Beach-front.jpg",
+    "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-050117/thumb_Beach-front.jpg",
+    "url_medium": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-050117/medium_Beach-front.jpg",
+    "url_small": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-050117/small_Beach-front.jpg",
+    "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-050117/xsmall_Beach-front.jpg",
+    "width": 955,
+    "height": 666,
+    "file_size": 123205,
+    "alt": "Beach Front",
+    "caption": "Beach Front",
     "description": ""
-  },
-  "category": "carlsbad"
+  }
 }
