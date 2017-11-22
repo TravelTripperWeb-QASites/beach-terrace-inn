@@ -29,6 +29,7 @@
     }
     ul.navbar-nav {
         .nav-item {
+            position:relative;
             .nav-link {
                 color: $nav-text;
                 @include transition($global-transition);
@@ -60,6 +61,17 @@
                 }
 
             }
+           .dropdown-menu{
+            left: 0;
+            padding: 1rem 0rem;
+            border-radius:0;
+            text-transform: uppercase;
+            font-size: $type-size-7;
+            text-align: center;
+            a{
+                color: $nav-text!important;
+            }
+           }
         }
         &.npl {
             padding-left: 0rem;
