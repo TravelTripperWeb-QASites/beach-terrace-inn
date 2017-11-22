@@ -112,10 +112,17 @@
     @include container-fix();
     ul {
         padding: 60px 0 70px;
+        @include media-breakpoint-down(sm) {
+            padding: 20px 0 30px;
+        }
         li {
             width: auto;
             padding: 0 15px;
             display: inline;
+            @include media-breakpoint-down(sm) {
+                display:block;
+                margin:5px 0;
+            }
             a {
                 text-transform: none;
                 font-size: $type-size-7;

@@ -91,6 +91,13 @@
         p {
             font-family: $primary-font-medium;
             padding-bottom: 2rem;
+            a{
+                color:$text-color;
+                &:hover{
+                    text-decoration:none;
+                    opacity:.8;
+                }
+            }
         }
     }
 }
