@@ -63,8 +63,14 @@
             }
            .dropdown-menu{
             left: 0;
-            padding: 1rem 1rem;
-            @extend .nav-link;
+            padding: 1rem 0rem;
+            border-radius:0;
+            text-transform: uppercase;
+            font-size: $type-size-7;
+            text-align: center;
+            a{
+                color: $nav-text!important;
+            }
            }
         }
         &.npl {

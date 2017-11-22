@@ -132,6 +132,15 @@ $(document).ready(function() {
     share: false
   });
   
+  //dorpdown
+    $(".dropdown").hover(
+      function () {
+          $('.dropdown-menu', this).stop().fadeIn("fast");
+      },
+      function () {
+          $('.dropdown-menu', this).stop().fadeOut("fast");
+      });
+
   //Lookin
     function initialize() {
 
