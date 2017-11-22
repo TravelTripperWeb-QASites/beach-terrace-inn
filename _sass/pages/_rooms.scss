@@ -133,6 +133,9 @@
                 &:hover {
                     background-color: $primary-bg;
                 }
+                &.active{
+                    background-color: $primary-bg;
+                }
             }
         }
     }

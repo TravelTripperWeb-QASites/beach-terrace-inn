@@ -29,6 +29,15 @@
 		        		padding:60px 0 5px;
 		        	}
 		        }
+                p{
+                    a{
+                        color:$text-color;
+                        &:hover{
+                            text-decoration:none;
+                            opacity:.8;
+                        }
+                    }
+                }
 		        @include media-breakpoint-up(md) {
 		        	padding: 110px 0 90px 100px;
 		        }
@@ -44,17 +53,20 @@
 	        	height:400px;
 	        }
 		}
-		button {
-	        @extend .common-btn;
-	        background-color: $secondary-bg;
-	        padding: 15px 0;
-	        border: 0;
-	        color: $white;
-	        font-family: $form-font;
-	        width: 100%;
-	        box-shadow: none;
-	        cursor: pointer;
-	    }
+        .btn-wrap{
+            width:100%;
+    		a {
+    	        @extend .common-btn;
+    	        background-color: $secondary-bg;
+    	        padding: 15px 0;
+    	        border: 0;
+    	        color: $white;
+    	        font-family: $form-font;
+    	        width: 100%;
+    	        box-shadow: none;
+    	        cursor: pointer;
+    	    }
+        }
 	}
 }
 

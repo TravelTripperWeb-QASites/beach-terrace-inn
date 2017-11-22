@@ -22,9 +22,10 @@
 	 	@include container-fix();
 	 	padding-left: 15px;
 	 	margin-bottom:20px; 
+	 	z-index:9;
 	 	@include media-breakpoint-up(md) {
-		padding-left:96px;
-	 	margin-bottom:-160px; 
+			padding-left:96px;
+		 	margin-bottom:-160px; 
 	 	} 
 	}
 	a{
@@ -71,4 +72,8 @@
 	h4{
 		padding-bottom: 36px;
 	}
+}
+.inner-banner-btn{
+	width:auto;
+    padding: 10px 15px;
 }

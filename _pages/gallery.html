@@ -38,13 +38,13 @@ meta_tags:
     <h4>take a visual tour</h4>
 </section>
 <!-- banner section end -->
-  <section class="assets-wrap">
+  <section class="assets-wrap gallery-nav">
     <ul class="text-center m-0">
         <li><a href="javascript:;" class="filter active" data-filter="all" title="All" data-rel="all">All</a></li>
         <li><a href="javascript:;" class="filter" data-rel="rooms" title="Rooms">Rooms</a></li>
         <li><a href="javascript:;" class="filter" data-rel="exterior" title="Exterior">Exterior</a></li>
         <li><a href="javascript:;" class="filter" data-rel="carlsbad" title="Carlsbad">Carlsbad</a></li>  
-       <li><a href="javascript:;" class="filter" data-rel="video" title="Video">Video</a>
+       <!-- <li><a href="javascript:;" class="filter" data-rel="video" title="Video">Video</a></li> -->
     </ul>  
 </section>
 <div class="gallery-wrapper">
@@ -52,6 +52,7 @@ meta_tags:
                 {% for photo in site.photos %} {% assign tag_list = photo.tags | split: "," | strip %} {% if tag_list contains "gallery" %}
                 <div class="fancybox" data-filter="{{photo.tags | replace: 'gallery' | replace: ',','' | replace:' ',''}}">
                     <div class="item" data-src="{% if photo.url_large %}{{ photo.url_large }}{% else %}{{ photo.url }}{% endif %}" data-exthumbimage="{% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %}" style="background-image:url({% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %})"></div>
+                    <div class="overlay"><span>View Image</span></div>
                 </div>
                 {% endif %} {% endfor %}
         </div>
