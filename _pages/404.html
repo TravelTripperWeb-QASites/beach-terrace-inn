@@ -7,22 +7,33 @@ meta_tags:
   robots:
 ---
 
-{% comment %}
+{% assign links = site.data.navigation.main %}
+<!-- banner section start -->
+<section class="inner-banner d-flex align-items-center" style="background-image:url(/assets/images/rooms/rooms-banner.jpg);">
+    <div class="overlap"></div>
+    <div class="inner-banner-title">
+        <h1>Page Not Found</h1>
+        <h5>Beach Terrace Inn</h5>
+    </div>
+</section>
+<!-- banner section end -->
 
-  Name:
-
-    404 (Page Not Found)
-
-  Description:
-
-    Static content that can be modified by editable regions.
-
-  Usage:
-
-    Text   - {% regionblock region_name, type:text %}{% endregionblock %}
-    
-    Header - {% regionblock region_name, type:header %}{% endregionblock %}
-    
-    Image  - {% regionblock region_name, type:image %}{% endregionblock %}
-
-{% endcomment %}
+<!-- sitemap start -->
+<section class="sitemap-wrap text-center">
+    <h4>Sitemap</h4>
+    <ul class="m-0 p-0">
+        {% for link in links[0].left %}
+        <li class="nav-item {% if link.dropdown %} dropdown {% endif %}">
+            <a class="" href="{{ link.url | absolute_url }}" {% if link.dropdown %} aria-haspopup="true" aria-expanded="true" {% endif %}><span class="{% if page.url == link.url %} active {% endif%}">{{ link.title }}</span></a> {% if link.dropdown %} {% endif %}
+        </li>
+        {% endfor %} {% for item in links[1].right %}
+        <li class="nav-item {% if page.url == item.url %}active{% endif%}">
+            <a class="" href="{{item.url | absolute_url}}" title="{{ item.title }}"><span class="{% if page.url == item.url %}active{% endif%}">{{ item.title }} </span></a>
+        </li>
+        {% endfor %}
+        <li><a href="/privacy-policy/" rel="nofollow">Privacy Policy</a></li>
+        <li><a href="/terms/" rel="nofollow">Terms & Conditions</a></li>
+        <li><a href="/sitemap/" rel="nofollow">Sitemap</a></li>
+    </ul>
+</section>
+<!-- sitemap end -->

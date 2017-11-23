@@ -23,22 +23,21 @@
 			@extend .bg-cover;
 			display: inline-block;
 			float: left;
-			 @include transition($global-transition);
+			@include transition($global-transition);
 			width: 100%;
 			height: 18.75rem;
 			background-size: cover;
 			&:hover {
-				cursor: pointer;
-				opacity: 0.7;
+				cursor: pointer; 
 			}
 		}
 		.overlay{
 			display:none;
 			position:absolute;
-			top:0;
-			left:0;
-			bottom:0;
-			right:0;
+			top:30px;
+			left:30px;
+			bottom:30px;
+			right:30px;
 			background-color:$gallery-hover;
 			span{
 				width:114px;
@@ -46,11 +45,22 @@
 				border:5px solid $white;
 				border-radius:50%;
 				color:$white;
+			    top: 50%;
+			    left: 50%;
+			    position: absolute;
+			    text-align: center;
+			    transform: translate(-50%, -50%);
+			    font-family:$primary-font-bold;
+			    font-size:$type-size-5;
+			    letter-spacing:1px;
+			    line-height:30px;
+			    text-transform:uppercase;
 			}
 		}
 		&:hover{
 			.overlay{
-				display:none;
+				@include transition($global-transition);
+				display:block;
 			}
 		}
 	}

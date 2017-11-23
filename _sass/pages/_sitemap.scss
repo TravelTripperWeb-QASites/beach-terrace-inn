@@ -1,0 +1,27 @@
+/*
+   Sitemap Page Elements
+   ========================================================================== */
+
+.sitemap-wrap{
+    @include container-fix();
+    max-width:700px;
+    margin: 50px auto;
+    h4{
+        margin-bottom:20px;
+    }
+    ul{
+        li{
+            margin-bottom:.8rem;
+            a{
+                font-family:$primary-font-medium !important;
+                text-transform:uppercase !important;
+                font-size: $type-size-8;
+                color: $text-color;
+                line-height: $type-size-3;
+                &:hover{
+                    text-decoration:none;
+                }
+            }
+        }
+    }
+}

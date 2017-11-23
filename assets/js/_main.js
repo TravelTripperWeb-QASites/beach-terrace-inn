@@ -5,8 +5,10 @@
 $(document).ready(function() {
   // FitVids init
   $("#main").fitVids();
-  $("#input_13").datepicker();
-  $("#input_14").datepicker();
+  $("#input-13").datepicker();
+  $("#input-14").datepicker();
+  $("#input_15").datepicker();
+  $("#input_16").datepicker();
 
   // init smooth scroll
   $("a").smoothScroll({ offset: -20 });

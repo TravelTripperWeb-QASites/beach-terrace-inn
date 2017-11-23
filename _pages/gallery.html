@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Gallery
-meta_description:
+title: San Diego Oceanfront Hotel Photos | Beach Terrace Inn
+meta_description: Enjoy a tour of our stunning San Diego oceanfront hotel with photos of the Beach Terrace Inn in Carlsbad. Check out the ocean view from your beachfront rooms!
 permalink: /gallery/
 meta_tags:
   robots:
@@ -51,8 +51,10 @@ meta_tags:
 <div class=" gallery-items-wrap" id="lightgallery">
                 {% for photo in site.photos %} {% assign tag_list = photo.tags | split: "," | strip %} {% if tag_list contains "gallery" %}
                 <div class="fancybox" data-filter="{{photo.tags | replace: 'gallery' | replace: ',','' | replace:' ',''}}">
-                    <div class="item" data-src="{% if photo.url_large %}{{ photo.url_large }}{% else %}{{ photo.url }}{% endif %}" data-exthumbimage="{% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %}" style="background-image:url({% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %})"></div>
-                    <div class="overlay"><span>View Image</span></div>
+                    <div class="item" data-src="{% if photo.url_large %}{{ photo.url_large }}{% else %}{{ photo.url }}{% endif %}" data-exthumbimage="{% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %}" style="background-image:url({% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %})">
+                    	<div class="overlay"><span class="d-flex align-items-center justify-content-center">View<br>Image</span></div>
+                    </div>
+                    
                 </div>
                 {% endif %} {% endfor %}
         </div>
