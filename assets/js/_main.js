@@ -313,8 +313,8 @@ $(document).ready(function() {
           styles: stylemap,
 
           center: new google.maps.LatLng(33.159199, -117.354283),
-          scrollwheel: false,
-          disableDefaultUI: true
+          scrollwheel: false
+          //disableDefaultUI: true
         });
 
 
