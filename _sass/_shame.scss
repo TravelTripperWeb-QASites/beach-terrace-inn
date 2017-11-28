@@ -94,3 +94,20 @@
         }
     }
 }
+
+.static-content-wrap{
+    @include container-fix();
+    margin-top: 40px;
+    margin-bottom: 40px;
+    h4, p{
+        padding: 0px 0 15px;
+    }
+    ul{
+        margin-bottom:20px;
+        li{
+            padding: 4px 0;
+            font-family: $secondary-font-regular;
+            list-style: disc;
+        }
+    }
+}
