@@ -1,52 +1,13 @@
 <div class="assets-slide">
 	<div class="assets-slide-inner">
-		<div class="slide">
-			<h4>Room 01</h4>
-			<div class="image-small" style="background-image: url(/assets/images/rooms/room2.jpg); " title="Offer 01">
+		<div class="slide" ng-repeat="room in browser.roomsList">
+			<h4 ng-bind-html="room.name | renderHTMLCorrectly"></h4>
+			<div class="image-small" ng-style="{'background-image':'url('+room.photos[0].large+')'}" title="[[room.name]]">
 			</div>
-			<a href="" class="border-black" title="View Special">
-				View Special
-			</a>
-		</div>
-		<div class="slide">
-			<h4>Room 02</h4>
-			<div class="image-small" style="background-image: url(/assets/images/rooms/room3.jpg); " title="Offer 01">
-			</div>
-			<a href="" class="border-black" title="View Special">
+			<a ng-href="/room-details/#[[room.name | formatNameForLink]]" title="View Room" class="border-black" >
 				View Room
 			</a>
 		</div>
-		<div class="slide">
-			<h4>Room 03</h4>
-			<div class="image-small" style="background-image: url(/assets/images/rooms/room3.jpg); " title="Offer 01">
-			</div>
-			<a href="" class="border-black" title="View Special">
-				View Room
-			</a>
-		</div>
-		<div class="slide">
-			<h4>Room 01</h4>
-			<div class="image-small" style="background-image: url(/assets/images/rooms/room2.jpg); " title="Offer 01">
-			</div>
-			<a href="" class="border-black" title="View Special">
-				View Room
-			</a>
-		</div>
-		<div class="slide">
-			<h4>Room 02</h4>
-			<div class="image-small" style="background-image: url(/assets/images/rooms/room3.jpg); " title="Offer 01">
-			</div>
-			<a href="" class="border-black" title="View Special">
-				View Room
-			</a>
-		</div>
-		<div class="slide">
-			<h4>Room 03</h4>
-			<div class="image-small" style="background-image: url(/assets/images/rooms/room3.jpg); " title="Offer 01">
-			</div>
-			<a href="" class="border-black" title="View Special">
-				View Room
-			</a>
-		</div>
+		
 	</div>
 </div>

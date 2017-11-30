@@ -336,7 +336,7 @@ More offers
       h5{
         text-align:left;
         color:$black;
-      }  
+      }
     }
 }
 /*
@@ -415,6 +415,9 @@ More offers
             }
         }
     }
+}
+.datepicker-input {
+    position: relative; z-index: 100000;
 }
 /*
    Overlap CSS

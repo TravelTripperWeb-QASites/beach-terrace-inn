@@ -6,19 +6,22 @@ permalink: /room-details/
 meta_tags:
   robots:
 ---
-
+<section ng-controller="roomDetail" rt3-room-details="room" class="room-detail-pa">
 <!-- rooms banner section start -->
-<section class="inner-banner extra-height d-flex align-items-end" style="background-image:url(/assets/images/rooms/room-banner.jpg);">
+<section class="inner-banner extra-height d-flex align-items-end" ng-style="{'background-image':'url('+room.photos[0].large+')'}">
     <div class="overlap"></div>
     <div class="title-bg"></div>
     <div class="inner-banner-title">
-        <h1>ocean<br>view</h1>
-        <h5>room <span>01</span> | Tonight’s rate <span>$380</span></h5>
+        <h1 ng-bind-html="room.name | renderHTMLCorrectly"></h1>
+        <h5>
+            <span ng-show="room.todayRate != 'Check Availability'"><a ng-href="{{site.reztripUrl}}search?selected_room_category=[[room.category]]&selected_room=[[room.code]]" target="_blank">Tonight’s rate [[portalInfo.default_currency_symbol]][[room.todayRate]]</a></span>
+            <span ng-show="room.todayRate == 'Check Availability'"><a ng-href="{{site.reztripUrl}}" target="_blank">[[room.todayRate]]</a></span>
+        </h5>
     </div>
 </section>
 <!-- rooms banner section end -->
 
-{% include booking-widget-custom.html %} 
+{% include booking-widget-custom.html %}
 
 <!-- room detail content section start -->
 <section>
@@ -26,9 +29,9 @@ meta_tags:
         <div class="room-details-inner m-0">
             <div class="_left p-0">
                 <div class="text-sec">
-                    <h2>oceanside<br>living</h2>
-                    <h4>enjoy timeless comforts</h4>
-                    <a href="" class="black" title="Book Now">Book Now</a>
+                    <h2 ng-bind-html="room.name | renderHTMLCorrectly"></h2>
+                    <h4 ng-bind-html="room.tagline | renderHTMLCorrectly"></h4>
+                    <a ng-href="{{site.reztripUrl}}search?selected_room_category=[[room.category]]&selected_room=[[room.code]]" class="black" title="Book Now">Book Now</a>
                 </div>
             </div>
             <div class="_right p-0">
@@ -44,7 +47,7 @@ meta_tags:
                 <img src="/assets/images/rooms/beach-view.jpg" alt="Beach view" class="align-self-end">
             </div>
             <div class="_middle">
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
+                <p ng-bind-html="room.description | renderHTMLCorrectly"></p>
             </div>
             <div class="_right text-right p-0">
                 <img src="/assets/images/rooms/flower.jpg" alt="Flower">
@@ -60,60 +63,13 @@ meta_tags:
     <div class="features">
         <div class="features-list">
             <ul class=" m-0 p-0">
-                <li class="active">
-                    <div class="features-icon">
-                        <img src="/assets/images/rooms/tv.png" alt="TV">
+                <li  ng-repeat="feature in hotelInfo.common_room_amenities">
+                    <div class="features-icon" >
+                        <img ng-src="/assets/images/rooms/features/[[feature | formatNameForLink]].png" alt="[[feature]]" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='">
                     </div>
-                    <span>42” Plasma TV</span>
+                    <span>[[feature]]</span>
                 </li>
-                <li>
-                    <div class="features-icon">
-                        <img src="/assets/images/rooms/fridge.png" alt="Refrigerator">
-                    </div>
-                    <span>Refrigerator</span>
-                </li>
-                <li>
-                    <div class="features-icon">
-                        <img src="/assets/images/rooms/luxury-linens.png" alt="Luxury Linens">
-                    </div>
-                    <span>Luxury Linens</span>
-                </li>
-                <li>
-                    <div class="features-icon">
-                        <img src="/assets/images/rooms/eco-friendly.png" alt="Eco-Friendly Amenities">
-                    </div>
-                    <span>Eco-Friendly Amenities</span>
-                </li>
-                <li>
-                    <div class="features-icon">
-                        <img src="/assets/images/rooms/private-balcony.png" alt="Private Balcony">
-                    </div>
-                    <span>Private Balcony</span>
-                </li>
-                <li>
-                    <div class="features-icon">
-                        <img src="/assets/images/rooms/iron-boardy.png" alt="Iron & Boardy">
-                    </div>
-                    <span>Iron & Boardy</span>
-                </li>
-                <li>
-                    <div class="features-icon">
-                        <img src="/assets/images/rooms/safe.png" alt="Safe">
-                    </div>
-                    <span>Safe</span>
-                </li>
-                <li>
-                    <div class="features-icon">
-                        <img src="/assets/images/rooms/coffee-maker.png" alt="Coffee Maker">
-                    </div>
-                    <span>Coffee Maker</span>
-                </li>
-                <li>
-                    <div class="features-icon">
-                        <img src="/assets/images/rooms/ac.png" alt="Air Conditioning">
-                    </div>
-                    <span>Air Conditioning</span>
-                </li>
+
             </ul>
         </div>
     </div>
@@ -138,3 +94,4 @@ meta_tags:
     </div>
 </section>
 <!-- newsletter signup end -->
+</section>

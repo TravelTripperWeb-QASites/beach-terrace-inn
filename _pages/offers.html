@@ -6,7 +6,7 @@ permalink: /offers/
 meta_tags:
   robots:
 ---
-
+<section rt3-special-rates="offers" >
 <!-- offers banner section start -->
 <section class="inner-banner d-flex align-items-center" style="background-image:url(/assets/images/offers/offers-banner.jpg);">
     <div class="overlap"></div>
@@ -28,70 +28,24 @@ meta_tags:
 
 <!-- offers section start -->
 <section class="assets-wrap offers-wrap">
-    <div class="assets-block m-0">
+    <div class="assets-block m-0" ng-repeat="offer in offers.special_rates">
         <div class="assets-img">
-        	<div class="img-inner bg-cover" style="background-image:url(/assets/images/offers/fall-sand.jpg);"></div>
+        	<div class="img-inner bg-cover" ng-style="{'background-image': 'url([[offer.images[0].large || '/assets/images/dummy.jpg' ]])'}"></div>
         </div>
         <div class="assets-content">
             <div class="assets-content-inner">
-                <h4>Fall on the sand</h4>
-                <h5>save 15%</h5>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+                <h4  ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></h4>
+                <!-- <h5>save 15%</h5> -->
+                <p ng-bind-html="offer.short_description | renderHTMLCorrectly"></p>
                 <div class="btn-holder">
-                    <a href="#" class="black-shadow-yellow" title="book offer">book offer</a>
-                    <a href="/offer-details/" class="white-shadow-yellow" title="view offer">view offer</a>
+                    <a ng-href="[[offer.promo_url]]" class="black-shadow-yellow" title="book offer">book offer</a>
+                    <a ng-href="/offer-details/#[[ offer.rate_plan_name | formatNameForLink ]]" class="white-shadow-yellow" title="view offer">view offer</a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="assets-block m-0">
-        <div class="assets-img">
-        	<div class="img-inner bg-cover" style="background-image:url(/assets/images/offers/book-direct.jpg);"></div>
-        </div>
-        <div class="assets-content">
-            <div class="assets-content-inner">
-                <h4>Book Direct</h4>
-                <h5>lowest prices guaranteed</h5>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                <div class="btn-holder">
-                    <a href="#" class="black-shadow-yellow" title="book offer">book offer</a>
-                    <a href="/offer-details/" class="white-shadow-yellow" title="view offer">view offer</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="assets-block m-0">
-        <div class="assets-img">
-        	<div class="img-inner bg-cover" style="background-image:url(/assets/images/offers/family-fun.jpg);"></div>
-        </div>
-        <div class="assets-content">
-            <div class="assets-content-inner">
-                <h4>family fun</h4>
-                <h5>package</h5>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
-                <div class="btn-holder">
-                    <a href="#" class="black-shadow-yellow" title="book offer">book offer</a>
-                    <a href="/offer-details/" class="white-shadow-yellow" title="view offer">view offer</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="assets-block m-0">
-        <div class="assets-img">
-        	<div class="img-inner bg-cover" style="background-image:url(/assets/images/offers/midweek.jpg);"></div>
-        </div>
-        <div class="assets-content">
-            <div class="assets-content-inner">
-                <h4>can’t beat midweek</h4>
-                <h5>up t0 33% off! Stay 2 nights get 1 free!</h5>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                <div class="btn-holder">
-                    <a href="#" class="black-shadow-yellow" title="book offer">book offer</a>
-                    <a href="/offer-details/" class="white-shadow-yellow" title="view offer">view offer</a>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
 </section>
 <!-- offers section end -->
 
@@ -111,3 +65,4 @@ meta_tags:
     </div>
 </section>
 <!-- newsletter signup end -->
+</section>
