@@ -14,17 +14,25 @@
           var instaLeftDiv='', i =0, rightStart, instaRightDiv='';
           if(response.data) {
               try {
+                  var rand1 = Math.floor(Math.random() * lim) + 1;
+                  var rand2 = Math.floor(Math.random() * lim-3) + 1;
+                  //var rand3 = Math.floor(Math.random() * lim) + 1;
+                  var hide=''
                   for(i= 0; i < lim ; i++) {
+                      hide = (i == rand1 || i == rand2 ) ? "style='visibility:hidden'" :'';
                       instaLeftDiv += (i%2) == 0 ? '<div class="footer-left-inner m-0">' : '';
-
-                      instaLeftDiv += '<div class="image-sec p-0" ><a href="'+ response.data[i].link +'" rel="nofollow" target="_blank"><div class="img-container bg-cover" style="background-image:url('+ response.data[i].images.standard_resolution.url +')"></div></a><div class="insta"><i class="fa fa-instagram" aria-hidden="true"></i></div></div>';
+                      instaLeftDiv += '<div class="image-sec p-0" '+hide+'><a href="'+ response.data[i].link +'" rel="nofollow" target="_blank"><div class="img-container bg-cover" style="background-image:url('+ response.data[i].images.standard_resolution.url +')"></div></a><div class="insta"><i class="fa fa-instagram" aria-hidden="true"></i></div></div>';
                       instaLeftDiv += (i+1) %2  == 0 ? '</div>' : '';
                   }
                   $(".footer-left").append(instaLeftDiv);
-                  rightStart = i
+                  rightStart = i;
+                  rand1 = Math.floor(Math.random() * (((lim*2)-i)+1) + i);
+                  rand2 = Math.floor(Math.random() * (((lim*2)-i)+1) + i);
+
                   for(var j= rightStart; j < lim*2 ; j++) {
+                      hide = (j == rand1 || j == rand2 ) ? "style='visibility:hidden'" :'';
                       instaRightDiv += (j%2) == 0 ? '<div class="footer-right-inner m-0">' : '';
-                      instaRightDiv += '<div class="image-sec p-0"><a href="'+ response.data[j].link +'" rel="nofollow" target="_blank"><div class="img-container bg-cover" style="background-image:url('+ response.data[j].images.standard_resolution.url +')"></div></a><div class="insta"><i class="fa fa-instagram" aria-hidden="true"></i></div></div>';
+                      instaRightDiv += '<div class="image-sec p-0" '+hide+'><a href="'+ response.data[j].link +'" rel="nofollow" target="_blank"><div class="img-container bg-cover" style="background-image:url('+ response.data[j].images.standard_resolution.url +')"></div></a><div class="insta"><i class="fa fa-instagram" aria-hidden="true"></i></div></div>';
                       instaRightDiv += (j+1) %2  == 0 ? '</div>' : '';
                   }
                   $(".footer-right").append(instaRightDiv);
