@@ -37,30 +37,29 @@
 </div>
 <!-- custom booking widget end -->
 <!--  Modal to get rooms adults children value-->
-<div class="modal fade " id="bookingWidgetRoomsModal" tabindex="-1" role="dialog" aria-labelledby="bookingWidgetRoomsLabel" aria-hidden="true">
+<div class="modal fade booking-widget-rooms" id="bookingWidgetRoomsModal" tabindex="-1" role="dialog" aria-labelledby="bookingWidgetRoomsLabel" aria-hidden="true">
  <div class="modal-dialog " role="document">
    <div class="modal-content booking-widget">
      <div class="modal-header">
-       <h3 class="modal-title">Rooms & Guests</h3>
+       <h4 class="modal-title text-center">Rooms & Guests</h4>
        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
          <span aria-hidden="true">&times;</span>
        </button>
      </div>
-     <div class="modal-body ">
-       <div class="rooms-holder" style="text-align:center">
-           <!-- <label >Rooms</label> -->
-           <select role="listbox" tabindex="0" id="roomsselector" name="roomsCount" >
-               <option selected="selected" value="1">1 Room </option>
-               <option value="2">2 Rooms</option>
-               <option value="3">3 Rooms</option>
-               <!-- <option value="4">4 Rooms</option> -->
-           </select>
-       </div>
+     <div class="modal-body">
        <div class="adult-children">
-           <div class="row">
-               <div id="adults-wrap" class="col">
+           <div class="adult-children-inner m-0">
+               <div class="rooms-wrap">
+                      <label >Rooms</label>
+                      <select role="listbox" tabindex="0" id="roomsselector" name="roomsCount" >
+                          <option selected="selected" value="1">1 Room </option>
+                          <option value="2">2 Rooms</option>
+                          <option value="3">3 Rooms</option>
+                      </select>
+               </div>
+               <div id="adults-wrap" class="adults-wrap">
                    <label for="adults">Adults</label>
-                   <select style="width: 40px;" name="adults[]">
+                   <select name="adults[]">
                        <option value="1">1</option>
                        <option value="2">2</option>
                        <option value="3">3</option>
@@ -68,9 +67,9 @@
 
                    </select>
                </div>
-               <div id="children-wrap" class="col">
+               <div id="children-wrap" class="children-wrap">
                    <label for="children">Children</label>
-                   <select style="width: 40px;" name="children[]">
+                   <select name="children[]">
                        <option value="0">0</option>
                        <option value="1">1</option>
                        <option value="2">2</option>
@@ -82,7 +81,7 @@
            </div>
        </div>
        <div class="extra-adult-children"></div>
-       <div style="text-align:center">
+       <div class="text-center">
            <button aria-label="Done" type="button" class=" black" data-dismiss="modal">Done</button>
        </div>
      </div>
