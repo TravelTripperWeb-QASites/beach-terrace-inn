@@ -1,0 +1,43 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+    var lim = 5;
+    var windowSize = $(window).width();
+    if (windowSize >= 1200) {
+      lim = 8;
+    }
+    var instaurl = 'https://api.instagram.com/v1/users/1452291232/media/recent/?access_token=1452291232.1677ed0.bef858b082bd4fecbc1a9896fd1642ac&callback=?';
+    $.ajax({
+      url: instaurl,
+      dataType: "jsonp",
+      success: function(response) {
+        setTimeout(function() {
+          var instaLeftDiv='', i =0, rightStart, instaRightDiv='';
+          if(response.data) {
+              try {
+                  for(i= 0; i < lim ; i++) {
+                      instaLeftDiv += (i%2) == 0 ? '<div class="footer-left-inner m-0">' : '';
+
+                      instaLeftDiv += '<div class="image-sec p-0" ><a href="'+ response.data[i].link +'" rel="nofollow" target="_blank"><div class="img-container bg-cover" style="background-image:url('+ response.data[i].images.standard_resolution.url +')"></div></a><div class="insta"><i class="fa fa-instagram" aria-hidden="true"></i></div></div>';
+                      instaLeftDiv += (i+1) %2  == 0 ? '</div>' : '';
+                  }
+                  $(".footer-left").append(instaLeftDiv);
+                  rightStart = i
+                  for(var j= rightStart; j < lim*2 ; j++) {
+                      instaRightDiv += (j%2) == 0 ? '<div class="footer-right-inner m-0">' : '';
+                      instaRightDiv += '<div class="image-sec p-0"><a href="'+ response.data[j].link +'" rel="nofollow" target="_blank"><div class="img-container bg-cover" style="background-image:url('+ response.data[j].images.standard_resolution.url +')"></div></a><div class="insta"><i class="fa fa-instagram" aria-hidden="true"></i></div></div>';
+                      instaRightDiv += (j+1) %2  == 0 ? '</div>' : '';
+                  }
+                  $(".footer-right").append(instaRightDiv);
+              }
+              catch (err) {
+
+              }
+
+          }
+
+
+        }, 1000);
+      }
+    });
+  });
+</script>
