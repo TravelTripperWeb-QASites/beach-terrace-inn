@@ -69,6 +69,12 @@ meta_tags:
                     </div>
                     <span>[[feature]]</span>
                 </li>
+                <li  ng-repeat="feature in room.amenities">
+                    <div class="features-icon" >
+                        <!-- <img ng-src="/assets/images/rooms/features/[[feature | formatNameForLink]].png" alt="[[feature]]" onerror="this.src='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='"> -->
+                    </div>
+                    <span>[[feature]]</span>
+                </li>
 
             </ul>
         </div>
