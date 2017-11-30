@@ -101,7 +101,7 @@ $(document).ready(function() {
 
           ]
         });
-    },2800);
+    },3100);
 
     //Attraction information
     $('.attractions-list').on('afterChange', function(event, slick, currentSlide, nextSlide){

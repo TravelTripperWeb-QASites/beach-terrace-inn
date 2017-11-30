@@ -267,6 +267,7 @@ More offers
     @extend .bg-cover;
     margin-top: 56px;
     min-height: 451px;
+    padding:0;
     @include media-breakpoint-down(md) {
         min-height: 300px;
     }
@@ -283,6 +284,9 @@ More offers
         }
         h5 {
             color: $white;
+            a{
+                color: $white;
+            }
         }
         @include media-breakpoint-down(sm) {
             text-align: left;
@@ -292,15 +296,33 @@ More offers
     &.extra-height {
         position:relative;
         min-height: 670px;
-        padding-bottom: 50px;
+        margin-bottom: 50px;
         @include media-breakpoint-down(md) {
             min-height: 450px;
         }
         .inner-banner-title {
+            position:absolute;
             width: 51%;
+            bottom:12%;
             @include media-breakpoint-down(sm) {
                 width: 90%;
             }
+        }
+        .rooms-details-carousel{
+            min-height:inherit;
+            width:100%;
+            .carousel-inner{
+                min-height:inherit;
+                width:100%;
+                .carousel-item{
+                    min-height:inherit;
+                    width:100%;
+                }
+                .carousel-control-prev, .carousel-control-next{
+                    margin:0 20px;
+                    z-index:999;
+                }
+            }  
         }
         .title-bg{
             content: "";

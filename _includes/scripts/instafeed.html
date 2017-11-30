@@ -16,14 +16,15 @@
               try {
                   for(i= 0; i < lim ; i++) {
                       instaLeftDiv += (i%2) == 0 ? '<div class="footer-left-inner m-0">' : '';
-                      instaLeftDiv += '<div class="image-sec p-0" ><a href="'+ response.data[i].link +'" rel="nofollow" target="_blank"><img src="'+ response.data[i].images.standard_resolution.url +'"/></a><div class="insta"><i class="fa fa-instagram" aria-hidden="true"></i></div></div>';
+
+                      instaLeftDiv += '<div class="image-sec p-0" ><a href="'+ response.data[i].link +'" rel="nofollow" target="_blank"><div class="img-container bg-cover" style="background-image:url('+ response.data[i].images.standard_resolution.url +')"></div></a><div class="insta"><i class="fa fa-instagram" aria-hidden="true"></i></div></div>';
                       instaLeftDiv += (i+1) %2  == 0 ? '</div>' : '';
                   }
                   $(".footer-left").append(instaLeftDiv);
                   rightStart = i
                   for(var j= rightStart; j < lim*2 ; j++) {
                       instaRightDiv += (j%2) == 0 ? '<div class="footer-right-inner m-0">' : '';
-                      instaRightDiv += '<div class="image-sec p-0"><a href="'+ response.data[j].link +'" rel="nofollow" target="_blank"><img src="'+ response.data[j].images.standard_resolution.url +'"/></a><div class="insta"><i class="fa fa-instagram" aria-hidden="true"></i></div></div>';
+                      instaRightDiv += '<div class="image-sec p-0"><a href="'+ response.data[j].link +'" rel="nofollow" target="_blank"><div class="img-container bg-cover" style="background-image:url('+ response.data[j].images.standard_resolution.url +')"></div></a><div class="insta"><i class="fa fa-instagram" aria-hidden="true"></i></div></div>';
                       instaRightDiv += (j+1) %2  == 0 ? '</div>' : '';
                   }
                   $(".footer-right").append(instaRightDiv);
