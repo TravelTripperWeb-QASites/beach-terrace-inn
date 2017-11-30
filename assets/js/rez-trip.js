@@ -36,10 +36,14 @@
       };
     })
     .controller('roomList', ['$scope', 'rt3Search', 'rt3Browser','$q','$filter','$http', function($scope, rt3Search, rt3Browser,$q,$filter,$http) {
+        $(".roomType").hide();
         $scope.selectedCat = '';
         $scope.updateCategory = function(cat){
             $scope.selectedCat = cat;
         }
+        setTimeout(function(){
+            $(".roomType").show();
+        },1600);
     }])
     .controller('roomDetail', ['$scope', 'rt3Search', 'rt3Browser','$timeout','$filter','$http', function($scope, rt3Search, rt3Browser,$timeout,$filter,$http) {
         //$(".loading").css("display","block");
