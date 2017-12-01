@@ -253,7 +253,7 @@
                    @include media-breakpoint-down(sm) {
                         width:auto;
                         padding-bottom:20px;
-                    } 
+                    }
                 }
             }
         }
@@ -473,6 +473,9 @@
                 }
                 h5 {
                     margin-bottom: 20px;
+                    a {
+                        color: $black;
+                    }
                 }
             }
             .btns-part {

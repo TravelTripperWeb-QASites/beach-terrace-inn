@@ -1,19 +1,32 @@
 ---
 layout: default
 title: Offer Details
-meta_description:
-permalink: /offer-details/
+meta_description: 
+permalink: "/offer-details/"
 meta_tags:
-  robots:
+  robots: 
+published_localized:
+  en: true
+title_localized:
+  en: Carlsbad Hotel Deals & Offers | Offers at Beach Terrace Inn
+layout_localized: default
+label: Carlsbad Hotel Deals & Offers | Offers at Beach Terrace Inn
+permalink_localized:
+  en: "/offer-details/"
+meta_description_localized:
+  en: Our Carlsbad oceanfront hotel regularly has new offers and packages to help
+    you slow down at one of the premier hotels in Carlsbad. View our exclusive deals!
+
 ---
 
+<section rt3-special-rates="offers">
 <!-- offers banner section start -->
-<section class="inner-banner extra-height d-flex align-items-end" style="background-image:url(/assets/images/offers/offer-banner.jpg);">
+<section class="inner-banner extra-height d-flex align-items-end" ng-style="{'background-image':'url('+offers.sRdetail.images[0].large+')'}">
     <div class="overlap"></div>
     <div class="title-bg big"></div>
     <div class="inner-banner-title offer-detail">
-        <h1>fall on<br>the sand</h1>
-        <h5>save <span>15%</span></h5>
+        <h1 ng-bind-html="offers.sRdetail.rate_plan_name | renderHTMLCorrectly"></h1>
+        <!-- <h5>save <span>15%</span></h5> -->
     </div>
 </section>
 <!-- offers banner section end -->
@@ -23,10 +36,10 @@ meta_tags:
 	<div class="intro-wrap m-0">
 		<div class="_left">
 			<div class="text-section">
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
-				<a href="#" title="book offer" class="black">book offer</a>
-				<a href="#" title="contact us" class="border-black">contact us</a>
-				<p>This offer is pre-paid and non-refundable. Offer valid 10/1 - 10/31/17. Some restrictions and blackout dates may apply.</p>
+				<p ng-bind-html="offers.sRdetail.long_description | renderHTMLCorrectly"></p>
+				<a ng-href="[[offers.sRdetail.promo_url]]" title="book offer" class="black">book offer</a>
+				<a href="/contact/" title="contact us" class="border-black">contact us</a>
+				<p>Offer valid <span ng-show="!offers.sRdetail.booking_end_date"> From </span>[[offers.sRdetail.booking_start_date | date:dd/MM/yyyy]] <span ng-show="offers.sRdetail.booking_end_date">- [[offers.sRdetail.booking_end_date | date:dd/MM/yyyy]]</span>. Some restrictions and blackout dates may apply.</p>
 			</div>
 		</div>
 		<div class="_right">
@@ -34,7 +47,7 @@ meta_tags:
 				<img src="/assets/images/offers/fall-sand.jpg" alt="Fall on the Sand">
 				<div class="image-sec-header">
 					<h2>on the<br>house</h2>
-					<h5>this offer includes:</h5>
+					<h5 ng-show="offers.sRdetail.addons.length > 0">this offer includes:</h5>
 				</div>
 			</div>
 		</div>
@@ -45,12 +58,8 @@ meta_tags:
 <!-- offer includes section start -->
 <div class="offer-includes d-flex justify-content-end">
 	<ul class="">
-		<li>Parking</li>
-		<li>Wifi</li>
-		<li>Breakfast</li>
-		<li>Beach Valet</li>
-		<li>Use of Beach Toys</li>
-		<li>No Resort Fee</li>
+		<li ng-repeat ="addon in offers.sRdetail.addons" >[[addon]]</li>
+
 	</ul>
 </div>
 <!-- offer includes section end -->
@@ -90,3 +99,4 @@ meta_tags:
     </div>
 </section>
 <!-- newsletter signup end -->
+</section>
