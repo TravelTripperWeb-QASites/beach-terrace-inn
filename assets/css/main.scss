@@ -2,18 +2,23 @@
 ---
 
 @import "bootstrap/scss/bootstrap";
+@import "fonts";
+@import "slick";
+@import "slick-theme";
 @import "variables";
 @import "base";
-@import "navigation";
 @import "header";
 @import "footer";
 @import "mixins";
 @import "utilities";
+@import "navigation";
 
 /* Import custom Sass files below */
 
+@import "shame";
 @import "pages/shared";
 @import "pages/about";
+@import "pages/rfp";
 @import "pages/contact";
 @import "pages/dining";
 @import "pages/events";
@@ -21,4 +26,9 @@
 @import "pages/location";
 @import "pages/offers";
 @import "pages/rooms";
-@import "shame";
+@import "pages/home";
+@import "pages/carlsbad";
+@import "pages/wedding";
+@import "pages/local-flow";
+@import "pages/sitemap";
+@import "lightgallery/lightgallery";

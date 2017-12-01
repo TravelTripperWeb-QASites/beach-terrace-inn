@@ -1,20 +1,102 @@
 ---
-layout: single-offer
+layout: default
 title: Offer Details
-meta_description:
-permalink: /offer-details/
+meta_description: 
+permalink: "/offer-details/"
 meta_tags:
-  robots:
+  robots: 
+published_localized:
+  en: true
+title_localized:
+  en: Carlsbad Hotel Deals & Offers | Offers at Beach Terrace Inn
+layout_localized: default
+label: Carlsbad Hotel Deals & Offers | Offers at Beach Terrace Inn
+permalink_localized:
+  en: "/offer-details/"
+meta_description_localized:
+  en: Our Carlsbad oceanfront hotel regularly has new offers and packages to help
+    you slow down at one of the premier hotels in Carlsbad. View our exclusive deals!
+
 ---
 
-{% comment %}
+<section rt3-special-rates="offers">
+<!-- offers banner section start -->
+<section class="inner-banner extra-height d-flex align-items-end" ng-style="{'background-image':'url('+offers.sRdetail.images[0].large+')'}">
+    <div class="overlap"></div>
+    <div class="title-bg big"></div>
+    <div class="inner-banner-title offer-detail">
+        <h1 ng-bind-html="offers.sRdetail.rate_plan_name | renderHTMLCorrectly"></h1>
+        <!-- <h5>save <span>15%</span></h5> -->
+    </div>
+</section>
+<!-- offers banner section end -->
 
-  Name:
+<!-- offer details content section start -->
+<section class="offer-details-intro">
+	<div class="intro-wrap m-0">
+		<div class="_left">
+			<div class="text-section">
+				<p ng-bind-html="offers.sRdetail.long_description | renderHTMLCorrectly"></p>
+				<a ng-href="[[offers.sRdetail.promo_url]]" title="book offer" class="black">book offer</a>
+				<a href="/contact/" title="contact us" class="border-black">contact us</a>
+				<p>Offer valid <span ng-show="!offers.sRdetail.booking_end_date"> From </span>[[offers.sRdetail.booking_start_date | date:dd/MM/yyyy]] <span ng-show="offers.sRdetail.booking_end_date">- [[offers.sRdetail.booking_end_date | date:dd/MM/yyyy]]</span>. Some restrictions and blackout dates may apply.</p>
+			</div>
+		</div>
+		<div class="_right">
+			<div class="image-section">
+				<img src="/assets/images/offers/fall-sand.jpg" alt="Fall on the Sand">
+				<div class="image-sec-header">
+					<h2>on the<br>house</h2>
+					<h5 ng-show="offers.sRdetail.addons.length > 0">this offer includes:</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- offer details content section end -->
 
-    Offer Details Page
+<!-- offer includes section start -->
+<div class="offer-includes d-flex justify-content-end">
+	<ul class="">
+		<li ng-repeat ="addon in offers.sRdetail.addons" >[[addon]]</li>
 
-  Description:
+	</ul>
+</div>
+<!-- offer includes section end -->
 
-    Display a single offer from RezTrip.
+<!-- gift section start -->
+<section class="gift-beach bg-cover" style="background-image:url(/assets/images/offers/gift-sec-bg.jpg);">
+	<div class="gift-beach-wrap m-0">
+		<div class="img-part p-0">
+			<img src="/assets/images/offers/hand-with-star.png" alt="Hand with Star">
+		</div>
+		<div class="text-part p-0">
+			<div class="text-part-inner">
+				<h2>gift the<br>beach</h2>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
+				<a href="" title="Buy Gift card" class="white-shadow-white">Buy Gift card</a>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- gift section end -->
 
-{% endcomment %}
+{% include special_offers.html %}
+
+<!-- newsletter signup start -->
+<section class="cta-signup bg-cover text-center" style="background-image: url(/assets/images/offers/offer-cta.jpg);">
+    <div class="overlap"></div>
+    <div class="cta-signup-inner">
+        <h4>exclusive newsletter sign-up</h4>
+        <h2>everyone's invited</h2>
+        <div class="input-holder m-auto">
+            <form action="https://submit.jotform.me/submit/73300591282451/" method="post" name="form_73300591282451" id="73300591282451" accept-charset="utf-8">
+                <input type="hidden" name="formID" value="73300591282451" />
+                <input required="required" type="email" id="input_3" name="q3_email" class="email-field validate[Email]" placeholder="Your Email Address goes here" title="Newsletter Signup" aria-label="Newsletter Signup">
+                <button type="submit" title="Newsletter Signup" class="e-icon m-0">$</button>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- newsletter signup end -->
+</section>

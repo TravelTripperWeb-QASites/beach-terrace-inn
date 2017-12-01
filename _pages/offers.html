@@ -1,20 +1,68 @@
 ---
 layout: default
-title: Offers
-meta_description:
+title: Carlsbad Hotel Deals & Offers | Offers at Beach Terrace Inn
+meta_description: Our Carlsbad oceanfront hotel regularly has new offers and packages to help you slow down at one of the premier hotels in Carlsbad. View our exclusive deals!
 permalink: /offers/
 meta_tags:
   robots:
 ---
+<section rt3-special-rates="offers" >
+<!-- offers banner section start -->
+<section class="inner-banner d-flex align-items-center" style="background-image:url(/assets/images/offers/offers-banner.jpg);">
+    <div class="overlap"></div>
+    <div class="inner-banner-title">
+        <h1>Our<br>Offers</h1>
+        <h5>moments of pure joy</h5>
+    </div>
+</section>
+<!-- offers banner section end -->
 
-{% comment %}
+<!-- offers content part start -->
+<section>
+	<div class="offers-intro">
+		<h3>our gift to you</h3>
+		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
+	</div>
+</section>
+<!-- offers content part end -->
 
-  Name:
+<!-- offers section start -->
+<section class="assets-wrap offers-wrap">
+    <div class="assets-block m-0" ng-repeat="offer in offers.special_rates">
+        <div class="assets-img">
+        	<div class="img-inner bg-cover" ng-style="{'background-image': 'url([[offer.images[0].large || '/assets/images/dummy.jpg' ]])'}"></div>
+        </div>
+        <div class="assets-content">
+            <div class="assets-content-inner">
+                <h4  ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></h4>
+                <!-- <h5>save 15%</h5> -->
+                <p ng-bind-html="offer.short_description | renderHTMLCorrectly"></p>
+                <div class="btn-holder">
+                    <a ng-href="[[offer.promo_url]]" class="black-shadow-yellow" title="book offer">book offer</a>
+                    <a ng-href="/offer-details/#[[ offer.rate_plan_name | formatNameForLink ]]" class="white-shadow-yellow" title="view offer">view offer</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    Offers Listing Page
 
-  Description:
+</section>
+<!-- offers section end -->
 
-    Display offer list from RezTrip.
-
-{% endcomment %}
+<!-- newsletter signup start -->
+<section class="cta-signup bg-cover text-center mt-0" style="background-image: url(/assets/images/offers/offers-cta.jpg);">
+    <div class="overlap"></div>
+    <div class="cta-signup-inner">
+        <h4>exclusive newsletter sign-up</h4>
+        <h2>go with the flow</h2>
+        <div class="input-holder m-auto">
+            <form action="https://submit.jotform.me/submit/73300591282451/" method="post" name="form_73300591282451" id="73300591282451" accept-charset="utf-8">
+                <input type="hidden" name="formID" value="73300591282451" />
+                <input required="required" type="email" id="input_3" name="q3_email" class="email-field validate[Email]" placeholder="Your Email Address goes here" title="Newsletter Signup" aria-label="Newsletter Signup">
+                <button type="submit" title="Newsletter Signup" class="e-icon m-0">$</button>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- newsletter signup end -->
+</section>

@@ -1,3 +1,182 @@
 /*
    Contact Page Elements
    ========================================================================== */
+
+.contact-banner{
+	@include container-fix();
+    margin: 56px auto 30px auto;
+    @include media-breakpoint-up(md) {
+    	margin: 56px auto 90px auto;
+    }
+	.contact-banner-inner{
+		@include make-row();
+		.heading{
+			@include make-col-ready();
+	        @include media-breakpoint-up(md) {
+	            @include make-col(3);
+	        }
+	        background-color:$inner-bg;
+	        .heading-inner{
+	        	padding: 50px 0 40px 40px;
+	        	position:relative;
+	        	z-index:9;
+	        	h1{
+	        		@extend h2;
+		        }
+		        h4{
+		        	padding:30px 0 5px;
+		        	@include media-breakpoint-up(md) {
+		        		padding:60px 0 5px;
+		        	}
+		        }
+                p{
+                    a{
+                        color:$text-color;
+                        &:hover{
+                            text-decoration:none;
+                            opacity:.8;
+                        }
+                    }
+                }
+		        @include media-breakpoint-up(md) {
+		        	padding: 110px 0 90px 100px;
+		        }
+	        }
+		}
+		.map-section{
+			@include make-col-ready();
+	        @include media-breakpoint-up(md) {
+	            @include make-col(9);
+	        }
+	        //background-image: url(/assets/images/contact/map.jpg);
+	        @include media-breakpoint-down(sm) {
+	        	height:400px;
+	        }
+		}
+        .btn-wrap{
+            width:100%;
+    		a {
+    	        @extend .common-btn;
+    	        background-color: $secondary-bg;
+    	        padding: 15px 0;
+    	        border: 0;
+    	        color: $white;
+    	        font-family: $form-font;
+    	        width: 100%;
+    	        box-shadow: none;
+    	        cursor: pointer;
+    	    }
+        }
+	}
+}
+
+.contact-intro{
+	margin-bottom:70px;
+    .intro-wrap {
+        @include make-row();
+        ._left{
+            @include make-col-ready();
+            @include media-breakpoint-up(lg) {
+                @include make-col(6);
+            }
+            .text-section{
+                padding: 0 30px;
+                width: 100%;
+                @include media-breakpoint-up(lg) {
+                    padding: 0 0 0 60px;
+                    width: 75%;
+                }
+                @include media-breakpoint-up(xl) {
+                    width: 70%;
+                    margin-left:18%;
+                }
+                @media screen and (min-width:1500px){
+            	    width: 55%;
+    				margin-left: 30%;
+                }
+                h3{
+                	padding-bottom:36px;
+                }
+                p{
+                    border-top: 3px solid $line-bg;
+                    padding-top:36px;
+                    &:last-child{
+                        margin-top:40px;
+                        width:100%;
+                        font-family:$secondary-font-bold;
+                        margin-bottom:50px;
+                        @include media-breakpoint-up(lg) {
+                            margin-bottom:0;
+                            margin-top:70px;
+                            width:90%;
+                        }
+                        @include media-breakpoint-up(xl) {
+                            width:55%;
+                            margin-top:140px;
+                        }
+                    }
+                }
+            }
+        }
+        ._right{
+            @include make-col-ready();
+            @include media-breakpoint-up(lg) {
+                @include make-col(6);
+            }
+            .form-section{
+            	border:3px solid $line-bg;
+            	padding:30px;
+            	@include media-breakpoint-up(lg) {
+            		padding:80px;
+            	}
+            	h4{
+            		padding-bottom:10px
+            	}
+            	p{
+            		padding-bottom:60px
+            	}
+            	form{
+            		@include make-row();
+            	}
+            	.control-col{
+            		@include make-col-ready();
+			        @include media-breakpoint-up(md) {
+			            @include make-col(6);
+			        }
+			        padding:0 10px;
+			        margin-bottom:26px;
+        		}
+        		.control-col-fw{
+        			@include make-col-ready();
+			        @include media-breakpoint-up(md) {
+			            @include make-col(12);
+			        }
+			        padding:0 10px;
+			        margin-bottom:26px;
+        		}
+    			.form-control{
+    				border: 0;
+				    border-radius: 0;
+				    height: 3.625rem;
+				    box-shadow: none;
+				    color: #9d9d9d;
+				    letter-spacing: 1px;
+				    font-size: .8rem;
+				    background-color:$input-bg;
+				    font-family:$secondary-font-light;
+				    font-size:$type-size-5;
+				    color:$text-color;
+    			}
+        		textarea{
+        			&.form-control{
+        				height: 12.5rem;
+        				resize:none;
+        			}
+        		}
+                button{
+                    cursor:pointer;
+                }
+            }
+        }
+    }
+}

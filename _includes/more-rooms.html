@@ -1,0 +1,26 @@
+<!-- more rooms start -->
+<section class="home-rooms text-center">
+	<h3>Browse Rooms</h3>
+    <div class="home-rooms-inner">
+      <div ng-repeat="room in browser.roomsList">
+      		<h5 class="room-title" ng-bind-html="room.name | renderHTMLCorrectly"></h5>
+            <img ng-src="[[room.photos[0].large]]" class="img-fluid" alt="[[room.image_info[0].caption]]">
+            <div class="caption m-0">
+            	<div class="content-part p-0 text-left">
+            		<h5>
+                        <span ng-show="room.todayRate != 'Check Availability'"><a ng-href="{{site.reztripUrl}}search?selected_room_category=[[room.category]]&selected_room=[[room.code]]" target="_blank">tonight’s rate [[portalInfo.default_currency_symbol]][[room.todayRate]]</a></span>
+                        <span ng-show="room.todayRate == 'Check Availability'"><a ng-href="{{site.reztripUrl}}" target="_blank">[[room.todayRate]]</a></span>
+
+                    </h5>
+            		<p ng-bind-html="room.short_description | renderHTMLCorrectly"></p>
+            	</div>
+            	<div class="btns-part p-0">
+            		<a ng-href="[[room.todayRate == 'Check Availability' ? '{{site.reztripUrl}}' : '{{site.reztripUrl}}' + 'search?selected_room_category='+room.category+'&selected_room='+room.code ]]" title="Book Now" class="black">book now</a><br>
+            		<a ng-href="/room-details/#[[room.name | formatNameForLink]]" title="View Room" class="border-black">view room</a>
+            	</div>
+            </div>
+      </div>
+
+    </div>
+</section>
+<!-- more rooms end -->

@@ -1,3 +1,455 @@
 /*
    Shared Page Elements
    ========================================================================== */
+
+.bg-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/*
+   Headings and paragraph styles
+   ========================================================================== */
+
+p {
+    @include text-formatting($secondary-font-regular, $type-size-8, normal, 1.875rem, normal, none, $text-color, normal);
+}
+h2 {
+    @include text-formatting($highlight-font, $type-size-1, normal, 6.5rem, 1px, uppercase, $text-color, normal);
+    @include media-breakpoint-down(lg) {
+        font-size: 3.438rem;
+        line-height: 4.375rem;
+    }
+    @include media-breakpoint-down(md) {
+        font-size: $type-size-3;
+        line-height: 3.5rem;
+    }
+}
+h3 {
+    @include text-formatting($primary-font-regular, $type-size-3, normal, 2.5rem, 1px, uppercase, $text-color, normal);
+}
+h4 {
+    @include text-formatting($primary-font-bold, $type-size-5, normal, normal, 1px, uppercase, $text-color, normal);
+}
+h5 {
+    @include text-formatting($primary-font-bold, $type-size-8, normal, normal, 2px, uppercase, $text-color, normal);
+}
+
+
+/*
+   Button styles
+   ========================================================================== */
+
+.common-btn {
+    @include text-formatting($primary-font-bold, $type-size-9, normal, normal, 2px, uppercase, $text-color, normal);
+    @include box-shadow(6px, 6px, 0px, $line-bg);
+    background-color: $white;
+    padding: 10px 0;
+    border: 1px solid transparent;
+    width: 174px;
+    text-align: center;
+    display: inline-block;
+    font-family: $primary-font-bold;
+    &:hover {
+        text-decoration: none;
+        background-color: $black;
+        color: $white;
+    }
+}
+
+.border-black {
+    @extend .common-btn;
+    border: 1px solid $black;
+}
+
+.white-shadow-yellow {
+    @extend .border-black;
+    @include box-shadow(6px, 6px, 0px, $primary-bg);
+}
+
+.white-shadow-white {
+    @extend .border-black;
+    @include box-shadow(6px, 6px, 0px, $white);
+    color: $black;
+    background-color: $white;
+}
+
+.black-shadow-yellow {
+    @extend .white-shadow-yellow;
+    background-color: $black;
+    color: $white;
+}
+
+.black-white-shadow {
+    @extend .black-shadow-yellow;
+    @include box-shadow(6px, 6px, 0px, $white);
+}
+
+.black {
+    @extend .border-black;
+    background-color: $black;
+    color: $white;
+    &:hover {
+        background-color: $white;
+        color: $black;
+    }
+}
+
+.text-btn {
+    @extend .common-btn;
+    box-shadow: none;
+    display: block;
+    margin: 0.55rem 0rem;
+    text-align: left;
+    position: relative;
+    &:after{
+        content:'$';
+        position: absolute;
+        font-family: $icons-font;
+        font-size: $type-size-3;
+        right: 10px;
+        top: 4px;
+    }
+    @include media-breakpoint-up(md) {
+        margin: 1.25rem 0rem;
+    }
+    &:hover {
+        background-color: transparent;
+        color: $black;
+    }
+}
+
+/*
+   CTA Section Styles
+   ========================================================================== */
+
+.cta-signup {
+    @include container-fix();
+    margin-top: 63px;
+    margin-bottom: 63px;
+    padding: 162px 0;
+    .cta-signup-inner {
+        position: relative;
+        h4 {
+            color: $white;
+        }
+        h2 {
+            color: $white;
+            padding: 80px 0;
+        }
+        .input-holder {
+            position: relative;
+            width: 300px;
+            @include media-breakpoint-up(sm) {
+                width: 385px;
+            }
+            input {
+                background-color: $white-70;
+                font-size: $type-size-5;
+                width: 100%;
+                border: 0;
+                padding: 12px 20px;
+                margin: 0;
+                line-height: 1.875rem;
+                font-family: $form-font;
+            }
+            button {
+                position: absolute;
+                width: 26px;
+                height: 15px;
+                right: 24px;
+                top: 4px;
+                color: $text-color;
+                border: 0;
+                background-color: transparent;
+                cursor: pointer;
+                span {
+                    color: $text-color;
+                }
+            }
+        }
+    }
+}
+/*
+icons font
+=================*/
+
+.e-icon {
+    font-family: $icons-font;
+    font-size: $type-size-3;
+    vertical-align: middle;
+    margin: 0 1rem;
+    vertical-align: middle;
+}
+//icons style
+.social_facebook,
+.social_twitter,
+.social_pinterest,
+.social_googleplus,
+.social_instagram,
+.icon-star {
+    font-family: $icons-font;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.social_facebook:before {
+    content: "\e093";
+}
+.social_twitter:before {
+    content: "\e094";
+}
+.social_pinterest:before {
+    content: "\e095";
+}
+.social_googleplus:before {
+    content: "\e096";
+}
+.social_instagram:before {
+    content: "\e09a";
+}
+.icon-star:before {
+    content: "\e033";
+}
+/*
+   Yellow box style
+   ========================================================================== */
+
+.yellow-box {
+    width: 422px;
+    height: 295px;
+    background-color: $primary-bg;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+/*
+More offers
+==================================*/
+
+.more-offers {
+    margin-bottom: 3.75rem;
+    h3 {
+        font-weight: lighter;
+        font-size: $type-size-4;
+        margin: 1.75rem auto;
+        text-align: center;
+        @include media-breakpoint-up(md) {
+            font-size: $type-size-2;
+            margin: 3.75rem auto;
+        }
+    }
+    @include more-sliders();
+}
+.accommodation{
+    @include more-sliders();
+}
+.vercal-line {
+    position: absolute;
+    background-color: $line-bg;
+    width: 2px;
+    height: 60px;
+    left: 0;
+    right: 0;
+    margin: 4rem auto;
+}
+/*
+   Offers rooms page banner CSS
+   ========================================================================== */
+
+.inner-banner {
+    @include container-fix();
+    @extend .bg-cover;
+    margin-top: 56px;
+    min-height: 451px;
+    padding:0;
+    @include media-breakpoint-down(md) {
+        min-height: 300px;
+    }
+    .inner-banner-title {
+        text-align: right;
+        position: relative;
+        width: 44%;
+        h1 {
+            @extend h2;
+            color: $white;
+            @include media-breakpoint-down(md) {
+                line-height: 3rem;
+            }
+        }
+        h5 {
+            color: $white;
+            a{
+                color: $white;
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            text-align: left;
+            width: 90%;
+        }
+    }
+    &.extra-height {
+        position:relative;
+        min-height: 670px;
+        margin-bottom: 50px;
+        @include media-breakpoint-down(md) {
+            min-height: 450px;
+        }
+        .inner-banner-title {
+            position:absolute;
+            width: 51%;
+            bottom:12%;
+            @include media-breakpoint-down(sm) {
+                width: 90%;
+            }
+        }
+        .rooms-details-carousel{
+            min-height:inherit;
+            width:100%;
+            .carousel-inner{
+                min-height:inherit;
+                width:100%;
+                .carousel-item{
+                    min-height:inherit;
+                    width:100%;
+                }
+                .carousel-control-prev, .carousel-control-next{
+                    margin:0 20px;
+                    z-index:999;
+                }
+            }  
+        }
+        .title-bg{
+            content: "";
+            width: 460px;
+            height: 333px;
+            background-color: $white-25;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+            &.big{
+                @extend .small;
+                width: 560px;
+                @include media-breakpoint-down(md) {
+                    width: 420px;
+                    height:230px;
+                }
+            }
+        }
+    }
+    &.half-banner{
+        background-size:inherit;
+        background-position:right;
+
+      @extend .extra-height ;
+       .inner-banner-title {
+            top: 50%;
+            left: 8%;
+        }
+      h1,
+      h5{
+        text-align:left;
+        color:$black;
+      }
+    }
+}
+/*
+   Datepicker CSS
+   ========================================================================== */
+
+.ui-datepicker {
+    font-family: $form-font !important;
+    border-radius: 0 !important;
+    .ui-datepicker-header {
+        background-color: transparent;
+        color: $secondary-bg;
+        border-radius: 0;
+        border: 0;
+        .ui-datepicker-next {
+            background: none;
+            &:hover {
+                background-color: transparent;
+                border: 0;
+            }
+            .ui-icon {
+                background: none;
+                position: relative;
+            }
+            &:after {
+                content: "\f105";
+                position: absolute;
+                top: 0;
+                right: 5px;
+                font-size: 20px;
+                color: $secondary-bg;
+                font-family: FontAwesome;
+            }
+        }
+        .ui-datepicker-prev {
+            @extend .ui-datepicker-next;
+            &:after {
+                content: "\f104";
+                left: 5px;
+            }
+        }
+        .ui-datepicker-title {
+            font-family: $form-font;
+            font-size: $type-size-12;
+            font-weight: 700;
+            padding-bottom: 5px;
+            padding-top: 6px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: $text-color;
+            line-height: normal
+        }
+    }
+    .ui-datepicker-calendar {
+        thead {
+            th {
+                font-weight: 400;
+                font-size: $type-size-11;
+            }
+        }
+        tbody {
+            td {
+                a {
+                    font-size: $type-size-11;
+                    &.ui-state-highlight {
+                        border: 1px solid $secondary-bg !important;
+                        background: $secondary-bg !important;
+                        color: $white !important;
+                    }
+                    &.ui-state-default {
+                        border: 0;
+                        background: transparent;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+.datepicker-input {
+    position: relative; z-index: 100000;
+}
+/*
+   Overlap CSS
+   ========================================================================== */
+
+.overlap {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .2);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}

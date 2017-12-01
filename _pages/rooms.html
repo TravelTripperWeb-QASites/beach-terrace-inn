@@ -1,20 +1,71 @@
 ---
 layout: default
-title: Rooms
-meta_description:
+title: Carlsbad Beachfront Hotel Rooms | Rooms at Beach Terrace Inn
+meta_description: Every room at our Carlsbad beachfront hotel offers comfortable bedding, eco-friendly amenities, 42" plasma TV and large walk-in showers. Book your stay today!
 permalink: /rooms/
 meta_tags:
   robots:
 ---
+<scetion ng-controller="roomList">
+<!-- rooms banner section start -->
+<section class="inner-banner d-flex align-items-center" style="background-image:url(/assets/images/rooms/rooms-banner.jpg);">
+    <div class="overlap"></div>
+    <div class="inner-banner-title">
+        <h1>Our<br>Rooms</h1>
+        <h5>beach front living</h5>
+    </div>
+</section>
+<!-- rooms banner section end -->
 
-{% comment %}
+{% include booking-widget-custom.html %}
 
-  Name:
+<!-- rooms section start -->
+<section class="assets-wrap">
+    <h3 class="text-center">browse room types</h3>
+    <ul class="text-center m-0 roomType">
+        <li><a ng-class="{'active': selectedCat ==''}" ng-click="updateCategory('')">All</a></li>
+        <li ng-repeat="cat in browser.roomCategories"><a href="javascript:;" ng-click="updateCategory(cat)" ng-class="{'active':cat== selectedCat}">[[cat]]</a></li>
 
-    Rooms Listing Page
+    </ul>
+    <div class="assets-block m-0" ng-repeat="room in browser.roomsList | filter : {'category':selectedCat}">
+        <div class="assets-img bg-cover" ng-style="{'background-image':'url('+room.photos[0].large+')'}">
+        </div>
+        <div class="assets-content">
+            <div class="assets-content-inner">
+                <h4 ng-bind-html="room.name | renderHTMLCorrectly"></h4>
+                <h5>
+                    <span ng-show="room.todayRate != 'Check Availability'"><a ng-href="{{site.reztripUrl}}search?selected_room_category=[[room.category]]&selected_room=[[room.code]]" target="_blank">tonight’s rate [[portalInfo.default_currency_symbol]][[room.todayRate]]</a></span>
+                    <span ng-show="room.todayRate == 'Check Availability'"><a ng-href="{{site.reztripUrl}}" target="_blank">[[room.todayRate]]</a></span>
 
-  Description:
+                </h5>
+                <p ng-bind-html="room.short_description | renderHTMLCorrectly"></p>
+                <div class="btn-holder">
+                    <a ng-href="[[room.todayRate == 'Check Availability' ? '{{site.reztripUrl}}' : '{{site.reztripUrl}}' + 'search?selected_room_category='+room.category+'&selected_room='+room.code ]]" class="black" title="book room">book room</a>
+                    <a ng-href="/room-details/#[[room.name | formatNameForLink]]" class="border-black" title="view room">view room</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    Display room list from RezTrip.
+</section>
+<!-- rooms section end -->
 
-{% endcomment %}
+{% include special_offers.html %}
+
+<!-- newsletter signup start -->
+<section class="cta-signup bg-cover text-center" style="background-image: url(/assets/images/rooms/rooms-cta.jpg);">
+    <div class="overlap"></div>
+    <div class="cta-signup-inner">
+        <h4>exclusive newsletter sign-up</h4>
+        <h2>seaside playground</h2>
+        <div class="input-holder m-auto">
+            <form action="https://submit.jotform.me/submit/73300591282451/" method="post" name="form_73300591282451" id="73300591282451" accept-charset="utf-8">
+                <input type="hidden" name="formID" value="73300591282451" />
+                <input required="required" type="email" id="input_3" name="q3_email" class="email-field validate[Email]" placeholder="Your Email Address goes here" title="Newsletter Signup" aria-label="Newsletter Signup">
+                <button type="submit" title="Newsletter Signup" class="e-icon m-0">$</button>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- newsletter signup end -->
+</section>

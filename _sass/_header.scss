@@ -1,3 +1,55 @@
-/*
-   Header Elements
-   ========================================================================== */
+.booknow{
+	background-color:$primary-bg;
+	color:$white;
+	position:fixed;
+	right:0px;
+	top:4px;
+	text-align:center;
+    height: 50px;
+    padding: 0 15px;
+    line-height: 50px;
+    z-index: 100;
+    font-size: $type-size-9;
+    font-family:$primary-font-bold;
+    letter-spacing: 2px;
+    color:$nav-text;
+    @include media-breakpoint-up(lg) {
+    	top:0px;
+    	padding:0 70px;
+    	height: 58px;
+    	line-height: 58px;
+    	font-size:$type-size-7;
+    }
+}
+
+.brand-centered { 
+  position: absolute;
+  width: 150px;   
+  vertical-align: middle;
+  left:0.55rem;
+  top: 4px;
+  @include media-breakpoint-up(lg) {
+    width: 260px; 
+    left:42%; 
+    left:calc(45.7% - 100px); 
+  }
+  .navbar-brand {
+  	vertical-align: middle;
+  	height: 100%;
+  	position: relative;
+  	display: block;
+  	padding:0;
+	   img{
+	   	  max-width: 100%;
+	   } 
+	}
+}
+
+@keyframes smoothScroll {
+	0% {
+		transform: translateY(-200px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
