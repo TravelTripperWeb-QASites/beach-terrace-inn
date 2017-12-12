@@ -68,11 +68,12 @@
     .controller('offerDetail', ['$scope', 'rt3SpecialRates', 'rt3Browser','$timeout','$filter','$q', function($scope, rt3SpecialRates, rt3Browser,$timeout,$filter,$q) {
           window.onhashchange = function() {
             window.location.reload();
-            $(window).scrollTop(0);
+            //$(window).scrollTop(0);
           }
          setTimeout(function(){
-          
+
            $(".loading").fadeOut('slow');
+           $(window).scrollTop(0);
          },1200);
 
     }])
