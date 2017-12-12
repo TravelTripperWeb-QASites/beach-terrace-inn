@@ -66,12 +66,15 @@
 
    }])
     .controller('offerDetail', ['$scope', 'rt3SpecialRates', 'rt3Browser','$timeout','$filter','$q', function($scope, rt3SpecialRates, rt3Browser,$timeout,$filter,$q) {
-      window.onhashchange = function() {
-        window.location.reload();
-        $(window).scrollTop(0);
-      }
-        $scope.reloadPage = function(){$window.location.reload();}
-         
+          window.onhashchange = function() {
+            window.location.reload();
+            $(window).scrollTop(0);
+          }
+         setTimeout(function(){
+          
+           $(".loading").fadeOut('slow');
+         },1200);
+
     }])
     .controller('bookingWidget', ['$scope', 'rt3Search', 'rt3Browser', function($scope, rt3Search, rt3Browser) {
       var self = this;
