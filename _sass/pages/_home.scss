@@ -255,8 +255,17 @@
                         padding-bottom:20px;
                     }
                 } */
-                .carousel-item{
-                    padding:15px 0 5px;
+                .carousel-inner{
+                    .carousel-item{
+                        padding:15px 0 5px;
+                    }
+                    a{
+                       top:35%;
+                       margin:0; 
+                       @include media-breakpoint-up(md) {
+                            top:40%;
+                       }
+                    }
                 }
                     .trip-advisor-testimonial{
                         h5{
