@@ -262,6 +262,7 @@
                     a{
                        top:35%;
                        margin:0; 
+                       cursor:pointer;
                        @include media-breakpoint-up(md) {
                             top:40%;
                        }
