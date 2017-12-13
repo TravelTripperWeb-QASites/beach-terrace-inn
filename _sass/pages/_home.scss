@@ -238,7 +238,7 @@
                     text-align:center;
                     display:block !important;
                 }
-                p {
+                /* p {
                     font-family: $highlight-font;
                     font-size:$type-size-5;
                     line-height:30px;
@@ -254,7 +254,24 @@
                         width:auto;
                         padding-bottom:20px;
                     }
+                } */
+                .carousel-item{
+                    padding:15px 0 5px;
                 }
+                    .trip-advisor-testimonial{
+                        h5{
+                            padding-bottom:10px;
+                            a{
+                                color:$text-color;
+                            }
+                        }
+                        p{
+                            padding-bottom:10px;
+                            span{
+                                font-family:$secondary-font-bold;
+                            }
+                        }
+                    }
             }
         }
     }
