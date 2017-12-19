@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Offer Details
-meta_description: 
+meta_description:
 permalink: "/offer-details/"
 meta_tags:
-  robots: 
+  robots:
 published_localized:
   en: true
 title_localized:
@@ -18,8 +18,8 @@ meta_description_localized:
     you slow down at one of the premier hotels in Carlsbad. View our exclusive deals!
 
 ---
-
-<section rt3-special-rates="offers">
+<div class="loading" style="display:block">Loading&#8230;</div>
+<section rt3-special-rates="offers" ng-controller="offerDetail">
 <!-- offers banner section start -->
 <section class="inner-banner extra-height d-flex align-items-end" ng-style="{'background-image':'url('+offers.sRdetail.images[0].large+')'}">
     <div class="overlap"></div>
@@ -74,7 +74,7 @@ meta_description_localized:
 			<div class="text-part-inner">
 				<h2>gift the<br>beach</h2>
 				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
-				<a href="" title="Buy Gift card" class="white-shadow-white">Buy Gift card</a>
+				<a href="/gift-the-beach/" title="Buy Gift card" class="white-shadow-white">Buy Gift card</a>
 			</div>
 		</div>
 	</div>
@@ -87,7 +87,7 @@ meta_description_localized:
 <section class="cta-signup bg-cover text-center" style="background-image: url(/assets/images/offers/offer-cta.jpg);">
     <div class="overlap"></div>
     <div class="cta-signup-inner">
-        <h4>exclusive newsletter sign-up</h4>
+        <h4>Stay in Touch with Beach Terrace Inn</h4>
         <h2>everyone's invited</h2>
         <div class="input-holder m-auto">
             <form action="https://submit.jotform.me/submit/73300591282451/" method="post" name="form_73300591282451" id="73300591282451" accept-charset="utf-8">
