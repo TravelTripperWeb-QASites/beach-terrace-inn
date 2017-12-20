@@ -24,9 +24,6 @@
         }
         img {
             width: 100%;
-            @include media-breakpoint-up(lg) {
-                width: auto;
-            }
         }
     }
     .carslsbad-text {

@@ -46,7 +46,6 @@
         },1600);
     }])
     .controller('roomDetail', ['$scope', 'rt3Search', 'rt3Browser','$timeout','$filter','$http', function($scope, rt3Search, rt3Browser,$timeout,$filter,$http) {
-        //$(".loading").css("display","block");
 
         setTimeout(function(){
           $(".loading").fadeOut('slow');
@@ -67,35 +66,15 @@
 
    }])
     .controller('offerDetail', ['$scope', 'rt3SpecialRates', 'rt3Browser','$timeout','$filter','$q', function($scope, rt3SpecialRates, rt3Browser,$timeout,$filter,$q) {
-      window.onhashchange = function() {
-        window.location.reload();
-      }
-        $scope.reloadPage = function(){$window.location.reload();}
-         //$(".loading").css("display","block");
-         $q.when(rt3SpecialRates.ready).then(function(response){
-           var oList = rt3SpecialRates.special_rates;;
-           var oName = window.location.hash.substr(1); //$("#offerId").val();
-           var tmpName;
-           for(var j= 0 ; j < oList.length ; j++){
-                oName = $filter ('formatNameForLink')(oName);
-                tmpName = $filter ('formatNameForLink')(oList[j].rate_plan_name);
-               if(tmpName == oName){
-                  // find previous and next rooms name
-                  if(j > 0){
-                     $scope.prevOfferName = oList[j-1].rate_plan_name;
-                  }
+          window.onhashchange = function() {
+            window.location.reload();
+            //$(window).scrollTop(0);
+          }
+         setTimeout(function(){
 
-                  if(j < oList.length -1){
-                     $scope.nextOfferName = oList[j+1].rate_plan_name;
-                  }
-                  break;
-               }
-           }
            $(".loading").fadeOut('slow');
-            $(".offerPageMainContent").css("display","block");
-        });
-
-
+           $(window).scrollTop(0);
+         },1200);
 
     }])
     .controller('bookingWidget', ['$scope', 'rt3Search', 'rt3Browser', function($scope, rt3Search, rt3Browser) {
