@@ -14,8 +14,8 @@ main:
   - right: 
     - title: Weddings
       url: /weddings/  
-    - title: Meetings
-      url: /meetings/
+    - title: Gatherings
+      url: /gatherings/
     - title: Gallery
       url: /gallery/
     - title: Contact

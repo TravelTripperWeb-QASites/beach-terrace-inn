@@ -214,6 +214,7 @@
             @include make-row();
             @include make-col-ready();
             background: $primary-bg;
+            min-height:310px;
             .brand-section{
                 @include make-col-ready();
                 @include media-breakpoint-up(md) {
@@ -238,26 +239,9 @@
                     text-align:center;
                     display:block !important;
                 }
-                /* p {
-                    font-family: $highlight-font;
-                    font-size:$type-size-5;
-                    line-height:30px;
-                    padding:20px 0;
-                    width:100%;
-                    @include media-breakpoint-up(md) {
-                        width:80%;
-                        margin: 0 4%;
-                    }
-                }
-                img{
-                   @include media-breakpoint-down(sm) {
-                        width:auto;
-                        padding-bottom:20px;
-                    }
-                } */
                 .carousel-inner{
                     .carousel-item{
-                        padding:15px 0 5px;
+                        //padding:15px 0 5px;
                     }
                     a{
                        top:35%;
@@ -342,6 +326,9 @@
             a {
                 margin-right: 5rem;
                 margin-top: 2rem;
+            }
+            h2{
+               text-shadow: 2px 2px 0px $white; 
             }
         }
     }
@@ -454,6 +441,155 @@
         }
     }
 }
+
+/* .home-rooms {
+    overflow-x: hidden;
+    position: relative;
+    h3 {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        @include transform-translate(-50%, 0);
+        font-size: $type-size-4;
+        width: 100%;
+        @include media-breakpoint-up(md) {
+            font-size: 3rem;
+        }
+    }
+    .slick-list {
+        overflow: visible !important;
+        overflow-x: visible !important;
+    }
+    .slick-slide {
+        padding: 200px 60px 30px;
+        @include media-breakpoint-down(lg) {
+            padding: 120px 20px 15px;
+        }
+        .room-title {
+            display: none;
+            position: absolute;
+            top: 110px;
+            left: 50%;
+            @include transform-translate(-50%, 0);
+        }
+        .caption {
+            padding: 80px 30px 0;
+            text-align: center;
+            opacity: 1;
+            @include make-row();
+            @include media-breakpoint-down(lg) {
+                padding: 30px 15px 0;
+            }
+            .content-part {
+                @include make-col-ready();
+                @include media-breakpoint-up(lg) {
+                    @include make-col(6);
+                }
+                h5 {
+                    margin-bottom: 20px;
+                    a {
+                        color: $black;
+                    }
+                }
+            }
+            .btns-part {
+                @extend .content-part;
+                a {
+                    &:first-child {
+                        margin-bottom: 25px;
+                        @include media-breakpoint-down(lg) {
+                            margin-top: 25px;
+                        }
+                    }
+                }
+                @include media-breakpoint-down(lg) {
+                    text-align: left;
+                }
+            }
+        }
+        img {
+            @include box-shadow(-20px, 20px, 0px, $line-bg);
+        }
+        &:focus {
+            outline: 0;
+        }
+        &.slick-active {
+            padding-top: 240px;
+            position: relative;
+            @include media-breakpoint-down(lg) {
+                padding-top: 170px;
+            }
+            img {
+                box-shadow: none;
+            }
+            .room-title {
+                display: block;
+            }
+        }
+        &.slick-cloned {
+            img {
+                @include box-shadow(20px, 20px, 0px, $line-bg);
+            }
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .slick-prev {
+        width: 60px;
+        position: absolute;
+        z-index: 999;
+        top: 45%;
+        left: 24%;
+        left: calc(25% - 25px);
+        height:100%;
+        &:before {
+            content: '#';
+            font-family: $icons-font;
+            display: block;
+            background-color: $line-bg;
+            width: 74px;
+            height: 74px;
+            color: $arrow-color;
+            font-size: $type-size-3;
+            padding-top: 22px;
+            @include media-breakpoint-down(lg) {
+                width: 37px;
+                height: 37px;
+                padding-top: 6px;
+            }
+        }
+    }
+    .slick-next {
+        width: 60px;
+        position: absolute;
+        z-index: 999;
+        top: 45%;
+        right: 25%;
+        right: calc(25% - 14px);
+        height:100%;
+        @include media-breakpoint-down (lg) {
+            right: calc(25% - 49px);
+        }
+        &:before {
+            content: '$';
+            font-family: $icons-font;
+            display: block;
+            background-color: $line-bg;
+            width: 74px;
+            height: 74px;
+            color: $arrow-color;
+            font-size: $type-size-3;
+            padding-top: 22px;
+            @include media-breakpoint-down(lg) {
+                width: 37px;
+                height: 37px;
+                padding-top: 6px;
+            }
+        }
+    }
+} */
+
 
 .home-rooms {
     overflow-x: hidden;
