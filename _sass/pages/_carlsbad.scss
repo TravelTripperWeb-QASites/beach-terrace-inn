@@ -180,13 +180,14 @@
         @include make-row();
          margin-top: 20px;
          @include media-breakpoint-up(lg) {
-             margin-top: -145px;
+             margin-top: -125px;
          }
     }
     .info {
         @include make-col-ready();
         @include media-breakpoint-up(md) {
             @include make-col(12);
+            min-height:450px;
         }
          @include media-breakpoint-up(lg) {
              @include make-col(3);

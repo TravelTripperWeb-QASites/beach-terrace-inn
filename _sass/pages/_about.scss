@@ -123,6 +123,9 @@
             a {
                 margin: 4rem;
             }
+            h2{
+                 text-shadow: 2px 2px 0px $white;
+            }
         }
     }
 }
@@ -155,6 +158,7 @@
         }
     }
     .features-list {
+        text-align:center;
         ul {
             li {
                 display: inline-block;
