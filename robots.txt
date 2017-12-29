@@ -1,8 +1,8 @@
 # Disallowed and allowed directories and files
 
 User-agent: *
-Disallow: 
+Disallow:
 
 # Define website sitemaps
 
-Sitemap:
+Sitemap: https://www.beachterraceinn.com/sitemap.xml
