@@ -3,7 +3,7 @@ title: "Beach Terrace Inn"
 title_separator: "|"
 name: "Hotels in Carlsbad CA | Carlsbad Hotel"
 description: "Enjoy a Southern California sunset from our private beach. Our luxurious Hotel in Carlsbad CA is built directly on the sand. Book our Carlsbad hotel direct!"
-url: https://beachterraceinn.com # the base hostname & protocol for your site e.g. "https://www.traveltripper.io"
+url: "https://www.beachterraceinn.com" # the base hostname & protocol for your site e.g. "https://www.traveltripper.io"
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: "TravelTripperWeb/beachterraceinn" # GitHub username/repo-name e.g. "TravelTripperWeb/bedrock"
 reztripUrl: https://beachterraceinn.reztrip.com/
