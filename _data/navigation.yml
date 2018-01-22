@@ -8,9 +8,9 @@ main:
       url: /offers/
     - title: Carlsbad
       url: /carlsbad/
-      # dropdown:
-      # - title: The local Flow
-      #   url: /local-flow/
+      dropdown:
+        - title: The local Flow
+          url: /local-flow/
   - right: 
     - title: Weddings
       url: /weddings/  
