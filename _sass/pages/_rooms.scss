@@ -131,13 +131,18 @@
                 font-size: $type-size-7;
                 font-family: $primary-font-medium;
                 letter-spacing: .5px;
-                color: $nav-text;
+                color: $nav-text !important;
                 position: relative;
+                border: none !important;
+                border-radius: 0 !important;
+                padding: 0 !important;
+                display: inline !important;
+                cursor:pointer;
                 &:hover {
-                    background-color: $primary-bg;
+                    background-color: $primary-bg !important;
                 }
                 &.active{
-                    background-color: $primary-bg;
+                    background-color: $primary-bg !important;
                 }
             }
         }

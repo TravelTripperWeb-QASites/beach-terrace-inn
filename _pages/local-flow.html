@@ -30,77 +30,214 @@ include_in_nav_localized:
 
 <!-- local flow section start -->
 <section class="assets-wrap local-flow-wrap">
-    <h3 class="text-center">browse room types</h3>
-    <ul class="text-center m-0">
-        <li><a href="">Eat & Drink</a></li>
-        <li><a href="">Attractions</a></li>
-        <li><a href="">Local Shops</a></li>
-        <li><a href="">Markets</a></li>
+    <!-- <h3 class="text-center">browse room types</h3> -->
+    <ul class="text-center m-0 pt-0 nav nav-tabs border-bottom-0 d-block" id="myTab" role="tablist">
+        <li class="nav-item"><a class="nav-link active" id="eat-tab" data-toggle="tab" data-target="#eat" role="tab" aria-controls="Eat & Drink" aria-selected="true">Eat & Drink</a></li>
+        <li class="nav-item"><a class="nav-link" id="att-tab" data-toggle="tab" data-target="#att" role="tab" aria-controls="attractions" aria-selected="false">Attractions</a></li>
+        <li class="nav-item"><a class="nav-link" id="local-tab" data-toggle="tab" data-target="#local" role="tab" aria-controls="local shops" aria-selected="false">Local Shops</a></li>
+        <li class="nav-item"><a class="nav-link" id="markets-tab" data-toggle="tab" data-target="#markets" role="tab" aria-controls="Markets" aria-selected="false">Markets</a></li>
     </ul>
-    <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/restaurant1.jpg);">
-        </div>
-        <div class="assets-content">
-            <div class="assets-content-inner">
-                <h5>restaurant<br><span>01</span></h5>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
-                <div class="btn-holder">
-                    <a href="#" class="border-black" title="view room">learn more</a>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="eat" role="tabpanel" aria-labelledby="eat-tab">
+            <div class="assets-block m-0">
+                <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/wrench-rodent-seabasstropub.jpg);">
+                </div>
+                <div class="assets-content">
+                    <div class="assets-content-inner">
+                        <h5>Wrench & Rodent Seabasstropub</h5>
+                        <p>An inventive and non-traditional spin on locally sourced and sustainable seafood in a snug, retro space.</p>
+                        <div class="btn-holder">
+                            <a href="http://www.seabasstropub.com/" target="_blank" class="border-black" title="view room">learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="assets-block m-0">
+                <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/urge-gastropub-whiskey-bank.jpg);">
+                </div>
+                <div class="assets-content">
+                    <div class="assets-content-inner">
+                        <h5>Urge Gastropub & Whiskey Bank </h5>
+                        <p>Serving up the comfort of Coastal American Classics paired with an extensive beer list and even more extensive selection of the world’s finest Whiskeys.</p>
+                        <div class="btn-holder">
+                            <a href="http://oceanside.urgegastropub.com/" target="_blank" class="border-black" title="view room">learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="assets-block m-0">
+                <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/steady-state-roasting.jpg);">
+                </div>
+                <div class="assets-content">
+                    <div class="assets-content-inner">
+                        <h5>Steady State Roasting </h5>
+                        <p>A small batch, highly skilled coffee roaster tucked away within a creative space shared with fellow artists and makers. </p>
+                        <div class="btn-holder">
+                            <a href="https://www.steadystateroasting.com/" target="_blank" class="border-black" title="view room">learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="assets-block m-0">
+                <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/flying-pig-pub-kitchen.jpg);">
+                </div>
+                <div class="assets-content">
+                    <div class="assets-content-inner">
+                        <h5>Flying Pig Pub & Kitchen </h5>
+                        <p>The self-proclaimed “original” farm-to-table pub in North County and proudly committed to community and environment. Locals rave about this rustic hotpot featuring artisanal cuisine, handmade pasta and a cozy ambiance. </p>
+                        <div class="btn-holder">
+                            <a href="http://www.flyingpig.pub/oceanside-ca/" target="_blank" class="border-black" title="view room">learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="assets-block m-0">
+                <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/blue-ocean-robata-sushi.jpg);">
+                </div>
+                <div class="assets-content">
+                    <div class="assets-content-inner">
+                        <h5>Blue Ocean Robata & Sushi </h5>
+                        <p>From specialty rolls and robata-grilled skewers to an impressive drink list and their very own poke shop next door, Blue Ocean makes for a lively dining experience. </p>
+                        <div class="btn-holder">
+                            <a href="http://blueoceanrobatasushi.com/" target="_blank" class="border-black" title="view room">learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="assets-block m-0">
+                <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/barrel-republic.jpg);">
+                </div>
+                <div class="assets-content">
+                    <div class="assets-content-inner">
+                        <h5>Barrel Republic </h5>
+                        <p>A self-pour beer bar with over 52 craft beers and 6 wines on tap.</p>
+                        <div class="btn-holder">
+                            <a href="http://barrelrepublic.com/locations/carlsbad" target="_blank" class="border-black" title="view room">learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="assets-block m-0">
+                <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/park101.jpg);">
+                </div>
+                <div class="assets-content">
+                    <div class="assets-content-inner">
+                        <h5>Park101</h5>
+                        <p>A multi-level complex featuring a Garden Pub with 32 local beer and wine on tap, the Tamarack View Deck with fire pits and gourmet snacks, Park 101 signature Barbeque in the pit or the convenience of a grab-and-go Market with handmade doughnuts. </p>
+                        <div class="btn-holder">
+                            <a href="https://www.park101carlsbad.com/" target="_blank" class="border-black" title="view room">learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="assets-block m-0">
+                <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/carruth-cellars-urban-winery.jpg);">
+                </div>
+                <div class="assets-content">
+                    <div class="assets-content-inner">
+                        <h5>Carruth Cellars Urban Winery & Tasting Room</h5>
+                        <p>An urban winery with a knowledgeable staff specializing in California style wines.</p>
+                        <div class="btn-holder">
+                            <a href="http://carruthcellars.com/carlsbad/" target="_blank" class="border-black" title="view room">learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="assets-block m-0">
+                <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/cafe-topes.jpg);">
+                </div>
+                <div class="assets-content">
+                    <div class="assets-content-inner">
+                        <h5>Café Topes</h5>
+                        <p>Voted Best Breakfast in Carlsbad. Be sure to get your paws on one of their famous cinnamon rolls, they sell out every day.</p>
+                        <div class="btn-holder">
+                            <a href="http://www.eatatcafetopes.com/" target="_blank" class="border-black" title="view room">learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="assets-block m-0">
+                <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/campfire.jpg);">
+                </div>
+                <div class="assets-content">
+                    <div class="assets-content-inner">
+                        <h5>Campfire</h5>
+                        <p>Campfire boasts of a ‘return to the origins of cooking and hospitality.’ And with unique cocktails, lively ambiance and a diverse menu, this stop has quickly become a local favorite. </p>
+                        <div class="btn-holder">
+                            <a href="https://thisiscampfire.com/" target="_blank" class="border-black" title="view room">learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="assets-block m-0">
+                <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/west-steak-and-seafood.jpg);">
+                </div>
+                <div class="assets-content">
+                    <div class="assets-content-inner">
+                        <h5>West steak and seafood</h5>
+                        <p>An intimate farm-to-table fine dining experience and recipient of Wine Spectator’s 2017 Award of Excellence.</p>
+                        <div class="btn-holder">
+                            <a href="http://www.weststeakandseafood.com/" target="_blank" class="border-black" title="view room">learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="assets-block m-0">
+                <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/restaurant1.jpg);">
+                </div>
+                <div class="assets-content">
+                    <div class="assets-content-inner">
+                        <h5>Yoshino Japanese Deli</h5>
+                        <p>This family-owned Japanese Deli was ranked among the “Top 100 Places to Eat in the U.S.” by Yelp in 2016. Get there early because doors close once their daily assortment of poke bowls and sushi are gone.</p>
+                        <div class="btn-holder">
+                            <a href="https://www.yelp.com/biz/yoshino-japanese-deli-carlsbad/" target="_blank" class="border-black" title="view room">learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="assets-block m-0">
+                <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/cream-of-the-crop.jpg);">
+                </div>
+                <div class="assets-content">
+                    <div class="assets-content-inner">
+                        <h5>Cream of the crop</h5>
+                        <p>Our favorite local natural foods market has been family owned and operated for 25+ years. Offering everything from kombucha and vitamins to deli sandwiches and vegan snacks. </p>
+                        <div class="btn-holder">
+                            <a href="http://www.creamofthecropnatural.com/" target="_blank" class="border-black" title="view room">learn more</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/restaurant2.jpg);">
+
+
+
+        <div class="tab-pane fade text-center pb-5" id="att" role="tabpanel" aria-labelledby="att-tab">
+            <h5>No results found</h5>
         </div>
-        <div class="assets-content">
-            <div class="assets-content-inner">
-                <h5>restaurant<br><span>02</span></h5>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
-                <div class="btn-holder">
-                    <a href="#" class="border-black" title="view room">learn more</a>
-                </div>
-            </div>
+        <div class="tab-pane fade text-center pb-5" id="local" role="tabpanel" aria-labelledby="local-tab">
+            <h5>No results found</h5>
         </div>
-    </div>
-    <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/restaurant3.jpg);">
-        </div>
-        <div class="assets-content">
-            <div class="assets-content-inner">
-                <h5>restaurant<br><span>03</span></h5>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
-                <div class="btn-holder">
-                    <a href="#" class="border-black" title="view room">learn more</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/restaurant4.jpg);">
-        </div>
-        <div class="assets-content">
-            <div class="assets-content-inner">
-                <h5>restaurant<br><span>04</span></h5>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
-                <div class="btn-holder">
-                    <a href="#" class="border-black" title="view room">learn more</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/restaurant5.jpg);">
-        </div>
-        <div class="assets-content">
-            <div class="assets-content-inner">
-                <h5>restaurant<br><span>05</span></h5>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
-                <div class="btn-holder">
-                    <a href="#" class="border-black" title="view room">learn more</a>
-                </div>
-            </div>
+        <div class="tab-pane fade text-center pb-5" id="markets" role="tabpanel" aria-labelledby="markets-tab">
+            <h5>No results found</h5>
         </div>
     </div>
 </section>
 <!-- local flow section end -->
+<!-- 
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+    </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+</div> -->
