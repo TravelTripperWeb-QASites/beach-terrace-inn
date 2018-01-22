@@ -112,6 +112,7 @@
 .common-content {
     margin-top: 20px;
     margin-bottom: 40px;
+    @extend .container-fluid;
     @include media-breakpoint-up(md) {
         margin-top: -70px;
         margin-bottom: 80px;
@@ -171,8 +172,10 @@
         }
     }
     .text-container {
+        @include container-fix();
         .text-container-inner {
             @include make-row();
+            @include make-col-ready();
         }
         @include make-row();
         @include make-col-ready();
@@ -292,43 +295,55 @@
     }
 }
 
-.visual_tour {
-    @include make-row();
-    padding-top: 40px;
-    .beach-view {
-        background:none;
-        padding-bottom: 270px;
+.visual_tour_main{
+    @extend .container-fluid;
+    .visual_tour {
+        @include make-row();
         @include make-col-ready();
-        @include media-breakpoint-up(md) {
-            @include make-col(9);
-            @include linearGradient($primary-bg, 65%, transparent, 35%);
-            padding-bottom: 200px;
-            padding-left:0;
-        }
-        img {
-            width: 100%;
+        padding-top: 40px;
+        .beach-view {
+            background:none;
+            padding-bottom: 270px;
+            @include make-col-ready();
             @include media-breakpoint-up(md) {
+                @include make-col(9);
+                //@include linearGradient($primary-bg, 65%, transparent, 35%);
+                padding-bottom: 200px;
+                padding-left:0;
+                &:after{
+                    content:"";
+                    position:absolute;
+                    width:75%;
+                    height:200px;
+                    background-color:$primary-bg;
+                }
+            }
+            img {
                 width: 100%;
+                @include media-breakpoint-up(md) {
+                    width: 100%;
+                }
             }
-        }
-        .over-lap-heading {
-            position: absolute;
-            bottom: 0px;
-            left: 15px;
-            text-align:left;
-            margin-bottom: 50px;
-            @include media-breakpoint-up(md) {
-                bottom: 46px;
-                right: -79px;
-                text-align:right;
-                margin-bottom:0;
-            }
-            a {
-                margin-right: 5rem;
-                margin-top: 2rem;
-            }
-            h2{
-               text-shadow: 2px 2px 0px $white; 
+            .over-lap-heading {
+                position: absolute;
+                bottom: 0px;
+                left: 15px;
+                text-align:left;
+                margin-bottom: 50px;
+                z-index:1;
+                @include media-breakpoint-up(md) {
+                    bottom: 46px;
+                    right: -79px;
+                    text-align:right;
+                    margin-bottom:0;
+                }
+                a {
+                    margin-right: 5rem;
+                    margin-top: 2rem;
+                }
+                h2{
+                   text-shadow: 2px 2px 0px $white; 
+                }
             }
         }
     }

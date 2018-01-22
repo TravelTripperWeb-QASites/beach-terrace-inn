@@ -268,7 +268,7 @@ More offers
     @extend .bg-cover;
     margin-top: 56px;
     min-height: 451px;
-    padding:0;
+    padding:100px 20px;
     @include media-breakpoint-down(md) {
         min-height: 300px;
     }
