@@ -140,9 +140,11 @@
                 cursor:pointer;
                 &:hover {
                     background-color: $primary-bg !important;
+                    color:$white !important;
                 }
                 &.active{
                     background-color: $primary-bg !important;
+                    color:$white !important;
                 }
             }
         }
@@ -174,6 +176,15 @@
             box-shadow:none;
             .assets-content-inner {
                 @include assets-content();
+                ul{
+                    padding:0;
+                    margin:40px 0;
+                    li{
+                        display:block;
+                        font-family:$secondary-font-regular;
+                        padding:5px 0;
+                    }
+                }
             }
         }
         &:nth-child(even) {
