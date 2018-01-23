@@ -216,7 +216,7 @@
         .trip-advisor {
             @include make-row();
             @include make-col-ready();
-            background: $primary-bg;
+            //background: $primary-bg;
             min-height:310px;
             .brand-section{
                 @include make-col-ready();
@@ -224,12 +224,20 @@
                     @include make-col(2);
                 }
                 border-right:1px solid $white-70;
-                i{
+                background-color:$trip-barnd;
+                /* i{
                     font-size:30px;
-                }
+                } */
                 @include media-breakpoint-down(sm) {
                     padding-top: 20px;
                     border-right:none;
+                }
+                img{
+                    width:auto;
+                    margin:0 auto;
+                    @include media-breakpoint-down(md) {
+                        margin-bottom: 20px;
+                    }
                 }
             }
             .text-section{
@@ -237,7 +245,11 @@
                 @include media-breakpoint-up(md) {
                     @include make-col(10);
                 }
+                @include media-breakpoint-down(md) {
+                    padding-top: 20px;
+                }
                 text-align:left;
+                background-color:$primary-bg;
                 @include media-breakpoint-down(sm) {
                     text-align:center;
                     display:block !important;
@@ -259,11 +271,12 @@
                         h5{
                             padding-bottom:10px;
                             a{
-                                color:$text-color;
+                                color:$white;
                             }
                         }
                         p{
                             padding-bottom:10px;
+                            color:$white;
                             span{
                                 font-family:$secondary-font-bold;
                             }

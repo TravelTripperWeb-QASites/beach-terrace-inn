@@ -1,5 +1,5 @@
 .booknow{
-	background-color:$primary-bg;
+	background-color:$red-color;
 	color:$white;
 	position:fixed;
 	right:0px;
@@ -12,13 +12,15 @@
     font-size: $type-size-9;
     font-family:$primary-font-bold;
     letter-spacing: 2px;
-    color:$nav-text;
     @include media-breakpoint-up(lg) {
     	top:0px;
     	padding:0 70px;
     	height: 58px;
     	line-height: 58px;
     	font-size:$type-size-7;
+    }
+    &:hover{
+      color:$white;
     }
 }
 

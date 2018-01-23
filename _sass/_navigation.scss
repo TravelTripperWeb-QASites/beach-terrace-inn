@@ -46,6 +46,7 @@
                 span{
                     &:hover, &.active{
                         background-color:$primary-bg;
+                        color:$white;
                     }
                 }
 
