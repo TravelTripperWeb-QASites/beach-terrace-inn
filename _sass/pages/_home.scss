@@ -29,7 +29,7 @@
         @include media-breakpoint-up(md) {
             padding: 1.6rem;
             letter-spacing: 4px;
-            right: -125px;
+            right: -127px;
             bottom: 123px;
         }
         a {
@@ -225,9 +225,14 @@
                 }
                 border-right:1px solid $white-70;
                 background-color:$trip-barnd;
-                /* i{
-                    font-size:30px;
-                } */
+                    i{
+                        font-size:50px;
+                        color:$white;
+                        padding-bottom: 0px;
+                        @include media-breakpoint-down(sm) {
+                            padding-bottom: 20px;
+                        }
+                    }
                 @include media-breakpoint-down(sm) {
                     padding-top: 20px;
                     border-right:none;
@@ -760,6 +765,27 @@
                 width: 37px;
                 height: 37px;
                 padding-top: 6px;
+            }
+        }
+    }
+}
+
+/* booking widget styles */
+
+.ttweb-booking-widget__body__date-selection__calendar {
+    .calendar-month table.calendar-month__grid {
+        .calendar-month__grid__date--in-selection{
+            background: $primary-bg !important;
+        }
+    }
+}
+.ttweb-booking-widget {
+    button{
+        &.ttweb-booking-widget__submit{
+            background-color: $primary-bg !important;
+            cursor:pointer;
+            &:hover{
+                background-color: $black !important;
             }
         }
     }
