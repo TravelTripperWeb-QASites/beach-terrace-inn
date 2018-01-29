@@ -191,7 +191,11 @@
             font-size: $type-size-5;
             text-transform: uppercase;
             letter-spacing: 1.7px;
-              @include media-breakpoint-up(lg) {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 75ch;
+            @include media-breakpoint-up(lg) {
                 margin-bottom: 33px;
                 margin-top: 60px;
             }
