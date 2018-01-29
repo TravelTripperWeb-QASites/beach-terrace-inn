@@ -236,7 +236,7 @@
             font-family: $icons-font;
             display: block;
             background-color: $line-bg;
-            color: $arrow-color;
+            color: $text-color;
             font-size: $type-size-3;
             padding:10px;
             @include media-breakpoint-down(lg) {
@@ -266,7 +266,7 @@
             font-family: $icons-font;
             display: block;
             background-color: $line-bg;
-            color: $arrow-color;
+            color: $text-color;
             font-size: $type-size-3;
             padding:10px;
             @include media-breakpoint-down(lg) {

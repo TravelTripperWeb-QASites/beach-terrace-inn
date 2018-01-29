@@ -731,7 +731,7 @@
             background-color: $line-bg;
             width: 74px;
             height: 74px;
-            color: $arrow-color;
+            color: $text-color;
             font-size: $type-size-3;
             padding-top: 22px;
             @include media-breakpoint-down(lg) {
@@ -758,7 +758,7 @@
             background-color: $line-bg;
             width: 74px;
             height: 74px;
-            color: $arrow-color;
+            color: $text-color;
             font-size: $type-size-3;
             padding-top: 22px;
             @include media-breakpoint-down(lg) {
