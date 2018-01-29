@@ -105,12 +105,13 @@
             }
         }
         .slick-prev {
-            width: 60px;
+            width: auto;
             position: absolute;
             z-index: 9;
-            top: 10px;
+            top: 34px;
             left: 22px;
             right: 0;
+            height:auto;
              @include media-breakpoint-up(md) {
                 right: -80px;
                 left: inherit;
@@ -130,7 +131,7 @@
                 background-color: $line-bg;
                 width: 74px;
                 height: 74px;
-                color: $arrow-color;
+                color: $text-color;
                 font-size: $type-size-3;
                 padding-top: 22px;
                 @include media-breakpoint-down(md) {
@@ -141,11 +142,12 @@
             }
         }
         .slick-next {
-            width: 60px;
+            width: auto;
             position: absolute;
             z-index: 9;
-            top: 10px;
+            top: 34px;
             right: 0px;
+            height:auto;
             @include media-breakpoint-up(md) {
                 right: -130px;
             }
@@ -162,7 +164,7 @@
                 background-color: $line-bg;
                 width: 74px;
                 height: 74px;
-                color: $arrow-color;
+                color:$text-color;
                 font-size: $type-size-3;
                 padding-top: 22px;
                 @include media-breakpoint-down(md) {

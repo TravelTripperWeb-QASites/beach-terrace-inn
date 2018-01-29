@@ -191,7 +191,11 @@
             font-size: $type-size-5;
             text-transform: uppercase;
             letter-spacing: 1.7px;
-              @include media-breakpoint-up(lg) {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 75ch;
+            @include media-breakpoint-up(lg) {
                 margin-bottom: 33px;
                 margin-top: 60px;
             }
@@ -236,7 +240,7 @@
             font-family: $icons-font;
             display: block;
             background-color: $line-bg;
-            color: $arrow-color;
+            color: $text-color;
             font-size: $type-size-3;
             padding:10px;
             @include media-breakpoint-down(lg) {
@@ -266,7 +270,7 @@
             font-family: $icons-font;
             display: block;
             background-color: $line-bg;
-            color: $arrow-color;
+            color: $text-color;
             font-size: $type-size-3;
             padding:10px;
             @include media-breakpoint-down(lg) {
