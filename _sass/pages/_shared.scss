@@ -298,6 +298,7 @@ More offers
         position:relative;
         min-height: 670px;
         margin-bottom: 50px;
+        padding:0;
         @include media-breakpoint-down(md) {
             min-height: 450px;
         }
@@ -322,6 +323,7 @@ More offers
                 .carousel-control-prev, .carousel-control-next{
                     margin:0 20px;
                     z-index:999;
+                    cursor:pointer;
                 }
             }  
         }
@@ -349,7 +351,7 @@ More offers
     &.half-banner{
         background-size:inherit;
         background-position:right;
-
+        padding:0;
       @extend .extra-height ;
        .inner-banner-title {
             top: 50%;

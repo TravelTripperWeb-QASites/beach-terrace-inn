@@ -5,8 +5,10 @@
 		<div class="assets-slide">
 			<div class="assets-slide-inner m-0">
 				<div class="slide" ng-repeat="offer in offers.special_rates">
-					<div class="image" ng-style="{'background-image': 'url([[offer.images[0].large || '/assets/images/dummy.jpg' ]])'}"  title="[[offer.rate_plan_name]]">
+					<a ng-href="/offer-details/#[[ offer.rate_plan_name | formatNameForLink ]]" title="View Special">
+						<div class="image" ng-style="{'background-image': 'url([[offer.images[0].large || '/assets/images/dummy.jpg' ]])'}"  title="[[offer.rate_plan_name]]">
 					</div>
+					</a>
 					<h4  ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></h4>
 					<p ng-bind-html="offer.short_description | renderHTMLCorrectly"></p>
 					<a ng-href="[[offer.promo_url]]" target="_blank" class="text-btn" title="View Special">
