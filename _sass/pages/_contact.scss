@@ -155,12 +155,12 @@
 				    font-family:$secondary-font-light;
 				    font-size:$type-size-5;
 				    color:$text-color;
-                    line-height:inherit;
-                    padding: 14px .75rem;
+                    line-height: normal;
+                    padding: 10px;
     			}
                 select{
                     &.form-control{
-                        height:58px;
+                        height:38px;
                     }
                 }
         		textarea{
