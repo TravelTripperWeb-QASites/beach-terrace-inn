@@ -107,8 +107,22 @@ $(document).ready(function() {
     $('.attractions-list').on('afterChange', function(event, slick, currentSlide, nextSlide){
     var $slides = $('.attractions-list').slick("getSlick").$slides;
     var title = $slides.eq( currentSlide ).data("text");
+    console.log(title);
     $('.info').html( title );
   });
+
+    $(document).on("click", ".attraction-info .text-btn", function(e){
+      e.preventDefault();
+      var attrUrl = $(this).attr("href");
+      var lastChar = attrUrl.slice(-1);      
+      if(lastChar == "?") {
+        attrUrl = attrUrl.substring(0, attrUrl.length - 1);
+      }
+      $(this).attr("href", attrUrl);
+      console.log(attrUrl);
+      window.open(attrUrl, '_blank');
+
+    });
 
   //Gallery filter
   $(".filter").on("click", function () {
