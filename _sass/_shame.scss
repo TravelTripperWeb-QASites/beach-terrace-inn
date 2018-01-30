@@ -38,6 +38,7 @@
         height: 25px;
         margin: 0;
         opacity: .9;
+        cursor:pointer;
         @include media-breakpoint-up(md){
             width: 105px;
             height: 100px;
@@ -63,7 +64,7 @@
              background: $primary-bg;
         }
         img {
-            width: 100%;
+            width: auto;
             @include transform-rotate(180deg)
         }
         &:hover {
@@ -78,6 +79,7 @@
         height: 25px;
         opacity: .9;
         margin: 0;
+        cursor:pointer;
          @include media-breakpoint-up(md){
              bottom: 15%;
           }
@@ -90,7 +92,7 @@
             opacity: .5;
         }
         img{
-            width:100%
+            width:auto;
         }
     }
 }
