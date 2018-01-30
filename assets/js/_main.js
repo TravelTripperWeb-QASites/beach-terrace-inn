@@ -107,7 +107,6 @@ $(document).ready(function() {
     $('.attractions-list').on('afterChange', function(event, slick, currentSlide, nextSlide){
     var $slides = $('.attractions-list').slick("getSlick").$slides;
     var title = $slides.eq( currentSlide ).data("text");
-    console.log(title);
     $('.info').html( title );
   });
 

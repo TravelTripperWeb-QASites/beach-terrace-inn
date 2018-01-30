@@ -69,9 +69,6 @@
             }
             img {
                 width: 100%;
-                @include media-breakpoint-up(lg) {
-                    width: auto;
-                }
             }
         }
     }
@@ -189,7 +186,7 @@
         @include make-col-ready();
         @include media-breakpoint-up(md) {
             @include make-col(12);
-            min-height:620px;
+            /* min-height:620px; */
         }
          @include media-breakpoint-up(lg) {
              @include make-col(3);
