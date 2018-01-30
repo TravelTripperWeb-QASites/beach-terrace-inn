@@ -37,9 +37,9 @@
             text-transform: uppercase;
             color: $secondary-bg;
             cursor: pointer;
-            span{
+            span {
                 font-size: $type-size-5;
-                padding-left:7px;
+                padding-left: 7px;
                 @include media-breakpoint-up(md) {
                     font-size: $type-size-4;
                 }
@@ -133,8 +133,8 @@
         .heading-part {
             position: relative;
             left: inherit;
-            text-align:left;
-            padding:30px 0;
+            text-align: left;
+            padding: 30px 0;
             @include media-breakpoint-up(md) {
                 left: -32%;
             }
@@ -142,14 +142,14 @@
                 @extend h2;
             }
             @include media-breakpoint-up(md) {
-                text-align:right;
-                padding:0;
+                text-align: right;
+                padding: 0;
             }
         }
-        img{
-            width:100%;
+        img {
+            width: 100%;
             @include media-breakpoint-up(md) {
-                width:auto;
+                width: auto;
             }
         }
     }
@@ -159,16 +159,15 @@
     @include make-row();
     .images-part {
         @include make-col-ready();
-        @include media-breakpoint-up(md) {
-            @include make-col(3);
+        min-height: 800px;
+        @include media-breakpoint-up(sm) {
+            min-height: 1300px;
         }
-        img {
-            padding-right: 0rem;
-            width: 100%;
-            height: 100%;
-            @include media-breakpoint-up(xl) {
-                padding-right: 8rem;
-            }
+        @include media-breakpoint-up(md) {
+            @include make-col(4);
+        }
+        @include media-breakpoint-up(lg) {
+            @include make-col(3);
         }
     }
     .text-container {
@@ -179,31 +178,43 @@
         }
         @include make-row();
         @include make-col-ready();
-        @include media-breakpoint-up(md) {
+         @include media-breakpoint-up(md) {
+            @include make-col(8);
+        }
+        @include media-breakpoint-up(lg) {
             @include make-col(9);
         }
         .content {
             @include make-col-ready();
             @include media-breakpoint-up(md) {
+                @include make-col(12);
+            }
+            @include media-breakpoint-up(lg) {
                 @include make-col(6);
             }
-            @extend .align-self-center;
-            p {
-                padding: 2.5rem 0rem 2.75rem 0;
-                margin-right: 0rem;
-                margin-top: 2.5rem;
-                border-top: 3px solid #f4f4f4;
-                @include media-breakpoint-up(lg) {
-                    margin-right: 10rem;
+            .text {
+                max-width: 100%;
+                margin: auto;
+                @include media-breakpoint-up(md) {
+                    max-width: 370px;
                 }
-            }
-            a {
-                margin-bottom: 50px;
+                p {
+                    padding: 2.5rem 0rem 2.75rem 0;
+                    margin-right: 0rem;
+                    margin-top: 2.5rem;
+                    border-top: 3px solid #f4f4f4;
+                }
+                a {
+                    margin-bottom: 50px;
+                }
             }
         }
         .img {
             @include make-col-ready();
             @include media-breakpoint-up(md) {
+                @include make-col(12);
+            }
+            @include media-breakpoint-up(lg) {
                 @include make-col(6);
             }
             text-align: right;
@@ -215,37 +226,36 @@
         }
         .trip-advisor {
             @include make-row();
-            @include make-col-ready();
-            //background: $primary-bg;
-            min-height:310px;
-            .brand-section{
+            @include make-col-ready(); //background: $primary-bg;
+            min-height: 310px;
+            .brand-section {
                 @include make-col-ready();
                 @include media-breakpoint-up(md) {
                     @include make-col(2);
                 }
                 border-right:1px solid $white-70;
                 background-color:$trip-barnd;
-                    i{
-                        font-size:50px;
-                        color:$white;
-                        padding-bottom: 0px;
-                        @include media-breakpoint-down(sm) {
-                            padding-bottom: 20px;
-                        }
+                i {
+                    font-size: 50px;
+                    color: $white;
+                    padding-bottom: 0px;
+                    @include media-breakpoint-down(sm) {
+                        padding-bottom: 20px;
                     }
+                }
                 @include media-breakpoint-down(sm) {
                     padding-top: 20px;
-                    border-right:none;
+                    border-right: none;
                 }
-                img{
-                    width:auto;
-                    margin:0 auto;
+                img {
+                    width: auto;
+                    margin: 0 auto;
                     @include media-breakpoint-down(md) {
                         margin-bottom: 20px;
                     }
                 }
             }
-            .text-section{
+            .text-section {
                 @include make-col-ready();
                 @include media-breakpoint-up(md) {
                     @include make-col(10);
@@ -256,53 +266,89 @@
                 text-align:left;
                 background-color:$primary-bg;
                 @include media-breakpoint-down(sm) {
-                    text-align:center;
-                    display:block !important;
+                    text-align: center;
+                    display: block !important;
                 }
-                .carousel-inner{
-                    .carousel-item{
-                        //padding:15px 0 5px;
+                .carousel-inner {
+                    .carousel-item {
                     }
-                    a{
-                       top:35%;
-                       margin:0; 
-                       cursor:pointer;
-                       @include media-breakpoint-up(md) {
-                            top:40%;
-                       }
-                    }
-                }
-                    .trip-advisor-testimonial{
-                        h5{
-                            padding-bottom:10px;
-                            a{
-                                color:$white;
-                            }
-                        }
-                        p{
-                            padding-bottom:10px;
-                            color:$white;
-                            span{
-                                font-family:$secondary-font-bold;
-                            }
+                    a {
+                        top: 35%;
+                        margin: 0;
+                        cursor: pointer;
+                        @include media-breakpoint-up(md) {
+                            top: 40%;
                         }
                     }
+                }
+                .trip-advisor-testimonial {
+                    h5 {
+                        padding-bottom: 10px;
+                        a {
+                            color: $white;
+                        }
+                    }
+                    p {
+                        padding-bottom: 10px;
+                        color: $white;
+                        span {
+                            font-family: $secondary-font-bold;
+                        }
+                    }
+                }
             }
         }
     }
 }
 
 .explore-area {
-    @extend .bottom-part;
+     @include make-row();
     .explore-area-inner {
-        @extend .text-container;
+        @include make-row();
+         @include make-col-ready();
+            @include media-breakpoint-up(md) {
+                @include make-col(9);
+            }
         .explore_img {
-            @extend .img;
             text-align: left;
+            @include make-col-ready();
+            @include media-breakpoint-up(md) {
+                @include make-col(6);
+            }
+            img{
+                width:100%;
+            }
+          
+        }
+         .content {
+            @include make-col-ready();
+            @include media-breakpoint-up(md) {
+                @include make-col(6);
+            }
+            .text {
+                max-width: 100%;
+                margin: auto;
+                @include media-breakpoint-up(md) {
+                    max-width: 370px;
+                }
+                p {
+                    padding: 2.5rem 0rem 2.75rem 0;
+                    margin-right: 0rem;
+                    margin-top: 2.5rem;
+                    border-top: 3px solid #f4f4f4;
+                }
+                a {
+                    margin-bottom: 50px;
+                }
+            }
         }
     }
+    
     .cycleing-img {
-        @extend .images-part;
+        @include make-col-ready();
+        @include media-breakpoint-up(md) {
+            @include make-col(3);
+        }
         img {
             width: 100%;
             height: auto;
@@ -313,27 +359,26 @@
     }
 }
 
-.visual_tour_main{
+.visual_tour_main {
     @extend .container-fluid;
     .visual_tour {
         @include make-row();
         @include make-col-ready();
         padding-top: 40px;
         .beach-view {
-            background:none;
+            background: none;
             padding-bottom: 270px;
             @include make-col-ready();
             @include media-breakpoint-up(md) {
-                @include make-col(9);
-                //@include linearGradient($primary-bg, 65%, transparent, 35%);
+                @include make-col(9); //@include linearGradient($primary-bg, 65%, transparent, 35%);
                 padding-bottom: 200px;
-                padding-left:0;
-                &:after{
-                    content:"";
-                    position:absolute;
-                    width:75%;
-                    height:200px;
-                    background-color:$primary-bg;
+                padding-left: 0;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 75%;
+                    height: 200px;
+                    background-color: $primary-bg;
                 }
             }
             img {
@@ -346,21 +391,21 @@
                 position: absolute;
                 bottom: 0px;
                 left: 15px;
-                text-align:left;
+                text-align: left;
                 margin-bottom: 50px;
-                z-index:1;
+                z-index: 1;
                 @include media-breakpoint-up(md) {
                     bottom: 46px;
                     right: -79px;
-                    text-align:right;
-                    margin-bottom:0;
+                    text-align: right;
+                    margin-bottom: 0;
                 }
                 a {
                     margin-right: 5rem;
                     margin-top: 2rem;
                 }
-                h2{
-                   text-shadow: 2px 2px 0px $white; 
+                h2 {
+                    text-shadow: 2px 2px 0px $white;
                 }
             }
         }
@@ -474,6 +519,7 @@
         }
     }
 }
+
 
 /* .home-rooms {
     overflow-x: hidden;
@@ -623,7 +669,6 @@
     }
 } */
 
-
 .home-rooms {
     overflow-x: hidden;
     position: relative;
@@ -770,21 +815,23 @@
     }
 }
 
+
 /* booking widget styles */
 
 .ttweb-booking-widget__body__date-selection__calendar {
     .calendar-month table.calendar-month__grid {
-        .calendar-month__grid__date--in-selection{
+        .calendar-month__grid__date--in-selection {
             background: $primary-bg !important;
         }
     }
 }
+
 .ttweb-booking-widget {
-    button{
-        &.ttweb-booking-widget__submit{
+    button {
+        &.ttweb-booking-widget__submit {
             background-color: $primary-bg !important;
-            cursor:pointer;
-            &:hover{
+            cursor: pointer;
+            &:hover {
                 background-color: $black !important;
             }
         }
