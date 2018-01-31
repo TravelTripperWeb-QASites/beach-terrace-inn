@@ -178,7 +178,9 @@
             @include media-breakpoint-up(xl) {
                 padding:200px 0 0 0;
             }
-            padding:120px 0 0 0;
+            @include media-breakpoint-up(lg) {
+                padding:120px 0 0 0;
+            }
         }
         @include make-row();
         @include make-col-ready();
@@ -230,12 +232,16 @@
         }
         .trip-advisor {
             @include make-row();
-            @include make-col-ready(); //background: $primary-bg;
+            @include make-col-ready();
             min-height: 310px;
+            @include media-breakpoint-up(lg) {
+                padding:0;
+            }
             .brand-section {
                 @include make-col-ready();
-                @include media-breakpoint-up(md) {
+                @include media-breakpoint-up(lg) {
                     @include make-col(2);
+                    padding:0;
                 }
                 border-right:1px solid $white-70;
                 background-color:$trip-barnd;
@@ -243,35 +249,42 @@
                     font-size: 50px;
                     color: $white;
                     padding-bottom: 0px;
-                    @include media-breakpoint-down(sm) {
+                    @include media-breakpoint-down(md) {
                         padding-bottom: 20px;
                     }
                 }
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(md) {
                     padding-top: 20px;
                     border-right: none;
                 }
                 img {
                     width: auto;
                     margin: 0 auto;
-                    @include media-breakpoint-down(md) {
+                    @include media-breakpoint-down(lg) {
                         margin-bottom: 20px;
                     }
                 }
             }
             .text-section {
-                @include make-col-ready();
-                @include media-breakpoint-up(md) {
-                    @include make-col(10);
-                }
-                @include media-breakpoint-down(md) {
-                    padding-top: 20px;
-                }
                 text-align:left;
                 background-color:$primary-bg;
+                @include make-col-ready();
+                @include media-breakpoint-up(lg) {
+                    @include make-col(10);
+                }
+                @include media-breakpoint-down(lg) {
+                    padding-top: 20px;
+                    min-height:400px;
+                }
+                @include media-breakpoint-down(md) {
+                    @include make-col(12);
+                    min-height:532px;
+                }
                 @include media-breakpoint-down(sm) {
-                    text-align: center;
-                    display: block !important;
+                    text-align: center;    
+                }
+                @media screen and (max-width: 480px) {
+                    min-height:740px;
                 }
                 .carousel-inner {
                     .carousel-item {
@@ -295,6 +308,8 @@
                     p {
                         padding-bottom: 10px;
                         color: $white;
+                        /* width: 90%;
+                        margin: 0 auto; */
                         span {
                             font-family: $secondary-font-bold;
                         }
@@ -767,7 +782,8 @@
         }
     }
     .slick-prev {
-        width: 60px;
+        width: auto;
+        height: auto;
         position: absolute;
         z-index: 999;
         top: 45%;
@@ -791,14 +807,15 @@
         }
     }
     .slick-next {
-        width: 60px;
+        width: auto;
+        height: auto;
         position: absolute;
         z-index: 999;
         top: 45%;
         right: 25%;
-        right: calc(25% - 14px);
+        right: calc(24% - 14px);
         @include media-breakpoint-down (lg) {
-            right: calc(25% - 49px);
+            right: calc(30% - 49px);
         }
         &:before {
             content: '$';

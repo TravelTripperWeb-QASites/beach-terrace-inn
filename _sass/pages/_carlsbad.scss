@@ -143,13 +143,13 @@
             position: absolute;
             z-index: 9;
             top: 34px;
-            right: 0px;
+            right: 22px;
             height:auto;
             @include media-breakpoint-up(md) {
                 right: -130px;
             }
             @include media-breakpoint-up(lg) {
-                right: -150px;
+                right: -180px;
             }
             @include media-breakpoint-up(xl) {
                 right: -250px;
@@ -186,12 +186,16 @@
         @include make-col-ready();
         @include media-breakpoint-up(md) {
             @include make-col(12);
-            /* min-height:620px; */
+                min-height:464px; 
         }
          @include media-breakpoint-up(lg) {
              @include make-col(3);
          }
-        padding:60px;
+         @include media-breakpoint-up(sm) {
+            min-height:292px;
+         }
+        padding:30px;
+        min-height:411px;
         background-color:$primary-bg;
         font-family: $secondary-font-regular;
         a {
