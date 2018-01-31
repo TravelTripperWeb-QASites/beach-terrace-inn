@@ -341,6 +341,11 @@ $(document).ready(function() {
           title: 'Beach Terrace inn',
           icon: iconBase + 'logo-icon.png'
         });
+
+         google.maps.event.addListener(marker, 'click', function() {
+          window.location.href = "https://goo.gl/maps/oAgfrCrWcb52";
+        });
+
     }
 
 

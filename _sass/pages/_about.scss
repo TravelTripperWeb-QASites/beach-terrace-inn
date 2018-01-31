@@ -46,14 +46,16 @@
              }
             p {
                 font-family: $secondary-font-regular;
+                padding: 0 0 2rem 0;
                 &:nth-child(1) {
-                    padding: 2rem 0 3rem 0;
+                    padding-top:3rem;
                     position:relative;
                     border-top:3px solid $line-bg-2;
                 }
             }
             a {
-                margin: 3rem 0;
+                margin: 0 0 2rem;
+                display:block;
             }
         }
     }

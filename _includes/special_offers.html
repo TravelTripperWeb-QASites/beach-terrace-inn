@@ -11,7 +11,7 @@
 					</a>
 					<h4  ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></h4>
 					<p ng-bind-html="offer.short_description | renderHTMLCorrectly"></p>
-					<a ng-href="[[offer.promo_url]]" target="_blank" class="text-btn" title="View Special">
+					<a ng-href="[[offer.promo_url]]" class="text-btn" title="View Special">
 						Check Rate
 					</a>
 					<a ng-href="/offer-details/#[[ offer.rate_plan_name | formatNameForLink ]]" class="white-shadow-yellow" title="View Special">
