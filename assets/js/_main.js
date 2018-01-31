@@ -60,11 +60,11 @@ $(document).ready(function() {
           responsive: [{
                breakpoint: 767,
                settings: {
-                 centerPadding: '25%',
+                 centerPadding: '10%',
                },
                breakpoint: 600,
                settings: {
-                 centerPadding: '13%',
+                 centerPadding: '0%',
                }
 
              }]
