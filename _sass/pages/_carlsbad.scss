@@ -183,21 +183,29 @@
          }
     }
     .info {
-        @include make-col-ready();
-        @include media-breakpoint-up(md) {
-            @include make-col(12);
-                min-height:464px; 
-        }
-         @include media-breakpoint-up(lg) {
-             @include make-col(3);
-         }
-         @include media-breakpoint-up(sm) {
-            min-height:292px;
-         }
         padding:30px;
         min-height:411px;
         background-color:$primary-bg;
         font-family: $secondary-font-regular;
+        @include make-col-ready();
+        @include media-breakpoint-up(md) {
+            @include make-col(12); 
+        }
+        @media (min-width: 320px) { min-height:450px;  }
+        @include media-breakpoint-up(sm) {
+            min-height:310px; 
+        }
+        @include media-breakpoint-up(md) {
+            min-height:290px;
+        }
+         @include media-breakpoint-up(lg) {
+             @include make-col(3);
+             min-height:590px;
+         }
+         @include media-breakpoint-up(xl) {
+            min-height:500px;
+        }
+         
         a {
             background-color: transparent;
             border:1px solid $text-color;
