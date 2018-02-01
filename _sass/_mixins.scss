@@ -91,12 +91,12 @@
                 @include make-col(6);
             }
             .text-section{
-                @include vertical-center();
                 padding: 0;
-                width: 100;
+                width: 100%;
                 @include media-breakpoint-up(lg) {
                     padding: 0 0 0 60px;
                     width: 75%;
+                    @include vertical-center();
                 }
                 @include media-breakpoint-up(xl) {
                     width: 70%;
