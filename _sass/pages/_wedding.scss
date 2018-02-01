@@ -3,6 +3,7 @@
 	@include intro();
 	h4{
 		padding-top:20px;
+		padding-bottom:20px;
 		@include media-breakpoint-up(md) {
 			padding-top:0;
 			padding-bottom: 36px;

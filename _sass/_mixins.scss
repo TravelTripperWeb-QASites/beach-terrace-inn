@@ -104,6 +104,10 @@
                 p{
                     border-top: 3px solid $line-bg;
                     padding-top:36px;
+                    margin-bottom:30px;
+                    @include media-breakpoint-up(lg) {
+                        margin-bottom:60px;
+                    }
                     &:last-child{
                         margin-top:40px;
                         width:100%;
@@ -121,11 +125,8 @@
                     }
                 }
                 a{
-                    display:block;
-                    margin-top:30px;
-                    @include media-breakpoint-up(xl) {
-                        margin-top:60px;
-                    }
+                    margin-bottom:30px;
+                    display:inline-block;
                 }
 
             }

@@ -296,11 +296,11 @@ More offers
     }
     &.extra-height {
         position:relative;
-        min-height: 670px;
+        height: 670px;
         margin-bottom: 50px;
         padding:0;
         @include media-breakpoint-down(md) {
-            min-height: 450px;
+            height: 450px;
         }
         .inner-banner-title {
             position:absolute;
@@ -308,6 +308,7 @@ More offers
             bottom:12%;
             @include media-breakpoint-down(sm) {
                 width: 90%;
+                left:5%;
             }
         }
         .rooms-details-carousel{
