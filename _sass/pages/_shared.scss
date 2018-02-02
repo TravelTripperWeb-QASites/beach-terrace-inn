@@ -305,7 +305,8 @@ More offers
         .inner-banner-title {
             position:absolute;
             width: 51%;
-            bottom:12%;
+            bottom:50px;
+            top:auto;
             z-index:9;
             @include media-breakpoint-down(sm) {
                 width: 90%;
@@ -330,13 +331,13 @@ More offers
             }  
         }
         .title-bg{
-            content: "";
             width: 460px;
             height: 333px;
             background-color: $white-25;
             position: absolute;
             left: 0px;
             bottom: 0px;
+            z-index:8;
             @include media-breakpoint-down(sm) {
                 display: none;
             }
