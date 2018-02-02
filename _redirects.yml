@@ -62,6 +62,7 @@
 - poolside-rooms/: rooms/
 - poolside-rooms/feed/: rooms/
 - red-nose-pose/feed/: offers/
+- rooms: rooms/
 - rooms-at-our-carlsbad-hotel/: rooms/
 - rooms-at-our-carlsbad-hotel/feed/: rooms/
 - sign-up/: offers/

@@ -67,9 +67,12 @@
 /* Vertical Center (Includes IE9) */
 
 @mixin vertical-center() {
-    position: relative;
+    position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
@@ -96,10 +99,13 @@
                 @include media-breakpoint-up(lg) {
                     padding: 0 0 0 60px;
                     width: 75%;
-                    @include vertical-center();
                 }
                 @include media-breakpoint-up(xl) {
                     width: 70%;
+                }
+                @media screen and (min-width: 1400px) {
+                    @include vertical-center();
+                    padding-top:80px;
                 }
                 p{
                     border-top: 3px solid $line-bg;
@@ -127,6 +133,9 @@
                 a{
                     margin-bottom:30px;
                     display:inline-block;
+                    @include media-breakpoint-up(xl) {
+                        display:block;
+                    }
                 }
 
             }
@@ -287,9 +296,11 @@
 @mixin assets-content() {
     width: 72%;
     margin: 0 auto;
-    @include vertical-center();
     @include media-breakpoint-down(sm) {
         width: 100%;
+    }
+    @include media-breakpoint-up(md) {
+        @include vertical-center();
     }
     h4 {
         font-family: $primary-font-regular;

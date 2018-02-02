@@ -60,7 +60,7 @@
                 height: 65px;
                 padding-bottom: 20px;
                 cursor: pointer;
-                z-index:99;
+                z-index:9;
                 &:active {
                     border: 0;
                     background-color: transparent;
@@ -185,6 +185,16 @@
                         padding:5px 0;
                     }
                 }
+                &:nth-child(odd) {
+                    @include media-breakpoint-up(md) {
+                        left:15%;
+                    }
+                }
+                &:nth-child(even) {
+                    @include media-breakpoint-up(md) {
+                        left:0;
+                    }
+                }
             }
         }
         &:nth-child(even) {
@@ -231,11 +241,12 @@
                 @include make-col(6);
             }
             .text-sec{
-                @include vertical-center();
+                position:relative;
                 padding:50px 0 30px 15px;
                 z-index:9;
                 @include media-breakpoint-up(md) {
                     padding:0 0 0 90px;
+                    @include vertical-center();
                 }
                 a{
                     margin-top: 50px;
@@ -332,3 +343,11 @@
         cursor:pointer;
     }
 }
+.room-dtl-banner{
+    height: 451px !important;
+    @include media-breakpoint-down(md) {
+        height: 300px !important;
+    }
+}
+
+

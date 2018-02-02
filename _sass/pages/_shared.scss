@@ -306,6 +306,7 @@ More offers
             position:absolute;
             width: 51%;
             bottom:12%;
+            z-index:9;
             @include media-breakpoint-down(sm) {
                 width: 90%;
                 left:5%;
