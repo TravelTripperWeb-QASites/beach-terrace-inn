@@ -72,6 +72,10 @@
 	max-width:100%;
 	h4{
 		padding-bottom: 36px;
+		padding-top:30px;
+		@include media-breakpoint-up(lg) {
+			padding-top:0px;
+		}
 	}
 }
 .inner-banner-btn{

@@ -21,7 +21,7 @@ permalink_localized:
 
 <section ng-controller="roomDetail" rt3-room-details="room" class="room-detail-pa">
     <!-- rooms banner section start -->
-    <section class="inner-banner extra-height d-flex align-items-end">
+    <section class="room-dtl-banner inner-banner p-0 extra-height d-flex align-items-end">
         <div id="roomsDetailsCarousel" class="carousel slide rooms-details-carousel" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item bg-cover" ng-class="{'active' : $index == 0}" ng-repeat="pic in room.photos" ng-style="{'background-image':'url('+pic.large+')'}">
