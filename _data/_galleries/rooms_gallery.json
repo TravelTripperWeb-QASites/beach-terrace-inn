@@ -76,6 +76,25 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-082000/thumb_cbk-lance2.jpg",
       "git_file_name": "_assets/image_data/cbk-lance2.json",
       "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-082000/cbk-lance2.jpg"
+    },
+    {
+      "name": "balcony-lance-sea-view",
+      "file_name": "balcony-lance-sea-view.jpg",
+      "file_type": "image/jpeg",
+      "url": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081957/balcony-lance-sea-view.jpg",
+      "tags": "gallery, rooms",
+      "file_size": 142581,
+      "width": 900,
+      "height": 501,
+      "description": "",
+      "date_added": "2017-12-27-081957",
+      "url_large": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081957/large_balcony-lance-sea-view.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081957/medium_balcony-lance-sea-view.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081957/small_balcony-lance-sea-view.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081957/xsmall_balcony-lance-sea-view.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081957/thumb_balcony-lance-sea-view.jpg",
+      "git_file_name": "_assets/image_data/balcony-lance-sea-view.json",
+      "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081957/balcony-lance-sea-view.jpg"
     }
   ],
   "description": ""
