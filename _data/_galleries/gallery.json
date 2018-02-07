@@ -304,6 +304,25 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080731/thumb_beach-terrace-inn-exterior.jpg",
       "git_file_name": "_assets/image_data/beach-terrace-inn-exterior.json",
       "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080731/beach-terrace-inn-exterior.jpg"
+    },
+    {
+      "name": "pool2",
+      "file_name": "pool2.jpg",
+      "file_type": "image/jpeg",
+      "url": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-042159/pool2.jpg",
+      "tags": "gallery, exterior",
+      "file_size": 386935,
+      "width": 1600,
+      "height": 1068,
+      "description": "Beach Terrace Inn  Swimming Pool",
+      "date_added": "2017-12-27-042159",
+      "url_large": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-042159/large_pool2.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-042159/medium_pool2.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-042159/small_pool2.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-042159/xsmall_pool2.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-042159/thumb_pool2.jpg",
+      "git_file_name": "_assets/image_data/pool2.json",
+      "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-042159/pool2.jpg"
     }
   ],
   "description": ""
