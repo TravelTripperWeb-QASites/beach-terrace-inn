@@ -152,6 +152,25 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081950/thumb_cbk-lance1.jpg",
       "git_file_name": "_assets/image_data/cbk-lance1.json",
       "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081950/cbk-lance1.jpg"
+    },
+    {
+      "name": "lounge",
+      "file_name": "lounge.jpg",
+      "file_type": "image/jpeg",
+      "url": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081946/lounge.jpg",
+      "tags": "gallery, rooms",
+      "file_size": 229792,
+      "width": 1505,
+      "height": 867,
+      "description": "",
+      "date_added": "2017-12-27-081946",
+      "url_large": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081946/large_lounge.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081946/medium_lounge.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081946/small_lounge.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081946/xsmall_lounge.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081946/thumb_lounge.jpg",
+      "git_file_name": "_assets/image_data/lounge.json",
+      "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081946/lounge.jpg"
     }
   ],
   "description": ""
