@@ -114,6 +114,25 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080806/thumb_bti-rocking-chairs.jpg",
       "git_file_name": "_assets/image_data/bti-rocking-chairs.json",
       "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080806/bti-rocking-chairs.jpg"
+    },
+    {
+      "name": "beach-sign",
+      "file_name": "beach-sign.jpg",
+      "file_type": "image/jpeg",
+      "url": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080758/beach-sign.jpg",
+      "tags": "gallery, exterior",
+      "file_size": 244795,
+      "width": 1600,
+      "height": 1067,
+      "description": "",
+      "date_added": "2017-12-27-080758",
+      "url_large": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080758/large_beach-sign.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080758/medium_beach-sign.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080758/small_beach-sign.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080758/xsmall_beach-sign.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080758/thumb_beach-sign.jpg",
+      "git_file_name": "_assets/image_data/beach-sign.json",
+      "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080758/beach-sign.jpg"
     }
   ],
   "description": ""
