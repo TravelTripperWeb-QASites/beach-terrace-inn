@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 
-meta_description: 
+title:
+meta_description:
 permalink: "/rfp/"
 meta_tags:
   robots: noindex, follow
@@ -19,7 +19,9 @@ permalink_localized:
 <section class="inner-banner" style="background-image:url(/assets/images/rooms/rooms-banner.jpg);">
     <div class="overlap"></div>
     <div class="inner-banner-title">
+        {% regionblock rfp_heading, type: heading %}
         <h1>Request for proposal</h1>
+        {% endregionblock %}
     </div>
 </section>
 <!-- banner section end -->
