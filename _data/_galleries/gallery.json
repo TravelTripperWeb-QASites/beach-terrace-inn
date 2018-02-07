@@ -95,6 +95,25 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080808/thumb_beach-view.jpg",
       "git_file_name": "_assets/image_data/beach-view.json",
       "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080808/beach-view.jpg"
+    },
+    {
+      "name": "bti-rocking-chairs",
+      "file_name": "bti-rocking-chairs.jpg",
+      "file_type": "image/jpeg",
+      "url": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080806/bti-rocking-chairs.jpg",
+      "tags": "gallery, exterior",
+      "file_size": 185043,
+      "width": 800,
+      "height": 533,
+      "description": "",
+      "date_added": "2017-12-27-080806",
+      "url_large": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080806/large_bti-rocking-chairs.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080806/medium_bti-rocking-chairs.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080806/small_bti-rocking-chairs.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080806/xsmall_bti-rocking-chairs.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080806/thumb_bti-rocking-chairs.jpg",
+      "git_file_name": "_assets/image_data/bti-rocking-chairs.json",
+      "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080806/bti-rocking-chairs.jpg"
     }
   ],
   "description": ""
