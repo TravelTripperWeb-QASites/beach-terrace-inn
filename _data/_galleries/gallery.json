@@ -38,6 +38,25 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080816/thumb_cb-lance.jpg",
       "git_file_name": "_assets/image_data/cb-lance.json",
       "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080816/cb-lance.jpg"
+    },
+    {
+      "name": "bti-terrace",
+      "file_name": "bti-terrace.jpg",
+      "file_type": "image/jpeg",
+      "url": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080812/bti-terrace.jpg",
+      "tags": "gallery, exterior",
+      "file_size": 151067,
+      "width": 1069,
+      "height": 798,
+      "description": "",
+      "date_added": "2017-12-27-080812",
+      "url_large": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080812/large_bti-terrace.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080812/medium_bti-terrace.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080812/small_bti-terrace.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080812/xsmall_bti-terrace.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080812/thumb_bti-terrace.jpg",
+      "git_file_name": "_assets/image_data/bti-terrace.json",
+      "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080812/bti-terrace.jpg"
     }
   ],
   "description": ""
