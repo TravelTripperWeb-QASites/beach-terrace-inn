@@ -228,6 +228,25 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081937/thumb_bathroom.jpg",
       "git_file_name": "_assets/image_data/bathroom.json",
       "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081937/bathroom.jpg"
+    },
+    {
+      "name": "bath",
+      "file_name": "bath.jpg",
+      "file_type": "image/jpeg",
+      "url": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081934/bath.jpg",
+      "tags": "gallery, rooms",
+      "file_size": 535100,
+      "width": 1366,
+      "height": 768,
+      "description": "",
+      "date_added": "2017-12-27-081934",
+      "url_large": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081934/large_bath.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081934/medium_bath.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081934/small_bath.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081934/xsmall_bath.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081934/thumb_bath.jpg",
+      "git_file_name": "_assets/image_data/bath.json",
+      "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081934/bath.jpg"
     }
   ],
   "description": ""
