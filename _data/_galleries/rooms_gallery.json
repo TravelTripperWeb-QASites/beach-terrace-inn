@@ -247,6 +247,25 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081934/thumb_bath.jpg",
       "git_file_name": "_assets/image_data/bath.json",
       "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081934/bath.jpg"
+    },
+    {
+      "name": "rooms-interior1",
+      "file_name": "rooms-interior1.jpg",
+      "file_type": "image/jpeg",
+      "url": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081931/rooms-interior1.jpg",
+      "tags": "gallery, rooms",
+      "file_size": 634197,
+      "width": 1366,
+      "height": 768,
+      "description": "",
+      "date_added": "2017-12-27-081931",
+      "url_large": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081931/large_rooms-interior1.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081931/medium_rooms-interior1.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081931/small_rooms-interior1.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081931/xsmall_rooms-interior1.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081931/thumb_rooms-interior1.jpg",
+      "git_file_name": "_assets/image_data/rooms-interior1.json",
+      "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081931/rooms-interior1.jpg"
     }
   ],
   "description": ""
