@@ -19,6 +19,25 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080822/thumb_lance-pool.jpg",
       "git_file_name": "_assets/image_data/lance-pool.json",
       "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080822/lance-pool.jpg"
+    },
+    {
+      "name": "cb-lance",
+      "file_name": "cb-lance.jpg",
+      "file_type": "image/jpeg",
+      "url": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080816/cb-lance.jpg",
+      "tags": "gallery, exterior",
+      "file_size": 131476,
+      "width": 900,
+      "height": 500,
+      "description": "",
+      "date_added": "2017-12-27-080816",
+      "url_large": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080816/large_cb-lance.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080816/medium_cb-lance.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080816/small_cb-lance.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080816/xsmall_cb-lance.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080816/thumb_cb-lance.jpg",
+      "git_file_name": "_assets/image_data/cb-lance.json",
+      "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080816/cb-lance.jpg"
     }
   ],
   "description": ""
