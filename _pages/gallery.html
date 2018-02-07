@@ -3,8 +3,6 @@ layout: default
 title: San Diego Oceanfront Hotel Photos | Beach Terrace Inn
 meta_description: Enjoy a tour of our stunning San Diego oceanfront hotel with photos of the Beach Terrace Inn in Carlsbad. Check out the ocean view from your beachfront rooms!
 permalink: /gallery/
-meta_tags:
-  robots:
 ---
 
 {% comment %}
@@ -45,7 +43,7 @@ meta_tags:
         <li><a href="javascript:;" class="filter" data-rel="exterior" title="Exterior">Exterior</a></li>
         <!-- <li><a href="javascript:;" class="filter" data-rel="carlsbad" title="Carlsbad">Carlsbad</a></li>   -->
        <!-- <li><a href="javascript:;" class="filter" data-rel="video" title="Video">Video</a></li> -->
-    </ul>  
+    </ul>
 </section>
 <div class="gallery-wrapper">
 <div class=" gallery-items-wrap" id="lightgallery">
@@ -54,7 +52,7 @@ meta_tags:
                     <div class="item" data-src="{% if photo.url_large %}{{ photo.url_large }}{% else %}{{ photo.url }}{% endif %}" data-exthumbimage="{% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %}" style="background-image:url({% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %})">
                     	<div class="overlay"><span class="d-flex align-items-center justify-content-center">View<br>Image</span></div>
                     </div>
-                    
+
                 </div>
                 {% endif %} {% endfor %}
         </div>
