@@ -266,6 +266,25 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081931/thumb_rooms-interior1.jpg",
       "git_file_name": "_assets/image_data/rooms-interior1.json",
       "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081931/rooms-interior1.jpg"
+    },
+    {
+      "name": "Pool-Terrace-2-King",
+      "file_name": "Pool-Terrace-2-King.jpg",
+      "file_type": "image/jpeg",
+      "url": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-050132/Pool-Terrace-2-King.jpg",
+      "tags": "gallery, rooms",
+      "file_size": 92395,
+      "width": 955,
+      "height": 666,
+      "description": "",
+      "date_added": "2017-11-17-050132",
+      "url_large": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-050132/large_Pool-Terrace-2-King.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-050132/medium_Pool-Terrace-2-King.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-050132/small_Pool-Terrace-2-King.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-050132/xsmall_Pool-Terrace-2-King.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-050132/thumb_Pool-Terrace-2-King.jpg",
+      "git_file_name": "_assets/image_data/Pool-Terrace-2-King.json",
+      "path": "//cdn.traveltripper.io/site-assets/32_826_8939/media/2017-11-17-050132/Pool-Terrace-2-King.jpg"
     }
   ],
   "description": ""
