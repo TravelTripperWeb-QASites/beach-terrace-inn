@@ -266,6 +266,25 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080738/thumb_beach-exterior.jpg",
       "git_file_name": "_assets/image_data/beach-exterior.json",
       "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080738/beach-exterior.jpg"
+    },
+    {
+      "name": "beach",
+      "file_name": "beach.jpg",
+      "file_type": "image/jpeg",
+      "url": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080735/beach.jpg",
+      "tags": "gallery, exterior",
+      "file_size": 504325,
+      "width": 1600,
+      "height": 1067,
+      "description": "",
+      "date_added": "2017-12-27-080735",
+      "url_large": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080735/large_beach.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080735/medium_beach.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080735/small_beach.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080735/xsmall_beach.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080735/thumb_beach.jpg",
+      "git_file_name": "_assets/image_data/beach.json",
+      "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080735/beach.jpg"
     }
   ],
   "description": ""
