@@ -95,6 +95,25 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081957/thumb_balcony-lance-sea-view.jpg",
       "git_file_name": "_assets/image_data/balcony-lance-sea-view.json",
       "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081957/balcony-lance-sea-view.jpg"
+    },
+    {
+      "name": "ptk-lnace",
+      "file_name": "ptk-lnace.jpg",
+      "file_type": "image/jpeg",
+      "url": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081955/ptk-lnace.jpg",
+      "tags": "gallery, rooms",
+      "file_size": 144283,
+      "width": 900,
+      "height": 501,
+      "description": "",
+      "date_added": "2017-12-27-081955",
+      "url_large": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081955/large_ptk-lnace.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081955/medium_ptk-lnace.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081955/small_ptk-lnace.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081955/xsmall_ptk-lnace.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081955/thumb_ptk-lnace.jpg",
+      "git_file_name": "_assets/image_data/ptk-lnace.json",
+      "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081955/ptk-lnace.jpg"
     }
   ],
   "description": ""
