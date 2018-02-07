@@ -19,6 +19,25 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080731/thumb_beach-terrace-inn-exterior.jpg",
       "git_file_name": "_assets/image_data/beach-terrace-inn-exterior.json",
       "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080731/beach-terrace-inn-exterior.jpg"
+    },
+    {
+      "name": "lance-pool",
+      "file_name": "lance-pool.jpg",
+      "file_type": "image/jpeg",
+      "url": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080822/lance-pool.jpg",
+      "tags": "gallery, exterior",
+      "file_size": 101501,
+      "width": 900,
+      "height": 500,
+      "description": "",
+      "date_added": "2017-12-27-080822",
+      "url_large": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080822/large_lance-pool.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080822/medium_lance-pool.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080822/small_lance-pool.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080822/xsmall_lance-pool.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080822/thumb_lance-pool.jpg",
+      "git_file_name": "_assets/image_data/lance-pool.json",
+      "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080822/lance-pool.jpg"
     }
   ],
   "description": ""
