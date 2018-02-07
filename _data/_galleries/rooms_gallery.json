@@ -171,6 +171,25 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081946/thumb_lounge.jpg",
       "git_file_name": "_assets/image_data/lounge.json",
       "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081946/lounge.jpg"
+    },
+    {
+      "name": "courtyard2-double",
+      "file_name": "courtyard2-double.jpg",
+      "file_type": "image/jpeg",
+      "url": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081944/courtyard2-double.jpg",
+      "tags": "gallery, rooms",
+      "file_size": 233818,
+      "width": 1600,
+      "height": 1067,
+      "description": "",
+      "date_added": "2017-12-27-081944",
+      "url_large": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081944/large_courtyard2-double.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081944/medium_courtyard2-double.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081944/small_courtyard2-double.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081944/xsmall_courtyard2-double.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081944/thumb_courtyard2-double.jpg",
+      "git_file_name": "_assets/image_data/courtyard2-double.json",
+      "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081944/courtyard2-double.jpg"
     }
   ],
   "description": ""
