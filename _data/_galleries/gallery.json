@@ -76,6 +76,25 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080810/thumb_sunset-at-beach-terrace-inn.jpg",
       "git_file_name": "_assets/image_data/sunset-at-beach-terrace-inn.json",
       "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080810/sunset-at-beach-terrace-inn.jpg"
+    },
+    {
+      "name": "beach-view",
+      "file_name": "beach-view.jpg",
+      "file_type": "image/jpeg",
+      "url": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080808/beach-view.jpg",
+      "tags": "gallery, exterior",
+      "file_size": 182261,
+      "width": 900,
+      "height": 501,
+      "description": "",
+      "date_added": "2017-12-27-080808",
+      "url_large": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080808/large_beach-view.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080808/medium_beach-view.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080808/small_beach-view.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080808/xsmall_beach-view.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080808/thumb_beach-view.jpg",
+      "git_file_name": "_assets/image_data/beach-view.json",
+      "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080808/beach-view.jpg"
     }
   ],
   "description": ""
