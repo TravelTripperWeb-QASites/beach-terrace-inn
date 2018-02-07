@@ -281,13 +281,14 @@
                     min-height:532px;
                 }
                 @include media-breakpoint-down(sm) {
-                    text-align: center;    
+                    text-align: center;
                 }
                 @media screen and (max-width: 480px) {
                     min-height:740px;
                 }
                 .carousel-inner {
                     .carousel-item {
+                        width: 90%;
                     }
                     a {
                         top: 35%;
@@ -337,7 +338,7 @@
             img{
                 width:100%;
             }
-          
+
         }
          .content {
             @include make-col-ready();
@@ -362,7 +363,7 @@
             }
         }
     }
-    
+
     .cycleing-img {
         @include make-col-ready();
         @include media-breakpoint-up(md) {

@@ -1,27 +1,18 @@
 ---
-layout: default
-title: Thank you
-meta_description: 
-permalink: "/thankyou/"
 meta_tags:
   robots: noindex, follow
 title_localized:
   en: Thank You | Beach Terrace Inn
-label_localized:
-  en: 
-layout_localized: default
+layout_localized:
+  en: default
 permalink_localized:
   en: "/thankyou/"
-meta_description_localized:
-  en: 
-meta_keywords_localized:
-  en: 
 published_localized:
   en: true
 include_in_nav_localized:
   en: true
-label: Thank You | Beach Terrace Inn
-
+label_localized:
+  en: Thank You | Beach Terrace Inn
 ---
 
 {% assign links = site.data.navigation.main %}
@@ -29,14 +20,20 @@ label: Thank You | Beach Terrace Inn
 <section class="inner-banner" style="background-image:url(/assets/images/rooms/rooms-banner.jpg);">
     <div class="overlap"></div>
     <div class="inner-banner-title">
+        {% regionblock page_heading, type: heading %}
         <h1>Thank you</h1>
+        {% endregionblock %}
+        {% regionblock page_subheading, type: heading %}
         <h5>Beach Terrace Inn</h5>
+        {% endregionblock %}
     </div>
 </section>
 <!-- banner section end -->
 
 <!-- sitemap start -->
 <section class="static-page-wrap text-center">
+    {% regionblock body_text, type: heading %}
     <h4>We will get in touch with you shortly.</h4>
+    {% endregionblock %}
 </section>
 <!-- sitemap end -->

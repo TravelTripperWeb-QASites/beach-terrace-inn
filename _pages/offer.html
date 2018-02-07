@@ -1,98 +1,99 @@
 ---
-layout: default
-title: Offer Details
-meta_description:
-permalink: "/offer-details/"
-meta_tags:
-  robots:
 published_localized:
   en: true
 title_localized:
   en: Carlsbad Hotel Deals & Offers | Offers at Beach Terrace Inn
-layout_localized: default
-label: Carlsbad Hotel Deals & Offers | Offers at Beach Terrace Inn
+layout_localized:
+  en: default
+label_localized:
+  en: Carlsbad Hotel Deals & Offers | Offers at Beach Terrace Inn
 permalink_localized:
   en: "/offer-details/"
 meta_description_localized:
-  en: Our Carlsbad oceanfront hotel regularly has new offers and packages to help
-    you slow down at one of the premier hotels in Carlsbad. View our exclusive deals!
-
+  en: Our Carlsbad oceanfront hotel regularly has new offers and packages to helpyou slow down at one of the premier hotels in Carlsbad. View our exclusive deals!
 ---
 <div class="loading" style="display:block">Loading&#8230;</div>
 <section rt3-special-rates="offers" ng-controller="offerDetail">
-<!-- offers banner section start -->
-<section class="inner-banner extra-height d-flex align-items-end" ng-style="{'background-image':'url('+offers.sRdetail.images[0].large+')'}">
-    <div class="overlap"></div>
-    <div class="title-bg big"></div>
-    <div class="inner-banner-title offer-detail">
-        <h1 ng-bind-html="offers.sRdetail.rate_plan_name | renderHTMLCorrectly"></h1>
-        <!-- <h5>save <span>15%</span></h5> -->
-    </div>
-</section>
-<!-- offers banner section end -->
 
-<!-- offer details content section start -->
-<section class="offer-details-intro">
-	<div class="intro-wrap m-0">
-		<div class="_left">
-			<div class="text-section">
-				<p ng-bind-html="offers.sRdetail.long_description | renderHTMLCorrectly"></p>
-				<a ng-href="[[offers.sRdetail.promo_url]]" title="book offer" class="black">book offer</a>
-				<a href="/contact/" title="contact us" class="border-black">contact us</a>
-				<p>Offer valid <span ng-show="!offers.sRdetail.booking_end_date"> From </span>[[offers.sRdetail.booking_start_date | date:dd/MM/yyyy]] <span ng-show="offers.sRdetail.booking_end_date">- [[offers.sRdetail.booking_end_date | date:dd/MM/yyyy]]</span>. Some restrictions and blackout dates may apply.</p>
-			</div>
+	<!-- offers banner section start -->
+	<section class="inner-banner extra-height d-flex align-items-end" ng-style="{'background-image':'url('+offers.sRdetail.images[0].large+')'}">
+		<div class="overlap"></div>
+		<div class="title-bg big"></div>
+		<div class="inner-banner-title offer-detail">
+			<h1 ng-bind-html="offers.sRdetail.rate_plan_name | renderHTMLCorrectly"></h1>
 		</div>
-		<div class="_right">
-			<div class="image-section">
-				<img src="/assets/images/offers/fall-sand.jpg" alt="Fall on the Sand">
-				<div class="image-sec-header">
-					<h2>on the<br>house</h2>
-					<h5 ng-show="offers.sRdetail.addons.length > 0">this offer includes:</h5>
+	</section>
+	<!-- offers banner section end -->
+
+	<!-- offer details content section start -->
+	<section class="offer-details-intro">
+		<div class="intro-wrap m-0">
+			<div class="_left">
+				<div class="text-section">
+					<p ng-bind-html="offers.sRdetail.long_description | renderHTMLCorrectly"></p>
+					<a ng-href="[[offers.sRdetail.promo_url]]" title="book offer" class="black">book offer</a>
+					<a href="/contact/" title="contact us" class="border-black">contact us</a>
+					<p>Offer valid <span ng-show="!offers.sRdetail.booking_end_date"> From </span>[[offers.sRdetail.booking_start_date | date:dd/MM/yyyy]] <span ng-show="offers.sRdetail.booking_end_date">- [[offers.sRdetail.booking_end_date | date:dd/MM/yyyy]]</span>. Some restrictions and blackout dates may apply.</p>
+				</div>
+			</div>
+			<div class="_right">
+				<div class="image-section">
+					<img src="/assets/images/offers/fall-sand.jpg" alt="Fall on the Sand">
+					<div class="image-sec-header">
+						<h2>on the<br>house</h2>
+						<h5 ng-show="offers.sRdetail.addons.length > 0">this offer includes:</h5>
+					</div>
 				</div>
 			</div>
 		</div>
+	</section>
+	<!-- offer details content section end -->
+
+	<!-- offer includes section start -->
+	<div class="offer-includes d-flex justify-content-end">
+		<ul class="">
+			<li ng-repeat ="addon in offers.sRdetail.addons" >[[addon]]</li>
+		</ul>
 	</div>
-</section>
-<!-- offer details content section end -->
+	<!-- offer includes section end -->
 
-<!-- offer includes section start -->
-<div class="offer-includes d-flex justify-content-end">
-	<ul class="">
-		<li ng-repeat ="addon in offers.sRdetail.addons" >[[addon]]</li>
-
-	</ul>
-</div>
-<!-- offer includes section end -->
-
-<!-- gift section start -->
-<section class="gift-beach bg-cover" style="background-image:url(/assets/images/offers/gift-sec-bg.jpg);">
-	<div class="gift-beach-wrap m-0">
-		<div class="img-part p-0">
-			<img src="/assets/images/offers/hand-with-star.png" alt="Hand with Star">
-		</div>
-		<div class="text-part p-0">
-			<div class="text-part-inner">
-				<h2>gift the<br>beach</h2>
-				<p>What could be a better than the gift of toes in sand at the Beach Terrace Inn?</p>
-				<a href="../gift-the-beach/" title="Buy Gift card" class="white-shadow-white">Buy A Gift Card</a>
+	<!-- gift section start -->
+	<section class="gift-beach bg-cover" style="background-image:url(/assets/images/offers/gift-sec-bg.jpg);">
+		<div class="gift-beach-wrap m-0">
+			<div class="img-part p-0">
+				<img src="/assets/images/offers/hand-with-star.png" alt="Hand with Star">
+			</div>
+			<div class="text-part p-0">
+				<div class="text-part-inner">
+					{% regionblock gift_heading, type: heading %}
+					<h2>gift the<br>beach</h2>
+					{% endregionblock %}
+					{% regionblock gift_text, type: text %}
+					<p>What could be a better than the gift of toes in sand at the Beach Terrace Inn?</p>
+					{% endregionblock %}
+					<a href="../gift-the-beach/" title="Buy Gift card" class="white-shadow-white">Buy A Gift Card</a>
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 <!-- gift section end -->
 
 {% include special_offers.html %}
 
-<!-- newsletter signup start -->
-<section class="cta-signup bg-cover text-center" style="background-image: url(/assets/images/offers/offer-cta.jpg);">
-    <div class="overlap"></div>
-    <div class="cta-signup-inner">
-        <h4>Stay in Touch with Beach Terrace Inn</h4>
-        <h2>everyone's invited</h2>
-        <div class="input-holder m-auto">
-            <a href="https://signup.e2ma.net/signup/1862574/1405684/" class="white-shadow-white" onclick="window.open('https://signup.e2ma.net/signup/1862574/1405684/', 'signup', 'menubar=no, location=no, toolbar=no, scrollbars=yes, height=500'); return false;">Join our list</a>
-        </div>
-    </div>
-</section>
-<!-- newsletter signup end -->
+	<!-- newsletter signup start -->
+	<section class="cta-signup bg-cover text-center" style="background-image: url(/assets/images/offers/offer-cta.jpg);">
+		<div class="overlap"></div>
+		<div class="cta-signup-inner">
+			{% regionblock newsletter_heading, type: heading %}
+			<h4>Stay in Touch with Beach Terrace Inn</h4>
+			{% endregionblock %}
+			{% regionblock newsletter_heading, type: heading %}
+			<h2>everyone's invited</h2>
+			{% endregionblock %}
+			<div class="input-holder m-auto">
+				<a href="https://signup.e2ma.net/signup/1862574/1405684/" class="white-shadow-white" onclick="window.open('https://signup.e2ma.net/signup/1862574/1405684/', 'signup', 'menubar=no, location=no, toolbar=no, scrollbars=yes, height=500'); return false;">Join our list</a>
+			</div>
+		</div>
+	</section>
+	<!-- newsletter signup end -->
 </section>
