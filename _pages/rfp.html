@@ -15,99 +15,111 @@ permalink_localized:
 
 <!-- banner section start -->
 <section class="inner-banner" style="background-image:url(/assets/images/rooms/rooms-banner.jpg);">
-    <div class="overlap"></div>
-    <div class="inner-banner-title">
-        {% regionblock rfp_heading, type: heading %}
-        <h1>Request for proposal</h1>
-        {% endregionblock %}
-    </div>
+  <div class="overlap"></div>
+  <div class="inner-banner-title">
+    {% regionblock rfp_heading, type: heading %}
+    <h1>Request for proposal</h1>
+    {% endregionblock %}
+  </div>
 </section>
 <!-- banner section end -->
 
 <!-- form section start -->
 <section class="contact-intro p-0">
-	<div class="intro-wrap m-0">
-		<div class="_right p-0 rfp-form">
-			<div class="form-section">
-				<form action="https://submit.jotform.me/submit/73262475804459/" method="post" name="form_73262475804459" id="73262475804459" accept-charset="utf-8" class="ng-pristine ng-valid" _lpchecked="1" class="m-0">
-                    <input type="hidden" name="formID" value="73262475804459">
-                    <p class="text-center">Intimate moments are our specialty. If you're interested in celebrating an occassion or hosting a gathering with us, and your party does not exceed more than 40 guests, please submit the form below. Typically, we require at least one room rental in addition to the event space. We are excited to connect with you and will respond promptly!</p>
-                    <h4 class="text-center">Contact Information</h4>
-                    <div class="control-col">
-                        <input type="text" class="form-control validate" id="input_3" name="q3_first-name" placeholder="First Name" required="">
-                    </div>
-                    <div class="control-col">
-                        <input type="text" class="form-control validate" id="input_9" name="q9_last-name" placeholder="Last Name" required="">
-                    </div>
-                    <div class="control-col">
-                        <input type="text" class="form-control validate" id="input_25" name="q25_company" placeholder="Company" required="">
-                    </div>
-                    <div class="control-col">
-                        <input type="text" class="form-control validate" id="input_11" name="q11_address-line-1" placeholder="Address" required="">
-                    </div>
-                    <div class="control-col">
-                        <input type="text" class="form-control validate" id="input_13" name="q13_city" placeholder="City" required="">
-                    </div>
-                    <div class="control-col">
-                        <input type="text" class="form-control validate" id="input_14" name="q14_zipcode" placeholder="Postal Code" required="">
-                    </div>
-                    <div class="control-col">
-                        <input type="text" class="form-control validate" id="input_26" name="q26_cell-phone" placeholder="Phone Number" required="">
-                    </div>
-                    <div class="control-col">
-                        <input type="email" class="form-control validate" id="input_4" name="q4_email" placeholder="Email" required="">
-                    </div>
-                    <h4 class="text-center">group Information</h4>
-                    <div class="control-col">
-                        <input type="text" id="input_15" class="form-control validate" id="input_15" name="q15_arrival" placeholder="Arrival Date" required="">
-                    </div>
-                    <div class="control-col">
-                        <input type="text" id="input_16" class="form-control validate" id="input_16" name="q16_departure" placeholder="Departure Date" required="">
-                    </div>
-                    <div class="control-col">
-                        <select class="form-control" id="input_32" name="q32_noOf">
-                            <option>Number of rooms</option>
-                            <option>10 Rooms</option>
-                            <option>11-30 Rooms</option>
-                            <option>31-48 Rooms</option>
-                        </select>
-                    </div>
-                    <div class="control-col" id="input_33" name="q33_eventType">
-                        <select class="form-control">
-                            <option>Event Type</option>
-                            <option>Corporate</option>
-                            <option>Wedding</option>
-                        </select>
-                    </div>
-                    <div class="control-col">
-                        <select class="form-control selectpicker" id="input_35" name="q35_areDate">
-                            <option>Are the dates flexible?</option>
-                            <option>Yes</option>
-                            <option>No</option>
-                        </select>
-                    </div>
-                    <div class="control-col">
-                        <textarea class="form-control" id="input_31" name="q31_sleeping-rooms31" cols="40" rows="5" placeholder="Comments"></textarea>
-                    </div>
-                    <div class="control-col">
-                       <h5> Request Ocean Lounge? </h5>
-                       <input  type="radio" class="radio-btn"  id="input_36_0" name="q36_requestOcean" value="Yes"><label> Yes</label></input>
-                       <input type="radio" class="radio-btn"  id="input_36_1" name="q36_requestOcean" value="No"  checked><label>No<label></input>
-                    </div>
-                    <div class="control-col">
-                       <h5> Request Ocean Terrace? </h5>
-                       <input  type="radio" class="radio-btn"  id="input_37_0" name="q37_requestOcean37" value="Yes" ><label>Yes</label></input>
-                       <input type="radio" class="radio-btn"  id="input_37_1" name="q37_requestOcean37" value="No" checked><label>No</label></input>
-                    </div>
-                    <!-- <div class="control-col-fw">
-                        <textarea class="form-control" id="input_7" name="q7_comments" cols="40" rows="5" placeholder="Your Message"></textarea>
-                    </div> -->
-                    <div class="control-col-fw">
-                        <button type="submit" id="input_2" class="black">Send</button>
-                    </div>
-                </form>
-			</div>
-		</div>
-	</div>
+  <div class="intro-wrap m-0">
+    <div class="_right p-0 rfp-form">
+      <div class="form-section">
+        <form action="https://submit.jotform.me/submit/73262475804459/" method="post" name="form_73262475804459" id="73262475804459"
+          accept-charset="utf-8" class="ng-pristine ng-valid" _lpchecked="1" class="m-0">
+          <input type="hidden" name="formID" value="73262475804459">
+          {% regionblock form_text, type: text %}
+          <p class="text-center">Intimate moments are our specialty. If you're interested in celebrating an occassion or hosting a gathering with
+            us, and your party does not exceed more than 40 guests, please submit the form below. Typically, we require at
+            least one room rental in addition to the event space. We are excited to connect with you and will respond promptly!</p>
+           {% endregionblock %}
+          <h4 class="text-center">Contact Information</h4>
+          <div class="control-col">
+            <input type="text" class="form-control validate" id="input_3" name="q3_first-name" placeholder="First Name" required="">
+          </div>
+          <div class="control-col">
+            <input type="text" class="form-control validate" id="input_9" name="q9_last-name" placeholder="Last Name" required="">
+          </div>
+          <div class="control-col">
+            <input type="text" class="form-control validate" id="input_25" name="q25_company" placeholder="Company" required="">
+          </div>
+          <div class="control-col">
+            <input type="text" class="form-control validate" id="input_11" name="q11_address-line-1" placeholder="Address" required="">
+          </div>
+          <div class="control-col">
+            <input type="text" class="form-control validate" id="input_13" name="q13_city" placeholder="City" required="">
+          </div>
+          <div class="control-col">
+            <input type="text" class="form-control validate" id="input_14" name="q14_zipcode" placeholder="Postal Code" required="">
+          </div>
+          <div class="control-col">
+            <input type="text" class="form-control validate" id="input_26" name="q26_cell-phone" placeholder="Phone Number" required="">
+          </div>
+          <div class="control-col">
+            <input type="email" class="form-control validate" id="input_4" name="q4_email" placeholder="Email" required="">
+          </div>
+          <h4 class="text-center">group Information</h4>
+          <div class="control-col">
+            <input type="text" id="input_15" class="form-control validate" id="input_15" name="q15_arrival" placeholder="Arrival Date"
+              required="">
+          </div>
+          <div class="control-col">
+            <input type="text" id="input_16" class="form-control validate" id="input_16" name="q16_departure" placeholder="Departure Date"
+              required="">
+          </div>
+          <div class="control-col">
+            <select class="form-control" id="input_32" name="q32_noOf">
+              <option>Number of rooms</option>
+              <option>10 Rooms</option>
+              <option>11-30 Rooms</option>
+              <option>31-48 Rooms</option>
+            </select>
+          </div>
+          <div class="control-col" id="input_33" name="q33_eventType">
+            <select class="form-control">
+              <option>Event Type</option>
+              <option>Corporate</option>
+              <option>Wedding</option>
+            </select>
+          </div>
+          <div class="control-col">
+            <select class="form-control selectpicker" id="input_35" name="q35_areDate">
+              <option>Are the dates flexible?</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+          <div class="control-col">
+            <textarea class="form-control" id="input_31" name="q31_sleeping-rooms31" cols="40" rows="5" placeholder="Comments"></textarea>
+          </div>
+          <div class="control-col">
+            <h5> Request Ocean Lounge? </h5>
+            <input type="radio" class="radio-btn" id="input_36_0" name="q36_requestOcean" value="Yes">
+              <label> Yes</label>
+            </input>
+            <input type="radio" class="radio-btn" id="input_36_1" name="q36_requestOcean" value="No" checked>
+              <label>No</label>
+            </input>
+          </div>
+          <div class="control-col">
+            <h5> Request Ocean Terrace? </h5>
+            <input type="radio" class="radio-btn" id="input_37_0" name="q37_requestOcean37" value="Yes">
+            <label>Yes</label>
+            </input>
+            <input type="radio" class="radio-btn" id="input_37_1" name="q37_requestOcean37" value="No" checked>
+            <label>No</label>
+            </input>
+          </div>
+          <div class="control-col-fw">
+            <button type="submit" id="input_2" class="black">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- form section end -->

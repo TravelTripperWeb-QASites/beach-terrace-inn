@@ -4,59 +4,70 @@ title: Carlsbad Hotel Deals & Offers | Offers at Beach Terrace Inn
 meta_description: Our Carlsbad oceanfront hotel regularly has new offers and packages to help you slow down at one of the premier hotels in Carlsbad. View our exclusive deals!
 permalink: /offers/
 ---
-<section rt3-special-rates="offers" >
-<!-- offers banner section start -->
-<section class="inner-banner" style="background-image:url(/assets/images/offers/offers-banner.jpg);">
+<section rt3-special-rates="offers">
+  <!-- offers banner section start -->
+  <section class="inner-banner" style="background-image:url(/assets/images/offers/offers-banner.jpg);">
     <div class="overlap"></div>
     <div class="inner-banner-title">
-        <h1>Book <br>Direct</h1>
-        <h5>Our Best Rates Guaranteed</h5>
+      {% regionblock page_heading, type: heading %}
+      <h1>Book
+        <br>Direct</h1>
+      {% endregionblock %}
+      {% regionblock page_subheading, type: heading %}
+      <h5>Our Best Rates Guaranteed</h5>
+      {% endregionblock %}
     </div>
-</section>
-<!-- offers banner section end -->
+  </section>
+  <!-- offers banner section end -->
 
-<!-- offers content part start -->
-<section>
-	<div class="offers-intro">
-		<h3>Our Promise to You</h3>
-		<p>At Beach Terrace Inn we’re committed to offering you the best rate available. Should you happen to find a lower rate online, let us know and we will happily match it - and give you a 10% discount as a reward for booking direct.</p>
-	</div>
-</section>
-<!-- offers content part end -->
+  <!-- offers content part start -->
+  <section>
+    <div class="offers-intro">
+      {% regionblock offer_heading, type: heading %}
+      <h3>Our Promise to You</h3>
+      {% endregionblock %}
+      {% regionblock offer_text, type: text %}
+      <p>At Beach Terrace Inn we’re committed to offering you the best rate available. Should you happen to find a lower rate
+        online, let us know and we will happily match it - and give you a 10% discount as a reward for booking direct.</p>
+      {% endregionblock %}
+    </div>
+  </section>
+  <!-- offers content part end -->
 
-<!-- offers section start -->
-<section class="assets-wrap offers-wrap">
+  <!-- offers section start -->
+  <section class="assets-wrap offers-wrap">
     <div class="assets-block m-0" ng-repeat="offer in offers.special_rates">
-        <div class="assets-img">
-        	<div class="img-inner bg-cover" ng-style="{'background-image': 'url([[offer.images[0].large || '/assets/images/dummy.jpg' ]])'}"></div>
+      <div class="assets-img">
+        <div class="img-inner bg-cover" ng-style="{'background-image': 'url([[offer.images[0].large || '/assets/images/dummy.jpg' ]])'}"></div>
+      </div>
+      <div class="assets-content">
+        <div class="assets-content-inner">
+          <h4 ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></h4>
+          <p ng-bind-html="offer.short_description | renderHTMLCorrectly"></p>
+          <div class="btn-holder">
+            <a ng-href="[[offer.promo_url]]" class="black-shadow-yellow" title="book offer">book offer</a>
+            <a ng-href="/offer-details/#[[ offer.rate_plan_name | formatNameForLink ]]" class="white-shadow-yellow" title="view offer">view offer</a>
+          </div>
         </div>
-        <div class="assets-content">
-            <div class="assets-content-inner">
-                <h4  ng-bind-html="offer.rate_plan_name | renderHTMLCorrectly"></h4>
-                <!-- <h5>save 15%</h5> -->
-                <p ng-bind-html="offer.short_description | renderHTMLCorrectly"></p>
-                <div class="btn-holder">
-                    <a ng-href="[[offer.promo_url]]" class="black-shadow-yellow" title="book offer">book offer</a>
-                    <a ng-href="/offer-details/#[[ offer.rate_plan_name | formatNameForLink ]]" class="white-shadow-yellow" title="view offer">view offer</a>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+  </section>
+  <!-- offers section end -->
 
-
-</section>
-<!-- offers section end -->
-
-<!-- newsletter signup start -->
-<section class="cta-signup bg-cover text-center mt-0" style="background-image: url(/assets/images/offers/offers-cta.jpg);">
+  <!-- newsletter signup start -->
+  <section class="cta-signup bg-cover text-center mt-0" style="background-image: url(/assets/images/offers/offers-cta.jpg);">
     <div class="overlap"></div>
     <div class="cta-signup-inner">
-        <h4>Stay in Touch with Beach Terrace Inn</h4>
-        <h2>go with the flow</h2>
-        <div class="input-holder m-auto">
-            <a href="https://signup.e2ma.net/signup/1862574/1405684/" class="white-shadow-white" onclick="window.open('https://signup.e2ma.net/signup/1862574/1405684/', 'signup', 'menubar=no, location=no, toolbar=no, scrollbars=yes, height=500'); return false;">Join our list</a>
-        </div>
+      {% regionblock cta_heading, type: heading %}
+      <h4>Stay in Touch with Beach Terrace Inn</h4>
+      {% endregionblock %}
+      {% regionblock cta_subheading, type: heading %}
+      <h2>go with the flow</h2>
+      {% endregionblock %}
+      <div class="input-holder m-auto">
+        <a href="https://signup.e2ma.net/signup/1862574/1405684/" class="white-shadow-white" onclick="window.open('https://signup.e2ma.net/signup/1862574/1405684/', 'signup', 'menubar=no, location=no, toolbar=no, scrollbars=yes, height=500'); return false;">Join our list</a>
+      </div>
     </div>
-</section>
-<!-- newsletter signup end -->
+  </section>
+  <!-- newsletter signup end -->
 </section>
