@@ -5,55 +5,55 @@ meta_description: Enjoy a tour of our stunning San Diego oceanfront hotel with p
 permalink: /gallery/
 ---
 
-{% comment %}
-
-  Name:
-
-    Gallery Page
-
-  Description:
-
-    Display gallery images from the media library.
-
-  Usage:
-
-    Upload images to media library and add the tag [gallery] to each.
-
-    eg. {% for photo in site.photos %}
-          {% assign tag_list = photo.tags | split: "," | strip %}
-          {% if tag_list contains "gallery" %}
-            <div data-src="{% if photo.url_large %}{{ photo.url_large }}{% else %}{{ photo.url }}{% endif %}">
-              <img src="{% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %}">
-            </div>
-          {% endif %}
-        {% endfor %}
-
-{% endcomment %}
-
 <!-- banner section start -->
 <section class="gallery-inner-banner  text-center pt-5">
-    <h2>Breathtaking Views</h2>
-    <h4>take a visual tour</h4>
+  {% regionblock page_heading, type: heading %}
+  <h2>Breathtaking Views</h2>
+  {% endregionblock %}
+  {% regionblock page_heading, type: heading %}
+  <h4>take a visual tour</h4>
+  {% endregionblock %}
 </section>
 <!-- banner section end -->
-  <section class="assets-wrap gallery-nav">
-    <ul class="text-center m-0">
-        <li><a href="javascript:;" class="filter active" data-filter="all" title="All" data-rel="all">All</a></li>
-        <li><a href="javascript:;" class="filter" data-rel="rooms" title="Rooms">Rooms</a></li>
-        <li><a href="javascript:;" class="filter" data-rel="exterior" title="Exterior">Exterior</a></li>
-        <!-- <li><a href="javascript:;" class="filter" data-rel="carlsbad" title="Carlsbad">Carlsbad</a></li>   -->
-       <!-- <li><a href="javascript:;" class="filter" data-rel="video" title="Video">Video</a></li> -->
-    </ul>
-</section>
-<div class="gallery-wrapper">
-<div class=" gallery-items-wrap" id="lightgallery">
-                {% for photo in site.photos %} {% assign tag_list = photo.tags | split: "," | strip %} {% if tag_list contains "gallery" %}
-                <div class="fancybox" data-filter="{{photo.tags | replace: 'gallery' | replace: ',','' | replace:' ',''}}">
-                    <div class="item" data-src="{% if photo.url_large %}{{ photo.url_large }}{% else %}{{ photo.url }}{% endif %}" data-exthumbimage="{% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %}" style="background-image:url({% if photo.url_medium %}{{ photo.url_medium }}{% else %}{{ photo.url }}{% endif %})">
-                    	<div class="overlay"><span class="d-flex align-items-center justify-content-center">View<br>Image</span></div>
-                    </div>
 
-                </div>
-                {% endif %} {% endfor %}
+<section class="assets-wrap gallery-nav">
+  <ul class="text-center m-0">
+    <li>
+      <a href="javascript:;" class="filter active" data-filter="all" title="All" data-rel="all">All</a>
+    </li>
+    <li>
+      <a href="javascript:;" class="filter" data-rel="rooms" title="Rooms">Rooms</a>
+    </li>
+    <li>
+      <a href="javascript:;" class="filter" data-rel="exterior" title="Exterior">Exterior</a>
+    </li>
+  </ul>
+</section>
+
+<div class="gallery-wrapper">
+  <div class=" gallery-items-wrap" id="lightgallery">
+
+    {% for photo in site.data._galleries.exterior_gallery.photos %}
+    <div class="fancybox" data-filter="exterior">
+      <div class="item" data-src="{% if photo_url_large %} {{ photo.url_large }} {% else %} {{ photo.url }} {% endif %}" data-exthumbimage="{% if photo.url_medium %} {{ photo.url_medium }} {% else %} {{ photo.url }} {% endif %}" style="background-image:url({% if photo.url_medium %} {{ photo.url_medium }} {% else %} {{ photo.url }} {% endif %})">
+        <div class="overlay">
+          <span class="d-flex align-items-center justify-content-center">View
+            <br>Image</span>
         </div>
+      </div>
+    </div>
+    {% endfor %}
+
+    {% for photo in site.data._galleries.rooms_gallery.photos %}
+    <div class="fancybox" data-filter="rooms">
+      <div class="item" data-src="{% if photo_url_large %} {{ photo.url_large }} {% else %} {{ photo.url }} {% endif %}" data-exthumbimage="{% if photo.url_medium %} {{ photo.url_medium }} {% else %} {{ photo.url }} {% endif %}" style="background-image:url({% if photo.url_medium %} {{ photo.url_medium }} {% else %} {{ photo.url }} {% endif %})">
+        <div class="overlay">
+          <span class="d-flex align-items-center justify-content-center">View
+            <br>Image</span>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
 </div>
