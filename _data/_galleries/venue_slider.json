@@ -38,6 +38,25 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_12053/media/2018-02-07-153805/thumb_meeting-hall-view-2.jpg",
       "git_file_name": "_assets/image_data/meeting-hall-view-2.json",
       "path": "//cdn.traveltripper.io/site-assets/32_826_12053/media/2018-02-07-153805/meeting-hall-view-2.jpg"
+    },
+    {
+      "name": "meeting-hall-view-3",
+      "file_name": "meeting-hall-view-3.jpg",
+      "file_type": "image/jpeg",
+      "url": "//cdn.traveltripper.io/site-assets/32_826_12053/media/2018-02-07-153809/meeting-hall-view-3.jpg",
+      "tags": "",
+      "file_size": 128669,
+      "width": 900,
+      "height": 642,
+      "description": "Meeting Hall",
+      "date_added": "2018-02-07-153809",
+      "url_large": "//cdn.traveltripper.io/site-assets/32_826_12053/media/2018-02-07-153809/large_meeting-hall-view-3.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/32_826_12053/media/2018-02-07-153809/medium_meeting-hall-view-3.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/32_826_12053/media/2018-02-07-153809/small_meeting-hall-view-3.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_12053/media/2018-02-07-153809/xsmall_meeting-hall-view-3.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_12053/media/2018-02-07-153809/thumb_meeting-hall-view-3.jpg",
+      "git_file_name": "_assets/image_data/meeting-hall-view-3.json",
+      "path": "//cdn.traveltripper.io/site-assets/32_826_12053/media/2018-02-07-153809/meeting-hall-view-3.jpg"
     }
   ],
   "description": ""
