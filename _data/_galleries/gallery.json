@@ -209,6 +209,25 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080748/thumb_bti-top-view.jpg",
       "git_file_name": "_assets/image_data/bti-top-view.json",
       "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080748/bti-top-view.jpg"
+    },
+    {
+      "name": "exterior",
+      "file_name": "exterior.jpg",
+      "file_type": "image/jpeg",
+      "url": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080745/exterior.jpg",
+      "tags": "gallery, exterior",
+      "file_size": 454908,
+      "width": 1600,
+      "height": 1067,
+      "description": "",
+      "date_added": "2017-12-27-080745",
+      "url_large": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080745/large_exterior.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080745/medium_exterior.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080745/small_exterior.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080745/xsmall_exterior.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080745/thumb_exterior.jpg",
+      "git_file_name": "_assets/image_data/exterior.json",
+      "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080745/exterior.jpg"
     }
   ],
   "description": ""
