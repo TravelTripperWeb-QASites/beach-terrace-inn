@@ -171,6 +171,25 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080753/thumb_bti-entrance.jpg",
       "git_file_name": "_assets/image_data/bti-entrance.json",
       "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080753/bti-entrance.jpg"
+    },
+    {
+      "name": "beach-terrace-inn-exterior2",
+      "file_name": "beach-terrace-inn-exterior2.jpg",
+      "file_type": "image/jpeg",
+      "url": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080750/beach-terrace-inn-exterior2.jpg",
+      "tags": "gallery, exterior",
+      "file_size": 402484,
+      "width": 1600,
+      "height": 1067,
+      "description": "",
+      "date_added": "2017-12-27-080750",
+      "url_large": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080750/large_beach-terrace-inn-exterior2.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080750/medium_beach-terrace-inn-exterior2.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080750/small_beach-terrace-inn-exterior2.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080750/xsmall_beach-terrace-inn-exterior2.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080750/thumb_beach-terrace-inn-exterior2.jpg",
+      "git_file_name": "_assets/image_data/beach-terrace-inn-exterior2.json",
+      "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-080750/beach-terrace-inn-exterior2.jpg"
     }
   ],
   "description": ""
