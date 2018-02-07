@@ -234,13 +234,15 @@ meta_tags:
 
 <!--request for proposal section start-->
 <div class="love-section">
-  {% regionblock rfp_image, type: image %}
+  {% regionblock rfp_image_one, type: image %}
   <img src="/assets/images/home/wedding-place.jpg" alt="Wedding Place" class="love-img">
   {% endregionblock %}
   <div class="love-section-wrap">
     <div class="love-section-inner">
       <div class="love-img p-0">
-        <img src="/assets/images/home/happy-wedding.jpg" alt="Happy Wedding at Beach Terrace Inn are magical" />
+        {% regionblock rfp_image_one, type: image %}
+        <img src="/assets/images/home/happy-wedding.jpg" alt="Happy Wedding at Beach Terrace Inn are magical">
+        {% endregionblock %}
       </div>
       <div class="love-sec-content">
         {% regionblock rfp_text, type: text %}
