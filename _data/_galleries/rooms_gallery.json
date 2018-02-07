@@ -209,6 +209,25 @@
       "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081939/thumb_ocean-front-king-premium.jpg",
       "git_file_name": "_assets/image_data/ocean-front-king-premium.json",
       "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081939/ocean-front-king-premium.jpg"
+    },
+    {
+      "name": "bathroom",
+      "file_name": "bathroom.jpg",
+      "file_type": "image/jpeg",
+      "url": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081937/bathroom.jpg",
+      "tags": "gallery, rooms",
+      "file_size": 497119,
+      "width": 1364,
+      "height": 768,
+      "description": "",
+      "date_added": "2017-12-27-081937",
+      "url_large": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081937/large_bathroom.jpg",
+      "url_medium": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081937/medium_bathroom.jpg",
+      "url_small": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081937/small_bathroom.jpg",
+      "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081937/xsmall_bathroom.jpg",
+      "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081937/thumb_bathroom.jpg",
+      "git_file_name": "_assets/image_data/bathroom.json",
+      "path": "//cdn.traveltripper.io/site-assets/32_826_10537/media/2017-12-27-081937/bathroom.jpg"
     }
   ],
   "description": ""
