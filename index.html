@@ -29,9 +29,13 @@ meta_tags:
       </div>
       <div class="text-section align-self-center">
         <div class="heading-part">
+          {% regionblock page_heading, type: heading %}
           <h1>Beach
             <br>Terrace inn</h1>
+          {% endregionblock %}
+          {% regionblock page_heading, type: heading %}
           <h4>Check in to Check out</h4>
+          {% endregionblock %}
         </div>
       </div>
     </div>
@@ -195,9 +199,13 @@ meta_tags:
         </div>
       </div>
       <div class="over-lap-heading">
+        {% regionblock visual_tour_heading, type: heading %}
         <h2>Ahhh-mazing
           <br>Views</h2>
+        {% endregionblock %}
+        {% regionblock visual_tour_subheading, type: heading %}
         <h4>The Only Beachfront Hotel in Carlsbad</h4>
+        {% endregionblock %}
         <a href="/gallery/" class="border-black" title="visual tour">visual tour</a>
       </div>
     </div>
@@ -260,9 +268,13 @@ meta_tags:
 <section class="moments-remember">
   <div class="moments-remember-inner m-0">
     <div class="moments-remember-left">
+      {% regionblock moments_heading, type: heading %}
       <h2>Intimate
         <br>Moments</h2>
+      {% endregionblock %}
+      {% regionblock moments_subheading, type: heading %}
       <h4>A Place to Create Unforgettable Memories</h4>
+      {% endrgionblock %}
       <a href="/weddings/" class="border-black" title="Discover more">discover more</a>
       <div class="yellow-box"></div>
     </div>

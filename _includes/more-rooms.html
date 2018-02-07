@@ -1,6 +1,8 @@
 <!-- more rooms start -->
 <section class="home-rooms text-center">
-	<h3>Browse Rooms</h3>
+    {% regionblock rooms_slider_heading, type: heading %}
+    <h3>Browse Rooms</h3>
+    {% endregionblock %}
     <div class="home-rooms-inner">
       <div ng-repeat="room in browser.roomsList">
       		<h5 class="room-title" ng-bind-html="room.name | renderHTMLCorrectly"></h5>

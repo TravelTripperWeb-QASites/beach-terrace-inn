@@ -1,7 +1,9 @@
 <!-- special offers start -->
 <section rt3-special-rates="offers">
 	<div class="more-offers">
-		<h3> Special Offers </h3>
+		{% regionblock special_offers_heading, type: heading %}
+		<h3>Special Offers</h3>
+		{% endregionblock %}
 		<div class="assets-slide">
 			<div class="assets-slide-inner m-0">
 				<div class="slide" ng-repeat="offer in offers.special_rates">
@@ -19,7 +21,7 @@
 					</a>
 				</div>
 
-				
+
 			</div>
 		</div>
 	</div>
