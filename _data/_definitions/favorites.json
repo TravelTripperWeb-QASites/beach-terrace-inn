@@ -10,6 +10,7 @@
   },
   "image": {
     "label": "Image",
+    "instructions": "Recommended size - 780px x 535px",
     "type": "image",
     "required": true
   },
