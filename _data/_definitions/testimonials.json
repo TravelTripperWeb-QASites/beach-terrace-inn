@@ -5,7 +5,7 @@
   },
   "testimonial_text": {
     "label": "Testimonial Text",
-    "type": "text",
+    "type": "richtext",
     "required": true
   },
   "testimonial_author": {
