@@ -1,0 +1,27 @@
+{
+  "title": "Oceanside",
+  "description": "<p>Our neighbor to the North, Oceanside, is an authentic beach town and home to 9 craft breweries, summer outdoor concerts, one famous pier, professional surf competitions and an up-and-coming culinary scene.</p>",
+  "image": {
+    "name": "oceanside",
+    "file_name": "oceanside.jpg",
+    "file_type": "image/jpeg",
+    "url": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-125350/oceanside.jpg",
+    "tags": "",
+    "file_size": 98336,
+    "width": 781,
+    "height": 535,
+    "description": "",
+    "date_added": "2018-02-09-125350",
+    "url_large": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-125350/large_oceanside.jpg",
+    "url_medium": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-125350/medium_oceanside.jpg",
+    "url_small": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-125350/small_oceanside.jpg",
+    "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-125350/xsmall_oceanside.jpg",
+    "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-125350/thumb_oceanside.jpg",
+    "path": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-125350/oceanside.jpg",
+    "alt": "Oceanside",
+    "caption": ""
+  },
+  "button_text": "Learn More",
+  "button_link": "http://visitoceanside.org/",
+  "category": "Explore"
+}
