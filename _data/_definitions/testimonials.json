@@ -15,7 +15,6 @@
   },
   "testimonial_link": {
     "label": "Trip Advisor Link",
-    "type": "text",
-    "required": true
+    "type": "text"
   }
 }
