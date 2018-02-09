@@ -1,6 +1,6 @@
 {
   "title": "Farmer’s Markets",
-  "description": "<p>Coastal San Diego County offers a variety of weekly certified Farmer&rsquo;s Markets featuring fresh, locally sourced products.</p>\n<ul>\n<li>Wednesdays in Carlsbad between 1-5p</li>\n<li>Thursdays in Oceanside between 9a-1p and then again from 5p-9p</li>\n<li>Saturdays in La Costa between 10a-2p</li>\n<li>Sundays in Encinitas between 10a-2p</li>\n</ul>",
+  "description": "<p class=\"p-0\">Coastal San Diego County offers a variety of weekly certified Farmer&rsquo;s Markets featuring fresh, locally sourced products.</p>\n<ul>\n<li>Wednesdays in Carlsbad between 1-5p</li>\n<li>Thursdays in Oceanside between 9a-1p and then again from 5p-9p</li>\n<li>Saturdays in La Costa between 10a-2p</li>\n<li>Sundays in Encinitas between 10a-2p</li>\n</ul>",
   "image": {
     "name": "farmer-markets",
     "file_name": "farmer-markets.jpg",
