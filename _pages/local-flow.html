@@ -94,190 +94,48 @@ include_in_nav_localized:
 
     <!-- Splurge starts here -->
     <div class="tab-pane fade text-center pb-5" id="splurge" role="tabpanel" aria-labelledby="splurge-tab">
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/chopra-center.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Chopra Center</h5>
-            <p>Discover the power of Ayurvedic massage, the art of meditation or the practice of yoga at Deepak Chopra’s acclaimed
-              Center. </p>
-            <div class="btn-holder">
-              <a href="https://chopra.com/" target="_blank" class="border-black" title="view room">learn more</a>
+      {% assign favorites = site.data._models.local-favorites | sort: 'title' %}
+      {% for favorite in favorites %}
+        {% if favorite.category == 'Splurge' %}
+          <div class="assets-block m-0">
+            <div class="assets-img bg-cover" style="background-image:url(https:{{ favorite.image.url }});"></div>
+            <div class="assets-content">
+              <div class="assets-content-inner">
+                <h5>{{ favorite.title }}</h5>
+                <p>{{ favorite.description }}</p>
+                <div class="btn-holder">
+                  <a href="{{ favorite.button_link }}" target="_blank" class="border-black" title="view room">{{ favorite.button_text }}</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/golf.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Golf</h5>
-            <p>North San Diego County features over 40 diverse golf courses. From the coastal Encinitas Ranch Golf Course to
-              the Arnold Palmer-designed Aviara Golf Club, there is something for golfers of all abilities to enjoy.</p>
-            <div class="btn-holder">
-              <a href="https://yournorthcounty.com/golf-courses-country-clubs-san-diego-north-county/" target="_blank" class="border-black"
-                title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/the-carlsbad-premium-outlets.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>The Carlsbad Premium Outlets</h5>
-            <p>Save 25% to 65% off at any of the 90+ designer and name-brand stores including Coach, Michael Kors, Nike and
-              Barney New York. </p>
-            <div class="btn-holder">
-              <a href="http://www.premiumoutlets.com/outlet/carlsbad" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/the-forum-carlsbad.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>The Forum Carlsbad</h5>
-            <p>Reminiscent of old world charm, The Forum offers an elite shopping experience with merchants like Apple, Free
-              People, Jos. A. Bank and lululemon athletica among award-winning landscape and delicious eats in an outdoor
-              shopping space.</p>
-            <div class="btn-holder">
-              <a href="https://www.theforumcarlsbad.com/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
+        {% endif %}
+      {% endfor %}
     </div>
     <!-- Splurge ends here -->
 
     <!-- Explore starts here -->
     <div class="tab-pane fade text-center pb-5" id="explore" role="tabpanel" aria-labelledby="explore-tab">
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/farmer-markets.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Farmer’s Markets</h5>
-            <p class="p-0">Coastal San Diego County offers a variety of weekly certified Farmer’s Markets featuring fresh, locally sourced
-              products. </p>
-            <ul>
-              <li>Wednesdays in Carlsbad between 1-5p</li>
-              <li>Thursdays in Oceanside between 9a-1p and then again from 5p-9p</li>
-              <li>Saturdays in La Costa between 10a-2p</li>
-              <li>Sundays in Encinitas between 10a-2p</li>
-            </ul>
-            <div class="btn-holder">
-              <a href="https://yournorthcounty.com/farmers-market-san-diego-north-county/" target="_blank" class="border-black" title="view room">learn more</a>
+      {% assign favorites = site.data._models.local-favorites | sort: 'title' %}
+      {% for favorite in favorites %}
+        {% if favorite.category == 'Explore' %}
+          <div class="assets-block m-0">
+            <div class="assets-img bg-cover" style="background-image:url(https:{{ favorite.image.url }});"></div>
+            <div class="assets-content">
+              <div class="assets-content-inner">
+                <h5>{{ favorite.title }}</h5>
+                <p>{{ favorite.description }}</p>
+                <div class="btn-holder">
+                  <a href="{{ favorite.button_link }}" target="_blank" class="border-black" title="view room">{{ favorite.button_text }}</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/torrey-pines-state.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Torrey Pines State Natural Reserve Park</h5>
-            <p>A 2,000 acre natural reserve with winding trails, miles of beaches, intertidal lagoons and sandstone bluffs.
-              </p>
-            <div class="btn-holder">
-              <a href="https://torreypine.org/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/the-trail-at-batiquitos-lagoon.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>The Trail at Batiquitos Lagoon</h5>
-            <p>Walk along one of the few remaining tidal wetlands in SoCal and a popular habitat for bird watching, fishing
-              and walking. </p>
-            <div class="btn-holder">
-              <a href="http://batiquitosfoundation.org/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/carlsbad-village.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Carlsbad Village</h5>
-            <p>Charming and bustling with energy, historic Carlsbad Village features 70+ restaurants and shops, miles of serene
-              boardwalk and just so happens to be within walking distance of The Beach Terrace Inn.</p>
-            <div class="btn-holder">
-              <a href="http://www.carlsbad-village.com/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/carlsbad-beaches.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Carlsbad Beaches</h5>
-            <p>Carlsbad offers several unique beaches across its 7 pristine miles of coastline. Whether you’re prowling for
-              the best surf break, an active game of sand volleyball, birdwatching or just a sandy spot to relax, there is
-              destined to be a beach that is perfect for you.</p>
-            <div class="btn-holder">
-              <a href="https://visitcarlsbad.com/beaches/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/oceanside.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Oceanside</h5>
-            <p>Our neighbor to the North, Oceanside, is an authentic beach town and home to 9 craft breweries, summer outdoor
-              concerts, one famous pier, professional surf competitions and an up-and-coming culinary scene. </p>
-            <div class="btn-holder">
-              <a href="http://visitoceanside.org/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/encinitas.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Encinitas</h5>
-            <p>Our neighbor to the South, Encinitas, is one of the best surfing cities in the world and home to a quintessential
-              SoCal surfer vibe. Meditation gardens, famous surf breaks, spectacular views and an energetic downtown scene
-              make this a beloved neighborhood.</p>
-            <div class="btn-holder">
-              <a href="https://www.sandiego.org/articles/north-county/encinitas-california.aspx" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/raw-skin-surf-shack.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Raw Skin Surf Shack</h5>
-            <p>Set up surf lessons, rent a surfboard and wetsuit or borrow a bicycle for the week as you explore our local scene.</p>
-            <div class="btn-holder">
-              <a href="https://www.rawskinsurf.com/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
+        {% endif %}
+      {% endfor %}
     </div>
     <!-- Explore ends here -->
+
   </div>
 </section>
 <!-- local flow section end -->
