@@ -1,0 +1,33 @@
+{
+  "title": {
+    "label": "Favorite Title",
+    "required": true
+  },
+  "description": {
+    "label": "Description",
+    "type": "richtext",
+    "required": true
+  },
+  "image": {
+    "label": "Image",
+    "instructions": "Recommended size - 780px x 535px",
+    "type": "image",
+    "required": true
+  },
+  "button_text": {
+    "label": "Button Text",
+    "type": "text",
+    "required": true
+  },
+  "button_link": {
+    "label": "Button Link",
+    "type": "text",
+    "required": true
+  },
+  "category": {
+    "label": "Favorite Category",
+    "type": "select",
+    "options": ["Eat & Drink", "Experience", "Splurge", "Explore"],
+    "required": true
+  }
+}

@@ -47,515 +47,95 @@ include_in_nav_localized:
     </li>
   </ul>
   <div class="tab-content" id="myTabContent">
+
     <!-- Eat & drink starts here -->
     <div class="tab-pane fade show active" id="eat" role="tabpanel" aria-labelledby="eat-tab">
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/wrench-rodent-seabasstropub.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Wrench & Rodent Seabasstropub</h5>
-            <p>An inventive and non-traditional spin on locally sourced and sustainable seafood in a snug, retro space.</p>
-            <div class="btn-holder">
-              <a href="http://www.seabasstropub.com/" target="_blank" class="border-black" title="view room">learn more</a>
+      {% assign favorites = site.data._models.local-favorites | sort: 'title' %}
+      {% for favorite in favorites %}
+        {% if favorite.category == 'Eat & Drink' %}
+          <div class="assets-block m-0">
+            <div class="assets-img bg-cover" style="background-image:url(https:{{ favorite.image.url }});"></div>
+            <div class="assets-content">
+              <div class="assets-content-inner">
+                <h5>{{ favorite.title }}</h5>
+                <p>{{ favorite.description }}</p>
+                <div class="btn-holder">
+                  <a href="{{ favorite.button_link }}" target="_blank" class="border-black" title="view room">{{ favorite.button_text }}</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/urge-gastropub-whiskey-bank.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Urge Gastropub & Whiskey Bank </h5>
-            <p>Serving up the comfort of Coastal American Classics paired with an extensive beer list and even more extensive
-              selection of the world’s finest Whiskeys.</p>
-            <div class="btn-holder">
-              <a href="http://oceanside.urgegastropub.com/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/steady-state-roasting.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Steady State Roasting </h5>
-            <p>A small batch, highly skilled coffee roaster tucked away within a creative space shared with fellow artists and
-              makers. </p>
-            <div class="btn-holder">
-              <a href="https://www.steadystateroasting.com/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/flying-pig-pub-kitchen.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Flying Pig Pub & Kitchen </h5>
-            <p>The self-proclaimed “original” farm-to-table pub in North County and proudly committed to community and environment.
-              Locals rave about this rustic hotpot featuring artisanal cuisine, handmade pasta and a cozy ambiance. </p>
-            <div class="btn-holder">
-              <a href="http://www.flyingpig.pub/oceanside-ca/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/blue-ocean-robata-sushi.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Blue Ocean Robata & Sushi </h5>
-            <p>From specialty rolls and robata-grilled skewers to an impressive drink list and their very own poke shop next
-              door, Blue Ocean makes for a lively dining experience. </p>
-            <div class="btn-holder">
-              <a href="http://blueoceanrobatasushi.com/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/barrel-republic.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Barrel Republic </h5>
-            <p>A self-pour beer bar with over 52 craft beers and 6 wines on tap.</p>
-            <div class="btn-holder">
-              <a href="http://barrelrepublic.com/locations/carlsbad" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/park101.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Park101</h5>
-            <p>A multi-level complex featuring a Garden Pub with 32 local beer and wine on tap, the Tamarack View Deck with
-              fire pits and gourmet snacks, Park 101 signature Barbeque in the pit or the convenience of a grab-and-go Market
-              with handmade doughnuts. </p>
-            <div class="btn-holder">
-              <a href="https://www.park101carlsbad.com/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/carruth-cellars-urban-winery.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Carruth Cellars Urban Winery & Tasting Room</h5>
-            <p>An urban winery with a knowledgeable staff specializing in California style wines.</p>
-            <div class="btn-holder">
-              <a href="http://carruthcellars.com/carlsbad/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/cafe-topes.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Café Topes</h5>
-            <p>Voted Best Breakfast in Carlsbad. Be sure to get your paws on one of their famous cinnamon rolls, they sell out
-              every day.</p>
-            <div class="btn-holder">
-              <a href="http://www.eatatcafetopes.com/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/campfire.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Campfire</h5>
-            <p>Campfire boasts of a ‘return to the origins of cooking and hospitality.’ And with unique cocktails, lively ambiance
-              and a diverse menu, this stop has quickly become a local favorite. </p>
-            <div class="btn-holder">
-              <a href="https://thisiscampfire.com/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/west-steak-and-seafood.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>West steak and seafood</h5>
-            <p>An intimate farm-to-table fine dining experience and recipient of Wine Spectator’s 2017 Award of Excellence.</p>
-            <div class="btn-holder">
-              <a href="http://www.weststeakandseafood.com/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/yoshino-dapanese-deli.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Yoshino Japanese Deli</h5>
-            <p>This family-owned Japanese Deli was ranked among the “Top 100 Places to Eat in the U.S.” by Yelp in 2016. Get
-              there early because doors close once their daily assortment of poke bowls and sushi are gone.</p>
-            <div class="btn-holder">
-              <a href="https://www.yelp.com/biz/yoshino-japanese-deli-carlsbad/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/cream-of-the-crop.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Cream of the crop</h5>
-            <p>Our favorite local natural foods market has been family owned and operated for 25+ years. Offering everything
-              from kombucha and vitamins to deli sandwiches and vegan snacks. </p>
-            <div class="btn-holder">
-              <a href="http://www.creamofthecropnatural.com/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
+        {% endif %}
+      {% endfor %}
     </div>
     <!-- Eat & drink ends here -->
 
     <!-- Experience starts here -->
     <div class="tab-pane fade text-center pb-5" id="experience" role="tabpanel" aria-labelledby="experience-tab">
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/legoland-california.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Legoland California</h5>
-            <p>A wonderland for families with over 60 rides, shows and attractions!</p>
-            <div class="btn-holder">
-              <a href="https://www.legoland.com/california/" target="_blank" class="border-black" title="view room">learn more</a>
+      {% assign favorites = site.data._models.local-favorites | sort: 'title' %}
+      {% for favorite in favorites %}
+        {% if favorite.category == 'Experience' %}
+          <div class="assets-block m-0">
+            <div class="assets-img bg-cover" style="background-image:url(https:{{ favorite.image.url }});"></div>
+            <div class="assets-content">
+              <div class="assets-content-inner">
+                <h5>{{ favorite.title }}</h5>
+                <p>{{ favorite.description }}</p>
+                <div class="btn-holder">
+                  <a href="{{ favorite.button_link }}" target="_blank" class="border-black" title="view room">{{ favorite.button_text }}</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/legoland-water-park.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Legoland Water Park</h5>
-            <p>Build your own raft, experience a splash safari or zip down water slides at Legoland’s popular Water Park.</p>
-            <div class="btn-holder">
-              <a href="https://www.legoland.com/california/legoland-water-park/rides-and-attractions/" target="_blank" class="border-black"
-                title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/sea-life-aquarium.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Sea Life Aquarium</h5>
-            <p>Marvel at life underwater with interactive experiences and stunning sea creatures.</p>
-            <div class="btn-holder">
-              <a href="https://www.visitsealife.com/california/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/the-flower-fields.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>The Flower Fields</h5>
-            <p>Tour over 50 acres of brilliant flowers in a glorious springtime display of rainbow colors and designs.</p>
-            <div class="btn-holder">
-              <a href="http://www.theflowerfields.com/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/alga-norte-skate-park.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Alga Norte Skate Park</h5>
-            <p>Did you know that Carlsbad was home to the first skate park in the world? Not to mention legendary skaters Tony
-              Hawk and Shaun White. Grab a board and check out this park, complete with a bowl, rails and lots of space.
-              </p>
-            <div class="btn-holder">
-              <a href="https://visitcarlsbad.com/attractions/alga-norte-skate-park/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/museum-of-making-music.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Museum of Making Music</h5>
-            <p>A unique museum experience with live performances, educational programs and interactive exhibits highlighting
-              instruments and sound.</p>
-            <div class="btn-holder">
-              <a href="https://www.museumofmakingmusic.org/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/oceanside-museum-of-art.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Oceanside Museum of Art</h5>
-            <p>A premier leader of contemporary arts and culture in San Diego County.</p>
-            <div class="btn-holder">
-              <a href="http://oma-online.org/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/san-diego-botanic-garden.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>San Diego Botanic Garden</h5>
-            <p>Stroll through 37 acres of botanical gardens featuring over 4,000 plant species and 29 themed gardens.</p>
-            <div class="btn-holder">
-              <a href="http://sdbgarden.org/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/california-surf-museum.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>California surf museum</h5>
-            <p>Explore the vibrant history, culture and lifestyle of Southern California’s most popular pastime. </p>
-            <div class="btn-holder">
-              <a href="https://surfmuseum.org/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
+        {% endif %}
+      {% endfor %}
     </div>
     <!-- Experience ends here -->
 
     <!-- Splurge starts here -->
     <div class="tab-pane fade text-center pb-5" id="splurge" role="tabpanel" aria-labelledby="splurge-tab">
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/chopra-center.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Chopra Center</h5>
-            <p>Discover the power of Ayurvedic massage, the art of meditation or the practice of yoga at Deepak Chopra’s acclaimed
-              Center. </p>
-            <div class="btn-holder">
-              <a href="https://chopra.com/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/golf.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Golf</h5>
-            <p>North San Diego County features over 40 diverse golf courses. From the coastal Encinitas Ranch Golf Course to
-              the Arnold Palmer-designed Aviara Golf Club, there is something for golfers of all abilities to enjoy.</p>
-            <div class="btn-holder">
-              <a href="https://yournorthcounty.com/golf-courses-country-clubs-san-diego-north-county/" target="_blank" class="border-black"
-                title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="assets-block m-0">
-                <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/the-omni-la-costa.jpg);">
+      {% assign favorites = site.data._models.local-favorites | sort: 'title' %}
+      {% for favorite in favorites %}
+        {% if favorite.category == 'Splurge' %}
+          <div class="assets-block m-0">
+            <div class="assets-img bg-cover" style="background-image:url(https:{{ favorite.image.url }});"></div>
+            <div class="assets-content">
+              <div class="assets-content-inner">
+                <h5>{{ favorite.title }}</h5>
+                <p>{{ favorite.description }}</p>
+                <div class="btn-holder">
+                  <a href="{{ favorite.button_link }}" target="_blank" class="border-black" title="view room">{{ favorite.button_text }}</a>
                 </div>
-                <div class="assets-content">
-                    <div class="assets-content-inner">
-                        <h5>The Omni La Cost Resort and Spa</h5>
-                        <p>Spoil yourself with a custom spa experience at the #1 Wellness Spa in the nation.</p>
-                        <div class="btn-holder">
-                            <a href="https://www.omnihotels.com/hotels/san-diego-la-costa/spa" target="_blank" class="border-black" title="view room">learn more</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/the-carlsbad-premium-outlets.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>The Carlsbad Premium Outlets</h5>
-            <p>Save 25% to 65% off at any of the 90+ designer and name-brand stores including Coach, Michael Kors, Nike and
-              Barney New York. </p>
-            <div class="btn-holder">
-              <a href="http://www.premiumoutlets.com/outlet/carlsbad" target="_blank" class="border-black" title="view room">learn more</a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/the-forum-carlsbad.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>The Forum Carlsbad</h5>
-            <p>Reminiscent of old world charm, The Forum offers an elite shopping experience with merchants like Apple, Free
-              People, Jos. A. Bank and lululemon athletica among award-winning landscape and delicious eats in an outdoor
-              shopping space.</p>
-            <div class="btn-holder">
-              <a href="https://www.theforumcarlsbad.com/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
+        {% endif %}
+      {% endfor %}
     </div>
     <!-- Splurge ends here -->
 
     <!-- Explore starts here -->
     <div class="tab-pane fade text-center pb-5" id="explore" role="tabpanel" aria-labelledby="explore-tab">
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/farmer-markets.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Farmer’s Markets</h5>
-            <p class="p-0">Coastal San Diego County offers a variety of weekly certified Farmer’s Markets featuring fresh, locally sourced
-              products. </p>
-            <ul>
-              <li>Wednesdays in Carlsbad between 1-5p</li>
-              <li>Thursdays in Oceanside between 9a-1p and then again from 5p-9p</li>
-              <li>Saturdays in La Costa between 10a-2p</li>
-              <li>Sundays in Encinitas between 10a-2p</li>
-            </ul>
-            <div class="btn-holder">
-              <a href="https://yournorthcounty.com/farmers-market-san-diego-north-county/" target="_blank" class="border-black" title="view room">learn more</a>
+      {% assign favorites = site.data._models.local-favorites | sort: 'title' %}
+      {% for favorite in favorites %}
+        {% if favorite.category == 'Explore' %}
+          <div class="assets-block m-0">
+            <div class="assets-img bg-cover" style="background-image:url(https:{{ favorite.image.url }});"></div>
+            <div class="assets-content">
+              <div class="assets-content-inner">
+                <h5>{{ favorite.title }}</h5>
+                <p>{{ favorite.description }}</p>
+                <div class="btn-holder">
+                  <a href="{{ favorite.button_link }}" target="_blank" class="border-black" title="view room">{{ favorite.button_text }}</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/torrey-pines-state.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Torrey Pines State Natural Reserve Park</h5>
-            <p>A 2,000 acre natural reserve with winding trails, miles of beaches, intertidal lagoons and sandstone bluffs.
-              </p>
-            <div class="btn-holder">
-              <a href="https://torreypine.org/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/the-trail-at-batiquitos-lagoon.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>The Trail at Batiquitos Lagoon</h5>
-            <p>Walk along one of the few remaining tidal wetlands in SoCal and a popular habitat for bird watching, fishing
-              and walking. </p>
-            <div class="btn-holder">
-              <a href="http://batiquitosfoundation.org/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/carlsbad-village.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Carlsbad Village</h5>
-            <p>Charming and bustling with energy, historic Carlsbad Village features 70+ restaurants and shops, miles of serene
-              boardwalk and just so happens to be within walking distance of The Beach Terrace Inn.</p>
-            <div class="btn-holder">
-              <a href="http://www.carlsbad-village.com/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/carlsbad-beaches.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Carlsbad Beaches</h5>
-            <p>Carlsbad offers several unique beaches across its 7 pristine miles of coastline. Whether you’re prowling for
-              the best surf break, an active game of sand volleyball, birdwatching or just a sandy spot to relax, there is
-              destined to be a beach that is perfect for you.</p>
-            <div class="btn-holder">
-              <a href="https://visitcarlsbad.com/beaches/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/oceanside.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Oceanside</h5>
-            <p>Our neighbor to the North, Oceanside, is an authentic beach town and home to 9 craft breweries, summer outdoor
-              concerts, one famous pier, professional surf competitions and an up-and-coming culinary scene. </p>
-            <div class="btn-holder">
-              <a href="http://visitoceanside.org/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/encinitas.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Encinitas</h5>
-            <p>Our neighbor to the South, Encinitas, is one of the best surfing cities in the world and home to a quintessential
-              SoCal surfer vibe. Meditation gardens, famous surf breaks, spectacular views and an energetic downtown scene
-              make this a beloved neighborhood.</p>
-            <div class="btn-holder">
-              <a href="https://www.sandiego.org/articles/north-county/encinitas-california.aspx" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="assets-block m-0">
-        <div class="assets-img bg-cover" style="background-image:url(/assets/images/local-flow/raw-skin-surf-shack.jpg);">
-        </div>
-        <div class="assets-content">
-          <div class="assets-content-inner">
-            <h5>Raw Skin Surf Shack</h5>
-            <p>Set up surf lessons, rent a surfboard and wetsuit or borrow a bicycle for the week as you explore our local scene.</p>
-            <div class="btn-holder">
-              <a href="https://www.rawskinsurf.com/" target="_blank" class="border-black" title="view room">learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
+        {% endif %}
+      {% endfor %}
     </div>
     <!-- Explore ends here -->
+
   </div>
 </section>
 <!-- local flow section end -->

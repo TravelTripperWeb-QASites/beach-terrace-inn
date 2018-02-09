@@ -1,0 +1,27 @@
+{
+  "title": "Golf",
+  "description": "<p>North San Diego County features over 40 diverse golf courses. From the coastal Encinitas Ranch Golf Course to the Arnold Palmer-designed Aviara Golf Club, there is something for golfers of all abilities to enjoy.</p>",
+  "image": {
+    "name": "golf",
+    "file_name": "golf.jpg",
+    "file_type": "image/jpeg",
+    "url": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-124302/golf.jpg",
+    "tags": "",
+    "file_size": 112872,
+    "width": 781,
+    "height": 535,
+    "description": "",
+    "date_added": "2018-02-09-124302",
+    "url_large": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-124302/large_golf.jpg",
+    "url_medium": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-124302/medium_golf.jpg",
+    "url_small": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-124302/small_golf.jpg",
+    "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-124302/xsmall_golf.jpg",
+    "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-124302/thumb_golf.jpg",
+    "path": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-124302/golf.jpg",
+    "alt": "Golf Course",
+    "caption": ""
+  },
+  "button_text": "Learn More",
+  "button_link": "https://yournorthcounty.com/golf-courses-country-clubs-san-diego-north-county/",
+  "category": "Splurge"
+}

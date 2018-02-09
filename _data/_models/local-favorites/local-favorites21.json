@@ -1,0 +1,27 @@
+{
+  "title": "San Diego Botanic Garden",
+  "description": "<p>Stroll through 37 acres of botanical gardens featuring over 4,000 plant species and 29 themed gardens.</p>",
+  "image": {
+    "name": "san-diego-botanic-garden",
+    "file_name": "san-diego-botanic-garden.jpg",
+    "file_type": "image/jpeg",
+    "url": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-123137/san-diego-botanic-garden.jpg",
+    "tags": "",
+    "file_size": 204710,
+    "width": 781,
+    "height": 535,
+    "description": "",
+    "date_added": "2018-02-09-123137",
+    "url_large": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-123137/large_san-diego-botanic-garden.jpg",
+    "url_medium": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-123137/medium_san-diego-botanic-garden.jpg",
+    "url_small": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-123137/small_san-diego-botanic-garden.jpg",
+    "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-123137/xsmall_san-diego-botanic-garden.jpg",
+    "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-123137/thumb_san-diego-botanic-garden.jpg",
+    "path": "//cdn.traveltripper.io/site-assets/32_826_12143/media/2018-02-09-123137/san-diego-botanic-garden.jpg",
+    "alt": "San Diego Botanic Garden",
+    "caption": ""
+  },
+  "button_text": "Learn More",
+  "button_link": "http://sdbgarden.org/",
+  "category": "Experience"
+}
