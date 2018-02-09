@@ -1,0 +1,21 @@
+{
+  "title": {
+    "label": "Testimonial Title",
+    "required": true
+  },
+  "testimonial_text": {
+    "label": "Testimonial Text",
+    "type": "text",
+    "required": true
+  },
+  "testimonial_author": {
+    "label": "Testimonial Author",
+    "type": "text",
+    "required": true
+  },
+  "testimonial_link": {
+    "label": "Trip Advisor Link",
+    "type": "text",
+    "required": true
+  }
+}
