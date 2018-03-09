@@ -273,6 +273,9 @@ More offers
         min-height: 300px;
     }
     .inner-banner-title {
+        &.right-banner-title{
+            right: 50px;
+        }
         text-align: right;
         position: relative;
         width: 44%;
