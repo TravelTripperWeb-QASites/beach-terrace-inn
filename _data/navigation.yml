@@ -6,6 +6,9 @@ main:
       url: /rooms/
     - title: Offers
       url: /offers/
+      dropdown:
+        - title: The Great Easter Rate Hunt
+          url: /easter/
     - title: Carlsbad
       url: /carlsbad/
       dropdown:
