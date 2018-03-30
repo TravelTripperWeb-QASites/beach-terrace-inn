@@ -24,6 +24,12 @@
   });
   // remove target attr of booking widget form to open it in same window.
   $(".ttweb-booking-widget form").removeAttr('target');
+
+  //hide best price per Night
+  setTimeout(function(){
+      $(".ttweb-booking-widget__footer__rate, .ttweb-booking-widget__body__flex-dates").hide();
+  }, 1200);
+
 </script>
 
 {% include scripts/instafeed.html %}
