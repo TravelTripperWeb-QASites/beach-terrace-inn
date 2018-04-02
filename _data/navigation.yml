@@ -6,17 +6,14 @@ main:
       url: /rooms/
     - title: Offers
       url: /offers/
-      dropdown:
-        - title: The Great Easter Rate Hunt
-          url: /easter/
     - title: Carlsbad
       url: /carlsbad/
       dropdown:
         - title: The local Flow
           url: /local-flow/
-  - right: 
+  - right:
     - title: Weddings
-      url: /weddings/  
+      url: /weddings/
     - title: Gatherings
       url: /gatherings/
     - title: Gallery
