@@ -1,0 +1,51 @@
+.caption-price {
+  display: none;
+	bottom: 30%;
+	z-index:100;
+	left: 0;
+	right:0;
+	text-align:center;
+	text-transform: none;
+	@media(max-width:767px){
+		bottom:0px;
+        background-color: $black;
+        border-bottom: 1px solid #777777;
+	}
+    @media (min-width: 768px){
+      position: absolute;
+    }
+}
+.price-holder{
+	padding: 8px 20px;
+	color: $white;
+	font-size: 18px;
+	background-color: $black;
+	vertical-align:middle;
+	font-family: $global-font-family;
+	letter-spacing: 1px;
+	display:inline-block;
+	margin-right: -2px;
+
+	@media (max-width: 1023px){
+		    padding: 6px 10px;
+			font-size: 11px;
+	}
+
+	span{
+		color: $white;
+		font-size: 30px;
+		vertical-align:middle;
+		padding-right: 18px;
+
+		@media (max-width: 1023px){
+		    font-size: 25px;
+			padding-right: 8px;
+		}
+	}
+	@media(max-width:768px){
+		&.tonight{
+			margin-top:1px;
+		}
+	}
+
+}

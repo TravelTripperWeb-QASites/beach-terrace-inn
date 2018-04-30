@@ -101,6 +101,7 @@ $(document).ready(function() {
 
           ]
         });
+        $(".caption-price").show();
     },3100);
 
     //Attraction information

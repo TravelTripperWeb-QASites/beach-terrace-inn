@@ -6,7 +6,7 @@ permalink:
 ---
 
 <!--hero image slider start-->
-<section class="hero-slider">
+<section class="hero-slider" rt3-recent-bookings="recentBookings">
   <div id="image-slider" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item bg-cover active" style="background-image:url(/assets/images/banner_hero.jpg)"></div>
@@ -14,6 +14,7 @@ permalink:
         <a href="http://beachterraceinn.reztrip.com/">Book Direct & Save<span>△</span></a>
       </div>
     </div>
+    <div class="caption-price" ng-show="recentBookings.totalBookings > 5"> <span class="price-holder"><span>[[ recentBookings.totalBookings ]]</span>People booked our hotel in the last 2 days</span></div>
   </div>
 </section>
 <!-- hero image slider end-->
