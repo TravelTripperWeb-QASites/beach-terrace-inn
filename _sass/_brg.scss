@@ -1,6 +1,6 @@
 .caption-price {
   display: none;
-	bottom: 30%;
+	bottom: 15%;
 	z-index:100;
 	left: 0;
 	right:0;
@@ -8,8 +8,9 @@
 	text-transform: none;
 	@media(max-width:767px){
 		bottom:0px;
-        background-color: $black;
-        border-bottom: 1px solid #777777;
+    background-color: $red-color;
+    border-bottom: 1px solid #777777;
+    
 	}
     @media (min-width: 768px){
       position: absolute;
@@ -19,7 +20,7 @@
 	padding: 8px 20px;
 	color: $white;
 	font-size: 18px;
-	background-color: $black;
+	background-color: $red-color;
 	vertical-align:middle;
 	font-family: $global-font-family;
 	letter-spacing: 1px;
