@@ -5,8 +5,8 @@
       $interpolateProvider.endSymbol(']]');
     })
     .value('rt3api', new Rt3Api({
-      portalId: 'beachterraceinn',
-      hotelId: 'CABTI',
+      portalId: 'hoteldivasf',
+      hotelId: 'SFOHDI',
       defaultLocale: 'en',
       defaultCurrency: 'USD'
     }))

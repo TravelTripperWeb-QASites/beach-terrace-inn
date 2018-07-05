@@ -229,7 +229,8 @@ angular.module('rezTrip')
                       }
 
                   }
-
+                  var lowestOTARate = Math.min.apply(Math, Object.keys(response.brg).map(function(key, index){return response.brg[key];}));
+                  response.lowestOTARate = lowestOTARate;
                 }
                 angular.extend(self , {'otaRates' : response});
             }, function(response){
