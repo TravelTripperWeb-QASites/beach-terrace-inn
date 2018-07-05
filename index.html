@@ -14,7 +14,28 @@ permalink:
         <a href="http://beachterraceinn.reztrip.com/">Book Direct & Save<span>△</span></a>
       </div>
     </div>
-    <div class="caption-price" ng-show="recentBookings.totalBookings > 5"> <span class="price-holder"><span>[[ recentBookings.totalBookings ]]</span>People booked our hotel in the last 2 days</span></div>
+    <div class="homeBannerWidget">
+      <div class="brg-price" ng-show="browser.isRate" >
+         <div class="best-rate-ota" ng-show ="browser.otaRates.brgFound && browser.otaRates.lowestOTARate >= browser.toNightsRate" >
+            <div class="boxes">
+              <div class="brg-tonight-rate ">
+                <p>Best Price Available</p>
+                <h4>Tonight's Rate <a href="{{site.reztripUrl}}search" class="homeTonightRate" ><span class="price">$[[browser.toNightsRate]]</span></a></h4>
+              </div>
+              <div class="ota-list" >
+                <ul>
+                <li ng-repeat = "(key, value) in browser.otaRates.brg" ng-show="browser.toNightsRate <= value">[[key]] <span>$[[value]]</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+      </div>
+      <div class="scarcity-price" rt3-recent-bookings="recentBookings">
+        <span class="price-holder" ng-show="recentBookings.totalBookings > 5"><span>[[ recentBookings.totalBookings ]]</span>People booked our hotel in the last 2 days</span>
+        <span class="price-holder tonight" ng-show="(!browser.otaRates.brgFound && browser.isRate) || (browser.otaRates.brgFound &&  browser.toNightsRate > browser.otaRates.lowestOTARate )"><a href="{{site.reztripUrl}}search" class="homeTonightRate" ><span class="tonightPrice">$[[ browser.toNightsRate ]]</span></a>Tonight’s Rate</span>
+      </div>
+    </div>
   </div>
 </section>
 <!-- hero image slider end-->

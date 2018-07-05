@@ -101,7 +101,7 @@ $(document).ready(function() {
 
           ]
         });
-        $(".caption-price").show();
+        $(".scarcity-price, .brg-price").show();
     },3100);
 
     //Attraction information
