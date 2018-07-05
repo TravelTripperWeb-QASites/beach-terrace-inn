@@ -195,7 +195,7 @@
     display: inline-block;
     margin-right: -2px;
     padding: 1px 20px;
-    font-family: 'Bryant Pro Regular';
+    font-family: $global-font-family;
     font-size: 15px;
     color: $white;
     letter-spacing: 1px;
@@ -223,9 +223,9 @@
       }
     }
     .tonightPrice {
-      font-family: 'Domaine Disp Extrabold';
+      font-family: $global-font-family;
       font-size: 30px;
-      font-style: italic;
+      //font-style: italic;
       color: $white;
     }
   }
@@ -235,7 +235,7 @@
     display: none;
     // margin: 0 auto;
     margin-bottom: 22px;
-    font-family: 'Bryant Pro Regular';
+    font-family: $global-font-family;
     @media(max-width: 768px) {
       margin-bottom: 1px;
       //border-bottom: 1px solid #ccc;
@@ -281,7 +281,7 @@
           h4 {
             margin: 0;
             padding: 0;
-            font-family: 'Bryant Pro Bold';
+            font-family: $global-font-family;
             font-size: 18px;
             line-height: 30px;
             color: #fff;
@@ -291,9 +291,9 @@
 
             .price {
               float: right;
-              font-family: 'Domaine Disp Extrabold';
+              font-family: $global-font-family;
               font-size: 30px;
-              font-style: italic;
+              //font-style: italic;
               color: $white;
               p {
                 margin-top: 1px;
