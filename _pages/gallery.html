@@ -52,14 +52,25 @@ permalink: /gallery/
     {% endif %}
     {% endfor %}
     {% for photo in site.data._galleries.rooms_gallery.photos %}
+    {% assign mod = forloop.index | modulo: 3 %}
     <div class="fancybox" data-filter="rooms">
-      <div class="item rez-offer" data-src="{% if photo_url_large %} {{ photo.url_large }} {% else %} {{ photo.url }} {% endif %}" data-exthumbimage="{% if photo.url_medium %} {{ photo.url_medium }} {% else %} {{ photo.url }} {% endif %}" style="background-image:url('{% if photo.url_medium %} {{ photo.url_medium }} {% else %} {{ photo.url }} {% endif %}'')">
+      <div class="item" data-src="{% if photo_url_large %} {{ photo.url_large }} {% else %} {{ photo.url }} {% endif %}" data-exthumbimage="{% if photo.url_medium %} {{ photo.url_medium }} {% else %} {{ photo.url }} {% endif %}" style="background-image:url('{% if photo.url_medium %} {{ photo.url_medium }} {% else %} {{ photo.url }} {% endif %}')">
         <div class="overlay">
           <span class="d-flex align-items-center justify-content-center">View
             <br>Image</span>
         </div>
       </div>
     </div>
+    {% if mod == 2 %}
+    <div class="fancybox hidden" data-filter="rooms">
+      <div class="item rez-offer" data-src="{% if photo_url_large %} {{ photo.url_large }} {% else %} {{ photo.url }} {% endif %}" data-exthumbimage="{% if photo.url_medium %} {{ photo.url_medium }} {% else %} {{ photo.url }} {% endif %}" style="background-image:url('{% if photo.url_medium %} {{ photo.url_medium }} {% else %} {{ photo.url }} {% endif %}')">
+        <div class="overlay">
+          <span class="d-flex align-items-center justify-content-center">View
+            <br>Image</span>
+        </div>
+      </div>
+    </div>
+    {% endif %}
     {% endfor %}
   </div>
 </div>
