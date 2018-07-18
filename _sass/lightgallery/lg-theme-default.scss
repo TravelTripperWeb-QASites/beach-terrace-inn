@@ -16,7 +16,8 @@
         outline: none;
         @media only screen and (max-width:510px){
             z-index:1090 !important;
-           ;
+            color: $lg-next-prev-hover-color;
+           
         }
 
         &.disabled {
