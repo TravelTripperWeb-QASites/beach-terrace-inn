@@ -34,7 +34,7 @@
                             width:100%;
                         }
                         .img-container{
-                            position: relative; 
+                            position: relative;
                         }
                         .insta{
                             width:53px;
@@ -129,6 +129,12 @@
                     p{
                         font-size:$type-size-11;
                         font-family:$primary-font-medium;
+                        a {
+                          color: $black;
+                          &:hover {
+                            text-decoration: underline;
+                          }
+                        }
                     }
                     @include media-breakpoint-down(sm){
                         text-align: center;
@@ -316,5 +322,3 @@
 //     	}
 //     }
 // }
-
-
