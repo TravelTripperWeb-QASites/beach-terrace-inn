@@ -52,6 +52,11 @@
                     position:relative;
                     border-top:3px solid $line-bg-2;
                 }
+                a {
+                  margin: 0 auto;
+                  display: inline-block;
+                  color: $info-color;
+                }
             }
             a {
                 margin: 0 0 2rem;
@@ -81,7 +86,7 @@
 .world-of-bliss {
     margin-top: -330px;
     .world-of-bliss-inner{
-        @include make-row(); 
+        @include make-row();
     }
     .about-slide {
         margin-top: 170px;
@@ -91,7 +96,7 @@
         }
         .carousel-control-prev,
         .carousel-control-next{
-           top:80%; 
+           top:80%;
            @include media-breakpoint-down(md) {
               top:50%;
            }
@@ -156,7 +161,7 @@
         @include container-fix();
          margin-top: 1.5rem ;
         @include media-breakpoint-up(md) {
-           margin-top: 8.5rem ;  
+           margin-top: 8.5rem ;
         }
     }
     .features-list {

@@ -529,6 +529,10 @@
                         background-color: $line-bg;
                         top: -30px;
                     }
+                    a {
+                      padding: 0;
+                      color: $info-color;
+                    }
                 }
                 a {
                     width: auto;
