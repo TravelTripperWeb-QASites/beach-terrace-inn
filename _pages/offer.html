@@ -33,7 +33,7 @@ meta_description_localized:
 					<p ng-bind-html="offers.sRdetail.long_description | renderHTMLCorrectly"></p>
 					<a ng-href="[[offers.sRdetail.promo_url]]" title="book offer" class="black">book offer</a>
 					<a href="/contact/" title="contact us" class="border-black">contact us</a>
-					<p>Offer valid <span ng-show="!offers.sRdetail.booking_end_date"> From </span>[[offers.sRdetail.booking_start_date | date:dd/MM/yyyy]] <span ng-show="offers.sRdetail.booking_end_date">- [[offers.sRdetail.booking_end_date | date:dd/MM/yyyy]]</span>. Some restrictions and blackout dates may apply.</p>
+					<p>{% comment %} [removed temporarily as per the request on zendesk 92080] Offer valid <span ng-show="!offers.sRdetail.booking_end_date"> From </span>[[offers.sRdetail.booking_start_date | date:dd/MM/yyyy]] <span ng-show="offers.sRdetail.booking_end_date">- [[offers.sRdetail.booking_end_date | date:dd/MM/yyyy]]</span>.{% endcomment %} Some restrictions and blackout dates may apply.</p>
 				</div>
 			</div>
 			<div class="_right">
