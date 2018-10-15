@@ -58,9 +58,13 @@
 }
 .special-banner-bar {
     margin: 50px 0px 50px 3px;
+
     text-align: center;
     background: $red-color;
     padding: 15px 0;
+		@media (max-width: 1000px){
+			margin-top: 126px;
+		}
     h3,a {
         display: inline-block;
         margin: 0 15px 0;
