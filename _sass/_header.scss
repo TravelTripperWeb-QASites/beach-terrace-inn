@@ -25,16 +25,16 @@
     }
 }
 
-.brand-centered { 
+.brand-centered {
   position: absolute;
-  width: 150px;   
+  width: 150px;
   vertical-align: middle;
   left:0.55rem;
   top: 4px;
   @include media-breakpoint-up(lg) {
-    width: 260px; 
-    left:42%; 
-    left:calc(45.7% - 100px); 
+    width: 260px;
+    left:42%;
+    left:calc(45.7% - 100px);
   }
   .navbar-brand {
   	vertical-align: middle;
@@ -44,7 +44,7 @@
   	padding:0;
 	   img{
 	   	  max-width: 100%;
-	   } 
+	   }
 	}
 }
 
@@ -55,4 +55,38 @@
 	100% {
 		transform: translateY(0px);
 	}
+}
+.special-banner-bar {
+    margin: 50px 0px 50px 3px;
+
+    text-align: center;
+    background: $red-color;
+    padding: 15px 0;
+		@media (max-width: 1000px){
+			margin-top: 126px;
+		}
+    h3,a {
+        display: inline-block;
+        margin: 0 15px 0;
+				color:#fff;
+        vertical-align: middle;
+				font-family: "brandon_grotesquebold";
+    }
+    h3 {
+        text-transform: uppercase;
+        font-size: 17px;
+        font-family: "brandon_grotesquebold";
+    }
+    a {
+        font-size: 13px;
+				border:1px solid #000;
+				border-radius: 0px;
+				margin-top:5px;
+				background-color:$red-color;
+				padding: 13px 30px 13px 33px;
+				&:hover{
+					background-color: #000;
+
+				}
+    }
 }

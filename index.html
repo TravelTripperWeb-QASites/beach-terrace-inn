@@ -10,30 +10,33 @@ permalink:
   <div id="image-slider" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item bg-cover active" style="background-image:url(/assets/images/banner_hero.jpg)"></div>
-      <div class="rate-widget" id="view_rates">
-        <a id="book_direct_cta" href="http://beachterraceinn.reztrip.com/">Book Direct & Save<span>△</span></a>
-      </div>
     </div>
     <div class="homeBannerWidget">
-      <div class="brg-price" ng-show="browser.isRate" >
-         <div class="best-rate-ota" ng-show ="browser.otaRates.brgFound && browser.otaRates.lowestOTARate >= browser.toNightsRate" >
-            <div class="boxes">
-              <div class="brg-tonight-rate ">
-                <p>Best Price Available</p>
-                <h4>Tonight's Rate <a href="{{site.reztripUrl}}search" class="homeTonightRate" ><span class="price">$[[browser.toNightsRate]]</span></a></h4>
-              </div>
-              <div class="ota-list" >
-                <ul>
-                <li ng-repeat = "(key, value) in browser.otaRates.brg" ng-show="browser.toNightsRate <= value">[[key]] <span>$[[value]]</span></li>
-                </ul>
-              </div>
+      <div class="brg-price" ng-show="browser.isRate">
+        <div class="best-rate-ota" ng-show="browser.otaRates.brgFound && browser.otaRates.lowestOTARate >= browser.toNightsRate">
+          <div class="boxes">
+            <div class="brg-tonight-rate ">
+              <p>Best Price Available</p>
+              <h4>Tonight's Rate
+                <a href="{{site.reztripUrl}}search" class="homeTonightRate">
+                  <span class="price">$[[browser.toNightsRate]]</span></a>
+              </h4>
+            </div>
+            <div class="ota-list">
+              <ul>
+                <li ng-repeat="(key, value) in browser.otaRates.brg" ng-show="browser.toNightsRate <= value">[[key]]
+                  <span>$[[value]]</span></li>
+              </ul>
             </div>
           </div>
+        </div>
 
       </div>
       <div class="scarcity-price" rt3-recent-bookings="recentBookings">
         <span class="price-holder" ng-show="recentBookings.totalBookings > 5"><span>[[ recentBookings.totalBookings ]]</span>People booked our hotel in the last 2 days</span>
-        <span class="price-holder tonight" ng-show="(!browser.otaRates.brgFound && browser.isRate) || (browser.otaRates.brgFound &&  browser.toNightsRate > browser.otaRates.lowestOTARate )"><a href="{{site.reztripUrl}}search" class="homeTonightRate" ><span class="tonightPrice">$[[ browser.toNightsRate ]]</span></a>Tonight’s Rate</span>
+        <span class="price-holder tonight" ng-show="(!browser.otaRates.brgFound && browser.isRate) || (browser.otaRates.brgFound &&  browser.toNightsRate > browser.otaRates.lowestOTARate )">
+          <a href="{{site.reztripUrl}}search" class="homeTonightRate">
+            <span class="tonightPrice">$[[ browser.toNightsRate ]]</span></a>Tonight’s Rate</span>
       </div>
     </div>
   </div>
@@ -49,11 +52,13 @@ permalink:
       </div>
       <div class="text-section align-self-center">
         <div class="heading-part">
-          {% regionblock page_heading, type: heading %}
+          {% regionblock page_heading,
+          type: heading %}
           <h1>Beach
             <br>Terrace inn</h1>
           {% endregionblock %}
-          {% regionblock page_heading, type: heading %}
+          {% regionblock page_heading,
+          type: heading %}
           <h4>Check in to Check out</h4>
           {% endregionblock %}
         </div>
@@ -66,18 +71,18 @@ permalink:
       <div class="text-container-inner m-0">
         <div class="content align-self-center">
           <div class="text">
-            {% regionblock about_text, type: text %}
-            <p>At Beach Terrace Inn, we pride ourselves on our ability to live life slowly, fully, and in the moment. We cherish
-              the “ahh moments” - those little instances where the distractions of the rest of the world are drowned out
-              and you can finally relax - like that moment when you first hear the waves of the Pacific, or the moment you
-              first feel the sand in your toes, or the moment you pull up to Beach Terrace Inn.
+            {% regionblock about_text,
+            type: text %}
+            <p>At Beach Terrace Inn, we pride ourselves on our ability to live life slowly, fully, and in the moment. We cherish the “ahh moments” - those little instances where the distractions of the rest of the world are drowned out and you can finally relax
+              - like that moment when you first hear the waves of the Pacific, or the moment you first feel the sand in your toes, or the moment you pull up to Beach Terrace Inn.
               <br>Let us show you how to get slow.</p>
             {% endregionblock %}
             <a href="/about/" title="Discover More" class="border-black">Discover More</a>
           </div>
         </div>
         <div class="img align-self-end p-0">
-          {% regionblock about_image, type: image %}
+          {% regionblock about_image,
+          type: image %}
           <img src="/assets/images/home/beach_treeace_inn_home_4.jpg" alt="Beach Terrace Inn Ariel View" class="img-fluid">
           {% endregionblock %}
         </div>
@@ -92,18 +97,18 @@ permalink:
 
               {% assign testimonials = site.data._models.testimonials %}
               {% for testimonial in testimonials %}
-              <div class="carousel-item {% if forloop.index == 1 %} active {% endif %}">
-                <div class="trip-advisor-testimonial">
-                  <h5>
-                    <a href="{{ testimonial.testimonial_link }}"
-                      target="_blank">"{{ testimonial.title }}"</a>
-                  </h5>
-                  <p>{{ testimonial.testimonial_text }}</p>
-                  <p>
-                    <span>- {{ testimonial.testimonial_author }}</span>
-                  </p>
+                <div class="carousel-item {% if forloop.index == 1 %} active {% endif %}">
+                  <div class="trip-advisor-testimonial">
+                    <h5>
+                      <a href="{{ testimonial.testimonial_link }}" target="_blank">"{{ testimonial.title }}"</a>
+                    </h5>
+                    <p>{{ testimonial.testimonial_text }}</p>
+                    <p>
+                      <span>-
+                        {{ testimonial.testimonial_author }}</span>
+                    </p>
+                  </div>
                 </div>
-              </div>
               {% endfor %}
 
               <a class="carousel-control-prev d-md-none" data-target="#tripAdvisorCarousel" role="button" data-slide="prev">
@@ -137,9 +142,9 @@ permalink:
         <div class="carousel-inner">
 
           {% for photo in site.data._galleries.homepage_visual_tour.photos %}
-          <div class="carousel-item {% if forloop.index == 1 %} active {% endif %}">
-            <img class="d-block w-100 img-fluid" src="{{ photo.url }}" alt="{{ photo.description }}">
-          </div>
+            <div class="carousel-item {% if forloop.index == 1 %} active {% endif %}">
+              <img class="d-block w-100 img-fluid" src="{{ photo.url }}" alt="{{ photo.description }}">
+            </div>
           {% endfor %}
 
           <a href="" class="carousel-control-prev" data-target="#common-carousel" role="button" data-slide="prev">
@@ -157,11 +162,13 @@ permalink:
         </div>
       </div>
       <div class="over-lap-heading">
-        {% regionblock visual_tour_heading, type: heading %}
+        {% regionblock visual_tour_heading,
+        type: heading %}
         <h2>Ahhh-mazing
           <br>Views</h2>
         {% endregionblock %}
-        {% regionblock visual_tour_subheading, type: heading %}
+        {% regionblock visual_tour_subheading,
+        type: heading %}
         <h4>The Only Beachfront Hotel in Carlsbad</h4>
         {% endregionblock %}
         <a href="/gallery/" class="border-black" title="visual tour">visual tour</a>
@@ -179,17 +186,18 @@ permalink:
     </div>
     <div class="content align-self-center">
       <div class="text">
-        {% regionblock explore_area_text, type: text %}
-        <p>A quiet beach town with miles of coastline, Carlsbad is known for its stunning beaches and breathtaking views. Take
-          in the natural beauty of its striking cliffs, or visit attractions such as Legoland or the Flower Fields. The beauty
-          of Carlsbad lies not only in its beach, but also its proximity.</p>
+        {% regionblock explore_area_text,
+        type: text %}
+        <p>A quiet beach town with miles of coastline, Carlsbad is known for its stunning beaches and breathtaking views. Take in the natural beauty of its striking cliffs, or visit attractions such as Legoland or the Flower Fields. The beauty of Carlsbad
+          lies not only in its beach, but also its proximity.</p>
         {% endregionblock %}
         <a href="/carlsbad/" title="Discover More" class="border-black">Explore Area</a>
       </div>
     </div>
   </div>
   <div class="cycleing-img align-self-end text-right p-0">
-    {% regionblock explore_area_image, type: image %}
+    {% regionblock explore_area_image,
+    type: image %}
     <img src="/assets/images/home/beach_terrace_inn_dish_cycle.jpg" alt="Beach Terrace Cycleing  & Dish" class="img-fluid pr-0">
     {% endregionblock %}
   </div>
@@ -200,20 +208,22 @@ permalink:
 
 <!--request for proposal section start-->
 <div class="love-section">
-  {% regionblock rfp_image_one, type: image %}
+  {% regionblock rfp_image_one,
+  type: image %}
   <img src="/assets/images/home/wedding-place.jpg" alt="Wedding Place" class="love-img">
   {% endregionblock %}
   <div class="love-section-wrap">
     <div class="love-section-inner">
       <div class="love-img p-0">
-        {% regionblock rfp_image_one, type: image %}
+        {% regionblock rfp_image_one,
+        type: image %}
         <img src="/assets/images/home/happy-wedding.jpg" alt="Happy Wedding at Beach Terrace Inn are magical">
         {% endregionblock %}
       </div>
       <div class="love-sec-content">
-        {% regionblock rfp_text, type: text %}
-        <p>Weddings at Beach Terrace Inn are magical. Let us make your special day even more memorable with an intimate beach
-          ceremony, sand in your toes, the setting sun, and a spacious event venue overlooking the water.</p>
+        {% regionblock rfp_text,
+        type: text %}
+        <p>Weddings at Beach Terrace Inn are magical. Let us make your special day even more memorable with an intimate beach ceremony, sand in your toes, the setting sun, and a spacious event venue overlooking the water.</p>
         {% endregionblock %}
         <a href="/rfp/" class="border-black" title="Discover more">request for proposal</a>
       </div>
@@ -226,11 +236,13 @@ permalink:
 <section class="moments-remember">
   <div class="moments-remember-inner m-0">
     <div class="moments-remember-left">
-      {% regionblock moments_heading, type: heading %}
+      {% regionblock moments_heading,
+      type: heading %}
       <h2>Intimate
         <br>Moments</h2>
       {% endregionblock %}
-      {% regionblock moments_subheading, type: heading %}
+      {% regionblock moments_subheading,
+      type: heading %}
       <h4>A Place to Create Unforgettable Memories</h4>
       {% endregionblock %}
       <a href="/weddings/" class="border-black" title="Discover more">discover more</a>
@@ -238,10 +250,8 @@ permalink:
     </div>
     <div class="moments-remember-right">
       <div class="moments-remember-right-inner m-0">
-        <div class="image-1 p-0">
-        </div>
-        <div class="image-2 p-0">
-        </div>
+        <div class="image-1 p-0"></div>
+        <div class="image-2 p-0"></div>
       </div>
     </div>
   </div>
@@ -252,10 +262,12 @@ permalink:
 <section class="cta-signup bg-cover text-center" style="background-image: url(/assets/images/home/home-cta-bg.jpg);">
   <div class="overlap"></div>
   <div class="cta-signup-inner">
-    {% regionblock newsletter_heading, type: heading %}
+    {% regionblock newsletter_heading,
+    type: heading %}
     <h4>Stay in Touch with Beach Terrace Inn</h4>
     {% endregionblock %}
-    {% regionblock newsletter_subheading, type: heading %}
+    {% regionblock newsletter_subheading,
+    type: heading %}
     <h2>Relax. Renew. Repeat.</h2>
     {% endregionblock %}
     <div class="input-holder m-auto">
