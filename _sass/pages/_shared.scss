@@ -331,7 +331,7 @@ More offers
                     z-index:999;
                     cursor:pointer;
                 }
-            }  
+            }
         }
         .title-bg{
             width: 460px;
@@ -369,7 +369,25 @@ More offers
         color:$black;
         text-shadow: 2px 2px 0px $white;
       }
+    .overlay {
+      @include media-breakpoint-down(md) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0,0,0,.4);
+      }
+      .inner-banner-title {
+        h1, h5 {
+          @include media-breakpoint-down(md) {
+            color: $white;
+            text-shadow: 2px 2px 0 $black;
+          }
+        }
+      }
     }
+  }
 }
 /*
    Datepicker CSS
@@ -463,4 +481,3 @@ More offers
     left: 0;
     bottom: 0;
 }
-
