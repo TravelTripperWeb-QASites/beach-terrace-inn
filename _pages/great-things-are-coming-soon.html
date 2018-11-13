@@ -1,0 +1,73 @@
+---
+published_localized:
+  en: true
+title_localized:
+  en: Great things are coming soon | Beach Terrace Inn
+layout_localized:
+  en: default
+label_localized:
+  en: Great things are coming soon | Beach Terrace Inn
+permalink_localized:
+  en: "/great-things-are-coming-soon/"
+meta_description_localized:
+  en: Great things are coming soon
+meta_tags:
+  robots: noindex, follow
+---
+<div class="loading" style="display:block">Loading&#8230;</div>
+<section rt3-special-rates="offers" ng-controller="offerDetail">
+
+  <!-- banner section start -->
+  <section class="inner-banner half-banner  d-flex align-items-center" style="background-image:url('//cdn.traveltripper.io/site-assets/32_826_20974/media/2018-11-08-053051/Header.jpg');">
+    <div class="overlay">
+      <div class="inner-banner-title">
+        {% regionblock hunt_banner_heading1, type: heading %}
+        <h1>Great Things</h1>
+        {% endregionblock %}
+        {% regionblock hunt_banner_heading2, type: heading %}
+        <h5>are coming soon</h5>
+        {% endregionblock %}
+      </div>
+    </div>
+  </section>
+  <!-- banner section end -->
+
+	<!-- offer details content section start -->
+	<section class="offer-details-intro">
+		<div class="intro-wrap m-0">
+			<div class="_left">
+				<div class="text-section">
+					{% region region1 %}
+				</div>
+			</div>
+			<div class="_right">
+				<div class="image-section">
+					{% region image1 %}
+					<div class="image-sec-header">
+						<!-- <h2>on the<br>house</h2> -->
+						<!-- <h5 ng-show="offers.sRdetail.addons.length > 0">this offer includes:</h5> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- offer details content section end -->
+
+
+	<!-- newsletter signup start -->
+	<section class="cta-signup bg-cover text-center" style="background-image: url(/assets/images/offers/offer-cta.jpg);">
+		<div class="overlap"></div>
+		<div class="cta-signup-inner">
+			{% regionblock hunt_newsletter_heading1, type: heading %}
+			<h4>Stay in Touch with Beach Terrace Inn</h4>
+			{% endregionblock %}
+			{% regionblock relax_newsletter_heading2, type: heading %}
+			<h2>Relax. Renew. Repeat</h2>
+			{% endregionblock %}
+			<div class="input-holder m-auto">
+				<a href="https://signup.e2ma.net/signup/1862574/1405684/" class="white-shadow-white" onclick="window.open('https://signup.e2ma.net/signup/1862574/1405684/', 'signup', 'menubar=no, location=no, toolbar=no, scrollbars=yes, height=500'); return false;">Subscribe now</a>
+			</div>
+		</div>
+	</section>
+	<!-- newsletter signup end -->
+</section>
