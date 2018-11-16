@@ -169,13 +169,13 @@
                 }
                 img{
                         width:100%;
-                }  
+                }
             }
         }
     }
 }
 
-// more sliders 
+// more sliders
 @mixin more-sliders(){
     .assets-slide{
         @include container-fix();
@@ -244,7 +244,7 @@
         @include media-breakpoint-up(xl) {
             left:-10px;
         }
-       
+
         &:before {
             content: '#';
              width: 60px;
@@ -286,11 +286,11 @@
             font-size: $type-size-3;
             padding:10px;
             @include media-breakpoint-down(lg) {
-               
+
             }
         }
     }
-}    
+}
 
 // assets content common
 @mixin assets-content() {

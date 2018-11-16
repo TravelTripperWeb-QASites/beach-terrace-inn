@@ -2,6 +2,9 @@ main:
   - left:
     - title: About
       url: /about/
+      dropdown:
+        - title: Getaway
+          url: /plan-your-getaway/
     - title: Rooms
       url: /rooms/
     - title: Offers
