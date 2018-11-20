@@ -51,7 +51,6 @@
 }
 
 .offer-details-intro {
-
   ul {
     margin: 0 0 30px;
     padding: 0;
@@ -61,6 +60,10 @@
     }
   }
 	@include intro();
+	.no-pad-pos {
+		position: inherit !important;
+		padding-top: 0 !important;
+	}
 }
 
 .offer-includes{
