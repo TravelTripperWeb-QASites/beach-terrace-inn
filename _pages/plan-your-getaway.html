@@ -15,9 +15,10 @@ meta_description_localized:
 ---
 
   <!-- banner section start -->
-  <section class="inner-banner half-banner  d-flex align-items-center" style="background-image:url('//cdn.traveltripper.io/site-assets/32_826_21194/media/2018-11-16-063309/BTI_LE_View.jpg');">
+  <section class="inner-banner half-banner  d-flex align-items-center" style="background-image:url('/assets/images/plan-a-getaway.jpg');">
+    <div class="overlay"></div>
       <div class="inner-banner-title">
-        {% regionblock getaway_banner_heading1, type: heading %}
+        {% regionblock getaway_banner_heading1, type:header %}
         <h1>Plan your Getaway</h1>
         {% endregionblock %}
       </div>
@@ -28,8 +29,8 @@ meta_description_localized:
 	<section class="offer-details-intro">
 		<div class="intro-wrap m-0">
 			<div class="_left">
-				<div class="text-section">
-          {% regionblock getaway_text, type: text %}
+				<div class="text-section plan-your-getaway">
+          {% regionblock getaway_text, type:text %}
           <ul>
             <li>Check in time: 4p</li>
             <li>Check out time: 11a</li>
@@ -38,7 +39,7 @@ meta_description_localized:
             <li>At this time, we are not a pet friendly resort</li>
           </ul>
             {% endregionblock %}
-            {% regionblock getaway_links, type: text %}
+            {% regionblock getaway_links, type:text %}
           <a class="black" title="book offer" href="/rooms/">Explore Rooms</a>
           <a class="border-black" title="contact us" href="/contact/">contact us</a>
           {% endregionblock %}
@@ -46,7 +47,7 @@ meta_description_localized:
 			</div>
 			<div class="_right">
 				<div class="image-section">
-            {% regionblock getaway_image, type: image %}
+            {% regionblock getaway_image, type:image %}
             <img src="//cdn.traveltripper.io/site-assets/32_826_21194/media/2018-11-16-063311/BTI_LE_Beach_Setup.jpg" alt="Beach view">
             {% endregionblock %}
 					<div class="image-sec-header">
@@ -64,10 +65,10 @@ meta_description_localized:
   <section class="cta-signup bg-cover text-center" style="background-image: url(/assets/images/offers/offers-cta.jpg);">
     <div class="overlap"></div>
     <div class="cta-signup-inner">
-      {% regionblock cta_heading, type: heading %}
+      {% regionblock cta_heading, type:header %}
       <h4>Stay in Touch with Beach Terrace Inn</h4>
       {% endregionblock %}
-      {% regionblock cta_subheading, type: heading %}
+      {% regionblock cta_subheading, type:header %}
       <h2>go with the flow</h2>
       {% endregionblock %}
       <div class="input-holder m-auto">

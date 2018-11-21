@@ -139,6 +139,19 @@
                 }
 
             }
+            .plan-your-getaway {
+          		p {
+          			margin: 0 0 18px;
+          			padding: 0;
+                border: 0;
+          		}
+              ul {
+                margin: 0 0 0 20px;
+                li {
+                  list-style-type: disc;
+                }
+              }
+          	}
         }
         ._right{
             @include make-col-ready();
