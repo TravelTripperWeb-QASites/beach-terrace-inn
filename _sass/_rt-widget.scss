@@ -4,13 +4,14 @@ $base-line-height: 22px;
 //colors
 $white: #fff;
 $black: #000000;
-$primary-color: #e03400;
+$primary-color: #14abd0;
 $secondary-color: $black;
 $ttgutters: 15px;
 $duration: 0.3s;
 $max-popwidth: 220px;
 
 .ttw-versatile {
+  
   position: relative;
   z-index: 9999;
   box-sizing: border-box;
@@ -69,7 +70,7 @@ $max-popwidth: 220px;
     margin-bottom: 0;
     padding: $ttgutters / 2;
     font-weight: bold;
-    color: $white;
+    color: $black;
     background-color: $primary-color;
     text-align: center;
     text-transform: uppercase;
@@ -127,13 +128,17 @@ $max-popwidth: 220px;
 
     a {
       width: 100%;
-      color:$white;
+      color:$black;
+      &:hover{
+        color:$white;
+      }
     }
-
     &:hover {
-      color: $white;
+      color: $white!important;
       background-color: $black;
     }
+
+
   }
 
   &__close {

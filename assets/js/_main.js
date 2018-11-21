@@ -14,7 +14,10 @@ $(document).ready(function() {
   $("a").smoothScroll({ offset: -20 });
 
 
-
+  //close versatile popup after 5 second
+  setTimeout(function() {
+    $('.ttw-versatile__close').trigger('click');
+  },8000);
   //main nav scroll resize
     function changeHeader(){
       if($( window ).width() > 991){
