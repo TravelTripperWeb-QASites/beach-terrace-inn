@@ -139,6 +139,23 @@
                 }
 
             }
+            .plan-your-getaway {
+              position: relative;
+              top: 0;
+              transform: none;
+              padding-top: 0;
+          		p {
+          			margin: 0 0 18px;
+          			padding: 0;
+                border: 0;
+          		}
+              ul {
+                margin: 0 0 0 20px;
+                li {
+                  list-style-type: disc;
+                }
+              }
+          	}
         }
         ._right{
             @include make-col-ready();
@@ -169,13 +186,13 @@
                 }
                 img{
                         width:100%;
-                }  
+                }
             }
         }
     }
 }
 
-// more sliders 
+// more sliders
 @mixin more-sliders(){
     .assets-slide{
         @include container-fix();
@@ -244,7 +261,7 @@
         @include media-breakpoint-up(xl) {
             left:-10px;
         }
-       
+
         &:before {
             content: '#';
              width: 60px;
@@ -286,11 +303,11 @@
             font-size: $type-size-3;
             padding:10px;
             @include media-breakpoint-down(lg) {
-               
+
             }
         }
     }
-}    
+}
 
 // assets content common
 @mixin assets-content() {
