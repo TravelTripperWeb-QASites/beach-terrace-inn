@@ -1,0 +1,80 @@
+---
+published_localized:
+  en: true
+title_localized:
+  en: Plan your Getaway | Offer at Beach Terrace Inn
+layout_localized:
+  en: default
+label_localized:
+  en: Plan your Getaway | Offer at Beach Terrace Inn
+permalink_localized:
+  en: "/plan-your-getaway/"
+meta_description_localized:
+  en: Plan your Getaway
+
+---
+
+  <!-- banner section start -->
+  <section class="inner-banner half-banner  d-flex align-items-center" style="background-image:url('/assets/images/plan-a-getaway.jpg');">
+    <div class="overlay">
+      <div class="inner-banner-title">
+        {% regionblock getaway_banner_heading1, type:header %}
+        <h1>Plan your Getaway</h1>
+        {% endregionblock %}
+      </div>
+    </div>
+  </section>
+  <!-- banner section end -->
+
+	<!-- offer details content section start -->
+	<section class="offer-details-intro">
+		<div class="intro-wrap m-0">
+			<div class="_left">
+				<div class="text-section plan-your-getaway">
+          {% regionblock getaway_text, type:text %}
+          <ul>
+            <li>Check in time: 4p</li>
+            <li>Check out time: 11a</li>
+            <li>Breakfast: 7a – 11a</li>
+            <li>Amenity Fee: $29 per night (inclusive of tax)</li>
+            <li>At this time, we are not a pet friendly resort</li>
+          </ul>
+            {% endregionblock %}
+            {% regionblock getaway_links, type:text %}
+          <a class="black" title="book offer" href="/rooms/">Explore Rooms</a>
+          <a class="border-black" title="contact us" href="/contact/">contact us</a>
+          {% endregionblock %}
+				</div>
+			</div>
+			<div class="_right">
+				<div class="image-section">
+            {% regionblock getaway_image, type:image %}
+            <img src="//cdn.traveltripper.io/site-assets/32_826_21194/media/2018-11-16-063311/BTI_LE_Beach_Setup.jpg" alt="Beach view">
+            {% endregionblock %}
+					<div class="image-sec-header">
+						<!-- <h2>on the<br>house</h2> -->
+						<!-- <h5 ng-show="offers.sRdetail.addons.length > 0">this offer includes:</h5> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- offer details content section end -->
+
+
+  <!-- newsletter signup start -->
+  <section class="cta-signup bg-cover text-center" style="background-image: url(/assets/images/offers/offers-cta.jpg);">
+    <div class="overlap"></div>
+    <div class="cta-signup-inner">
+      {% regionblock cta_heading, type:header %}
+      <h4>Stay in Touch with Beach Terrace Inn</h4>
+      {% endregionblock %}
+      {% regionblock cta_subheading, type:header %}
+      <h2>go with the flow</h2>
+      {% endregionblock %}
+      <div class="input-holder m-auto">
+        <a href="https://signup.e2ma.net/signup/1862574/1405684/" class="white-shadow-white" onclick="window.open('https://signup.e2ma.net/signup/1862574/1405684/', 'signup', 'menubar=no, location=no, toolbar=no, scrollbars=yes, height=500'); return false;">Join our list</a>
+      </div>
+    </div>
+  </section>
+  <!-- newsletter signup end -->

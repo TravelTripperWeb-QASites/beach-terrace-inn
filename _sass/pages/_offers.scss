@@ -39,7 +39,7 @@
 		}
 		&:nth-child(even) {
 	        .assets-img {
-	        	.img-inner{
+	        	.img-inner {
 	                @include box-shadow(-15px, 15px, 0px, $line-bg);
 	                @include media-breakpoint-down(sm) {
 	                    @include box-shadow(15px, 15px, 0px, $line-bg);
@@ -51,6 +51,14 @@
 }
 
 .offer-details-intro {
+  ul {
+    margin: 0 0 30px;
+    padding: 0;
+    li {
+      font-family: $secondary-font-regular;
+      line-height: 28px;
+    }
+  }
 	@include intro();
 	.no-pad-pos {
 		position: inherit !important;
