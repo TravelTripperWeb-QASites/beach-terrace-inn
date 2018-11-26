@@ -59,6 +59,18 @@
 
   // Call the rezGallery function to show offers inside the gallery
   $('#lightgallery').rezGallery();
+{% if page.url != '/something-awesome/' %}
+  {% assign versatile = site.data.versatile-popup %}
+  var popup = new ttPlugin.versatileCard({
+      header: '{{ versatile.title }}',
+      body: '{{ versatile.body }}',
+      footer: '<a href="{{ versatile.cta_link }}" target="_blank">{{ versatile.cta_text }}</a>',
+      showOnLoad: true,
+      globalName: 'versatile-unlock-offer-popup',
+      customVisible: true
+    });
+    popup.init();
+    {% endif %}
 </script>
 
 {% include scripts/instafeed.html %}
