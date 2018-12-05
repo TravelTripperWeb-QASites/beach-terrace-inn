@@ -1,24 +1,28 @@
 [
   {
     "content": {
-      "name": "BTI_LE_View",
-      "file_name": "BTI_LE_View.jpg",
-      "url": "//cdn.traveltripper.io/site-assets/32_826_21194/media/2018-11-16-063309/BTI_LE_View.jpg",
-      "tags": "",
-      "description": "",
-      "date_added": "2018-11-16-063309",
-      "file_type": "image/jpeg",
+      "name": "BTI-LE-View",
+      "content_type": null,
+      "date_added": "2018-12-05-125413",
+      "url_thumb": "http://res.cloudinary.com/traveltripperweb/image/upload/c_crop,h_602,w_917,x_0,y_167/c_fill,g_faces,h_140,w_140/v1544032454/rruwejy1bkvpt5kuxtyz.jpg",
+      "url_xsmall": "http://res.cloudinary.com/traveltripperweb/image/upload/c_crop,h_602,w_917,x_0,y_167/c_fit,h_300,w_300/v1544032454/rruwejy1bkvpt5kuxtyz.jpg",
+      "url_small": "http://res.cloudinary.com/traveltripperweb/image/upload/c_crop,h_602,w_917,x_0,y_167/c_fit,h_768,w_768/v1544032454/rruwejy1bkvpt5kuxtyz.jpg",
+      "url_medium": "http://res.cloudinary.com/traveltripperweb/image/upload/c_crop,h_602,w_917,x_0,y_167/c_fit,h_992,w_992/v1544032454/rruwejy1bkvpt5kuxtyz.jpg",
+      "url_large": "http://res.cloudinary.com/traveltripperweb/image/upload/c_crop,h_602,w_917,x_0,y_167/c_fit,h_1200,w_1200/v1544032454/rruwejy1bkvpt5kuxtyz.jpg",
       "width": 1151,
       "height": 768,
-      "file_size": 532509,
-      "url_large": "//cdn.traveltripper.io/site-assets/32_826_21194/media/2018-11-16-063309/large_BTI_LE_View.jpg",
-      "url_medium": "//cdn.traveltripper.io/site-assets/32_826_21194/media/2018-11-16-063309/medium_BTI_LE_View.jpg",
-      "url_small": "//cdn.traveltripper.io/site-assets/32_826_21194/media/2018-11-16-063309/small_BTI_LE_View.jpg",
-      "url_xsmall": "//cdn.traveltripper.io/site-assets/32_826_21194/media/2018-11-16-063309/xsmall_BTI_LE_View.jpg",
-      "url_thumb": "//cdn.traveltripper.io/site-assets/32_826_21194/media/2018-11-16-063309/thumb_BTI_LE_View.jpg",
-      "git_file_name": "_assets/image_data/BTI-LE-View.json",
-      "path": "//cdn.traveltripper.io/site-assets/32_826_21194/media/2018-11-16-063309/BTI_LE_View.jpg",
-      "alt": "BTI_LE_View"
+      "format": "jpg",
+      "url": "https://res.cloudinary.com/traveltripperweb/image/upload/v1544032454/rruwejy1bkvpt5kuxtyz.jpg",
+      "resource_type": "image",
+      "size": 532509,
+      "crop": {
+        "origin": {
+          "x": 0,
+          "y": 167
+        },
+        "width": 917,
+        "height": 602
+      }
     },
     "_template": "image"
   }
